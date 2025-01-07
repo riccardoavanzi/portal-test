@@ -1,0 +1,1134 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vietnam Airlines - Cheap flights to South Korea and the world - Lisbon</title>
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- IMPORT ICONS CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="css/vibrant.css">
+        <!-- SWIPER JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- AI ALPACA JS -->
+        <script src="./alpaca.js"></script>
+        
+    </head>
+<body>
+    
+    <!-- SHARE MODAL -->
+    <div class="modal fade" id="share_modal" tabindex="-1" aria-labelledby="share_modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="share_modal_label">Share this page</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">              
+                    <div class="copy_link d-flex justify-content-between align-items-center">
+                        <div class="link border p-3 rounded-2" id="url"></div>
+                        <div class="copy_btn">
+                            <button class="btn btn_tertiary">copy link</button>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center w-100 m-auto mt-3 mb-3">
+                         - or share with - 
+                    </div>
+                    <div class="share_buttons w-100">
+                        <ul class="d-flex justify-content-evenly align-items-center">
+                            <li>
+                                <button class="d-flex justify-content-center align-items-center rounded-2 p-3 btn-success">
+                                    <i class='bx bxl-whatsapp' ></i>
+                                    Whatsapp
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-center align-items-center rounded-2 p-3 btn-info" style="color: white;">
+                                    <i class='bx bxl-telegram' ></i>
+                                    Telegram
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-center align-items-center rounded-2 p-3 btn-primary">
+                                    <i class='bx bxl-messenger' ></i>
+                                    Messenger
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share this email with anyone else.</div>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                <button type="submit" class="btn btn-primary">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div class="modal" id="mobilemenu">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a href="index.html" id="book" class="nav-link dropdown-toggle">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="manage" class="nav-link">Manage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="destination.html" id="destinations" class="nav-link">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="content.html" id="help" class="nav-link">Help</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" id="loyalty" class="nav-link">Loyalty</a>
+                    </li> -->
+                </ul>
+                <button type="button" class="btn btn-lg btn-primary">
+                    <i class="bx bxs-user-circle"></i>
+                    <div>Login</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER CONTAINER -->
+    <div class="container-fluid landing_container" id="landing-container">
+        <!-- HEADER CONTENT -->
+        <div class="container header_content">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg nav_container fixed-top" id="navigationbar">
+                <!-- NAVBAR CONTENT -->
+                <div class="container">
+                    <!-- LOGO -->
+                        <a href="index.html" class="navbar-brand">
+                            <img src="assets/img/logo/logo.png" alt="logo" id="airline_logo">
+                        </a>
+
+                        <!-- BUTTON TO TRIGGER HAMBURGER MENU -->
+                        <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#mobilemenu"
+                        >
+                            <span>
+                                <i class='bx bx-menu-alt-right'></i>
+                            </span>
+                        </button>
+
+                    <!-- MENU LIST DESKTOP -->
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto menu">
+                            <li class="nav-item">
+                                <a href="index.html" id="book" class="nav-link">Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" id="manage" class="nav-link">Manage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="destination.html" id="destinations" class="nav-link">Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="content.html" id="help" class="nav-link">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <input type="text" id="searchDest" placeholder="search destination" onkeydown="handleSearch(event)">
+                            </li>
+                            <li>
+                                <div class="dropdown" id="language-dropdown-container">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class='bx bx-world'></i>
+                                    </button>
+                                      <ul class="dropdown-menu" id="langList" aria-labelledby="languageDropdown">
+                                        <li>
+                                            <button class="dropdown-item" id="en" onclick="translateEN()">English</button>
+                                            <button class="dropdown-item" id="fr" onclick="translateFR()">French</button>
+                                            <button class="dropdown-item" id="de" onclick="translateDE()">German</button>
+                                            <button class="dropdown-item" id="kr" onclick="translateKR()">Korean</button>
+                                            <button class="dropdown-item" id="zh" onclick="translateZH()">Chinese</button>
+                                            <button class="dropdown-item" id="zh" onclick="translateVN()">Vietnamese</button>
+                                        </li>
+                                      </ul>
+                                      <!-- <button id="translateButton" class="btn btn-primary">Translate Page</button> -->
+                                    </div>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a href="#" id="loyalty" class="nav-link">Loyalty</a>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary">
+                                        <i class="bx bxs-user-circle"></i>
+                                    <div>Login</div>
+                                </button>
+                            </li> -->
+                        </ul>
+                    </div>                   
+                    <!-- END OF DESKTOP MENU LIST -->
+                </div>
+                
+            </nav>
+            <!-- HERO -->
+            <div class="container hero_container landing_hero_container" id="hero-container">
+                <div class="card col-9 hero_content">
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <h1 class="card-title"><span id="main-title"></span> <span class="destination-name"></span><span id="main-title-second"></span><span id="destination-lowest-price"></span></h1>
+                            <p class="card-text" id="destination-subtitle"></p>
+                            <p id="destination-description"></p>
+                        </div>
+                        <!-- <button class="btn btn-secondary btn-lg">Inspire me</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF HEADER CONTENT -->
+
+
+
+    </div>
+
+    <!-- MULTIPURPOSE COMPONENT -->
+    <div class="container" id="multipurpose_component_landing">
+        <ul>
+            <!-- FLIGHTS -->
+            <li>
+                <a href="#histogram">
+                    <i class='bx bxs-plane'></i>
+                    flights
+                </a>
+            </li>
+            <!-- VISIT -->
+            <li>
+                <a href="#visit">
+                    <i class='bx bxs-castle' ></i>
+                    visit
+                </a>
+            </li>
+            <!-- WEATHER -->
+            <li>
+                <a href="#weather">
+                    <i class='bx bxs-sun' ></i>
+                    weather
+                </a>
+            </li>
+            <!-- SERVICES -->
+            <li>
+                <a href="#partners">
+                    <i class='bx bxs-bed' ></i>
+                    services
+                </a>
+            </li>
+            <!-- SAVE -->
+            <!-- <li id="save">
+            <a href="#">
+                <button data-bs-toggle="modal" data-bs-target="#send_modal">
+                    <i class='bx bx-mail-send' ></i>
+                    Send
+                </button>
+            </a>
+            </li> -->
+            <!-- SHARE -->
+            <li id="share">
+                <a href="#">
+                    <button data-bs-toggle="modal" data-bs-target="#share_modal">
+                        <i class='bx bxs-group' ></i>
+                        Share
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- FLIGHTS AND DEALS -->
+    <section id="deals" class="container">
+        <!-- TITLE -->
+        <div class="title">
+            <h2><span id="best-deals"></span> <span class="destination-name"></span></h2>
+            <div class="subtitle d-flex align-items-center">
+                <span><span id="from"></span></span>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Beijing (PEK)
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Clark International Airport</a></li>
+                    <li><a class="dropdown-item" href="#">Mactan-Cebu Airport</a></li>
+                    <li><a class="dropdown-item" href="#">Francisco Bangoy International Airport</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div id="histogram">
+            <div class="histogram_container">
+                <div class="histogram_content">
+                    
+                    <div class="carousel slide" id="carouselExampleControls" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                
+                                <div class="year">2022</div>
+                                
+                                <ul class="dates_list">
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">120$</p>
+                                        </div>
+                                        <div class="month_label">January</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">160$</p>
+                                        </div>
+                                        <div class="month_label">February</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">220$</p>
+                                        </div>
+                                        <div class="month_label">March</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">200$</p>
+                                        </div>
+                                        <div class="month_label">April</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">May</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">June</div>
+                                    </li>
+                                    <li class="month minimum">
+                                        <div class="cheapest_chip">
+                                            Cheapest
+                                        </div>
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">80$</p>
+                                        </div>
+                                        <div class="month_label">July</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">August</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">120$</p>
+                                        </div>
+                                        <div class="month_label">September</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">October</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">250$</p>
+                                        </div>
+                                        <div class="month_label">November</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">200$</p>
+                                        </div>
+                                        <div class="month_label">December</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="carousel-item">
+                                
+                                <div class="year">2023</div>
+                                
+                                <ul class="dates_list">
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">January</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">February</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">March</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">April</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">May</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">June</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">July</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">August</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">September</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">October</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">November</div>
+                                    </li>
+                                    <li class="month">
+                                        <div class="month_price">
+                                            <label for="subtitle price">FROM</label>
+                                            <p class="subtitle price">150$</p>
+                                        </div>
+                                        <div class="month_label">December</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button">
+                            <i class='bx bx-chevron-left'></i>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+    </div> -->
+
+    <section id="dates">
+            <div class="swiper-carousel">
+                <div class="swiper" id="dates-histogram">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide histogramdate">
+                            <div class="date-content" id="datecontent1">
+                                <div class="from">from</div>
+                                <div class="price" id="month1"></div>
+                                <div class="month" id="month1label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent2">
+                                <div class="from">from</div>
+                                <div class="price" id="month2"></div>
+                                <div class="month" id="month2label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent3">
+                                <div class="from">from</div>
+                                <div class="price" id="month3"></div>
+                                <div class="month" id="month3label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent4">
+                                <div class="from">from</div>
+                                <div class="price" id="month4"></div>
+                                <div class="month" id="month4label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent5">
+                                <div class="from">from</div>
+                                <div class="price" id="month5"></div>
+                                <div class="month" id="month5label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent6">
+                                <div class="from">from</div>
+                                <div class="price" id="month6"></div>
+                                <div class="month" id="month6label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent7">
+                                <div class="from">from</div>
+                                <div class="price" id="month7"></div>
+                                <div class="month" id="month7label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent8">
+                                <div class="from">from</div>
+                                <div class="price" id="month8"></div>
+                                <div class="month" id="month8label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent9">
+                                <div class="from">from</div>
+                                <div class="price" id="month9"></div>
+                                <div class="month" id="month9label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent10">
+                                <div class="from">from</div>
+                                <div class="price" id="month10"></div>
+                                <div class="month" id="month10label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent11">
+                                <div class="from">from</div>
+                                <div class="price" id="month11"></div>
+                                <div class="month" id="month11label"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="date-content" id="datecontent12">
+                                <div class="from">from</div>
+                                <div class="price" id="month12"></div>
+                                <div class="month" id="month12label"></div>
+                            </div> 
+                        </div>                       
+                    </div>
+                    <div class="swiper-button-next"> <i class='bx bx-chevron-right' style="color: #FFF;" ></i></div>
+                    <div class="swiper-button-prev"><i class='bx bx-chevron-left' style="color: #FFF;"></i></div>
+                </div>
+            </div>
+    </section>
+
+    <!-- WHAT TO VISIT -->
+    <section id="visit">
+        <div class="section_title">
+            <h2><span id="top3"></span><span class="destination-name"></span></h2>
+            <h6><span id="makesure"></span></h6>
+        </div>
+        <div class="visit_items mx-auto">
+            <ul>
+                <!-- CARD 1 -->
+                <li>
+                    <div class="card">
+                        <img alt="attraction1" class="card-img-top" src="" id="attraction1image">
+                        <div class="card-body">
+                            <h5 class="card-title" id="attraction1title">Altare della patria</h5>
+                            <p class="card-text" id="attraction1content">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a class="btn btn-tertiary" href="#">Know more</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- CARD 2 -->
+                <li>
+                    <div class="card">
+                        <img alt="attraction2" class="card-img-top" src="" id="attraction2image">
+                        <div class="card-body">
+                            <h5 class="card-title" id="attraction2title">Colosseo romano</h5>
+                            <p class="card-text" id="attraction2content">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a class="btn btn-tertiary" href="#">Know more</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- CARD 3 -->
+                <li>
+                    <div class="card">
+                        <img alt="attraction3" class="card-img-top" src="" id="attraction3image">
+                        <div class="card-body">
+                            <h5 class="card-title" id="attraction3title">Stato del Vaticano</h5>
+                            <p class="card-text" id="attraction3content">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a class="btn btn-tertiary" href="#">Know more</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center col-9 mx-auto">
+                <button class="btn btn-primary">
+                    More activities
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos">
+        <div class="section_title">
+            <h2><span id="videostitle"></span><span class="destination-name"></span> <span id="videostitle2"></span></h2>
+        </div>
+            <div class="swiper-carousel">
+                <div class="swiper" id="video-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><iframe id="video1"  src="" title="New York City Vacation Travel Guide | Expedia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe id="video2"  src="" title="12 Things Every First Timer MUST DO When Visiting NYC !" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe id="video3"  src="" title="TOP 10 Things to do in NEW YORK CITY  | NYC Travel Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe id="video4"  src="" title="TOP 10 Things to do in NEW YORK CITY  | NYC Travel Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="swiper-button-next"> <i class='bx bx-chevron-right' style="color: #FFF;" ></i></div>
+                    <div class="swiper-button-prev"><i class='bx bx-chevron-left' style="color: #FFF;"></i></div>
+                </div>
+            </div>
+    </section>
+
+    <!-- GENERIC CONTENT -->
+    <section class="left-block p-5" id="content">
+        <div class="left-block-container container">
+            <div class="left-block-content row align-items-center justify-content-between">
+                <div class="left-block-img col-md">
+                    <img alt="" class="img-fluid" src="" id="destination-content-image">
+                </div>
+                <div class="left-block-text col-md p-5">
+                    <h2><span id="allyouwant"></span> <span class="destination-name"></span></h2>
+                    <p id="destination-lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deleniti possimus magnam corporis ratione facere!</p>
+                    <!-- <a class="btn btn-tertiary" href="#">
+                        Know more
+                        <i class='bx bx-chevron-right' ></i> 
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEATHER -->
+    <section id="weather">
+        <div class="section_title">
+            <h2><span id="weathertitle"></span> <span class="destination-name"></span>?</h2>
+            <h6><span id="weathersub"></span></h6>
+            <p></p>
+        </div>
+        <div class="forecast">
+            <ul>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">JAN</div>
+                        <div class="temperature">7°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud' ></i>
+                    <div class="data">
+                        <div class="period">FEB</div>
+                        <div class="temperature">12°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud-lightning thunder' ></i>
+                    <div class="data">
+                        <div class="period">MAR</div>
+                        <div class="temperature">15°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud-rain rain' ></i>
+                    <div class="data">
+                        <div class="period">APR</div>
+                        <div class="temperature">18°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">MAY</div>
+                        <div class="temperature">27°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">JUN</div>
+                        <div class="temperature">32°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">JUL</div>
+                        <div class="temperature">35°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">AUG</div>
+                        <div class="temperature">36°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-sun sun'></i>
+                    <div class="data">
+                        <div class="period">SEP</div>
+                        <div class="temperature">27°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud-rain rain' ></i>
+                    <div class="data">
+                        <div class="period">OCT</div>
+                        <div class="temperature">16°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud-rain rain' ></i>
+                    <div class="data">
+                        <div class="period">NOV</div>
+                        <div class="temperature">12°C</div>
+                    </div>
+                </li>
+                <li>
+                    <i class='bx bxs-cloud' ></i>
+                    <div class="data">
+                        <div class="period">DEC</div>
+                        <div class="temperature">5°C</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TRAVELGUIDE -->
+    <section id="travelguide">
+        <div class="section_title">
+            <h2><span class="destination-name"></span> <span id="travelguide-title"></span></h2>
+            <h6><span id="travelsub"></span></h6>
+        </div>
+        <div class="travelguide-container">
+            <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active d-flex align-items-center" id="pills-interest-tab" data-bs-toggle="pill" data-bs-target="#pill-interest" type="button" role="tab">
+                        <i class='bx bxs-pin'></i>
+                        <span id="poititle"></span>
+                    </button>
+                    
+                </li>
+                <li>
+                    <button class="nav-link d-flex align-items-center" id="pills-interest-tab" data-bs-toggle="pill" data-bs-target="#pill-food" type="button" role="tab">
+                        <i class='bx bxs-bowl-hot'></i>
+                        <span id="fd"></span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-link d-flex align-items-center" id="pills-interest-tab" data-bs-toggle="pill" data-bs-target="#pill-events" type="button" role="tab">
+                        <i class='bx bxs-calendar-event' ></i>
+                        <span id="events"></span>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pill-interest" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="container" id="poi">
+                        <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="poi1title"></h5>
+                              <p class="card-text" id="poi1description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="poi2title"></h5>
+                              <p class="card-text" id="poi2description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="poi3title" ></h5>
+                              <p class="card-text" id="poi3description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pill-food" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="container" id="foods">
+                        <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="food1title"></h5>
+                              <p class="card-text" id="food1description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="food2title"></h5>
+                              <p class="card-text" id="food2description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="food3title" ></h5>
+                              <p class="card-text" id="food3description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pill-events" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="container" id="events">
+                        <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="event1title"></h5>
+                              <p class="card-text" id="event1description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="event2title"></h5>
+                              <p class="card-text" id="event2description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                          <div class="card card-new mx-2 my-2" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title" id="event3title" ></h5>
+                              <p class="card-text" id="event3description"></p>
+                              <a href="#" class="btn btn-primary">Discover more</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section id="partners">
+        <div class="section_title">
+            <h2><span id="help"></span></h2>
+            <h6><span id="helpsub"></span><span class="destination-name"></span></h6>
+        </div>
+        <div class="partners">
+            <ul>
+                <!-- HOTEL -->
+                <li id="hotel_partner">
+                    <div class="partner_container">
+                        <div class="partner_data">
+                            <div class="partner_title">
+                                <h4>Sleep</h4>
+                                <!-- <img src="" alt="hotels_partner"> -->
+                            </div>
+                            <div class="partner_description" id="hotel">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quo.
+                            </div>
+                        </div>
+                        <div class="partner_cta">
+                            <button class="btn btn-secondary">Know more</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- CAR RENTAL -->
+                <li id="car_rental">
+                    <div class="partner_container">
+                        <div class="partner_data">
+                            <div class="partner_title">
+                                <h4>Drive</h4>
+                                <!-- <img src="" alt="hotels_partner"> -->
+                            </div>
+                            <div class="partner_description" id="car">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quo.
+                            </div>
+                        </div>
+                        <div class="partner_cta">
+                            <button class="btn btn-secondary">Know more</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- EVENTS -->
+                <li id="events">
+                    <div class="partner_container">
+                        <div class="partner_data">
+                            <div class="partner_title">
+                                <h4>Enjoy</h4>
+                                <!-- <img src="" alt="events_partner_logo"> -->
+                            </div>
+                            <div class="partner_description" id="event">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quo.
+                            </div>
+                        </div>
+                        <div class="partner_cta">
+                            <button class="btn btn-secondary">Know more</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEARCH FORM -->
+    <section id="search_section">
+        <h3 class="text-center">Need more options?</h3>
+        <div class="container-fluid" id="search_component_landing">
+            <div class="mlt_container">
+                <div class="mlt_content">
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- SEARCH -->
+                        <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="search_container" id="search">
+                                <ul class="criteria">
+                                    <li>
+                                        <label for="deperture">FROM</label>
+                                        <input type="text" placeholder="Departure" id="departure">
+                                    </li>
+                                    <li>
+                                        <label for="destination">TO</label>
+                                        <input type="text" placeholder="Destination" id="destination" value="">
+                                    </li>
+                                    <li>
+                                        <label for="cal">WHEN</label>
+                                        <button id="cal" type="button">Add dates</button>
+                                    </li>
+                                    <li>
+                                        <label for="pax">WHO</label>
+                                        <button id="pax" type="button">Add passengers</button>
+                                    </li>
+                                </ul>
+                                <button type="submit" class="submit">
+                                    <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="container">
+            <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+        
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+        
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+        
+                <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <div>
+                <img src="/assets/img/logo/logo.png" alt="">
+                <p>© 2024 Philippine Airlines. All rights reserved.</p>
+                </div>
+                <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-twitter' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxs-envelope' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-messenger' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bx-headphone' ></i></a></li>
+                </ul>
+            </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- SCROLLING NAV FUNCTION -->
+    <script>
+        window.onscroll = function() {bgFunction()};
+        function bgFunction(){
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navigationbar").style.background = "#252523";
+                document.getElementById("navigationbar").style.padding = "20px 0px 15px 0px";
+                document.getElementById("airline_logo").src="../assets/img/logo/logo_white.png";
+            } else {
+                document.getElementById("navigationbar").style.background = "none";
+                document.getElementById("airline_logo").src="../assets/img/logo/logo_white.png";
+            }
+                        }
+</script>  
+
+    <!-- COPY URL SCRIPT -->
+    <script>
+        const url = window.location.href;
+        document.getElementById("url").innerHTML = url;
+        console.log(url);
+    </script>
+
+    <!-- DESTINATION URL -->
+    <script>
+        window.addEventListener('load',(event) => {
+            var destination = "NewYork"; // Replace with your destination name
+          // Modify the URL by appending the destination name
+          var currentUrl = window.location.href;
+          var newUrl = currentUrl + "/" + destination;
+        })
+    </script>
+
+    <!-- SWIPER INTIALISE -->
+
+    <script> 
+        window.onload = function(){
+            var swiper1 = new Swiper("#video-swiper", {
+                slidesPerView: "auto",
+                centeredSlides: false,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: false,
+                },
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+            var swiper2 = new Swiper("#dates-histogram", {
+                slidesPerView: "auto",
+                centeredSlides: false,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        }
+    </script>
+    
+
+    <!-- WEATHER API -->
+        <!-- CONNECTION TO WEATHER THIRD PARTY API -->
+        <script src="api.openweathermap.org/data/2.5/forecast/daily?lat={41.902782}&lon={12.496366}&cnt={7}&appid={54f4ba28f67f2a1fce29086afb555fa1}"></script>
+
+    <!-- HOTELS API -->
+        <!-- CONNECTION TO BOOKING.COM THIRD PARTY API -->
+
+    <!-- TRANSLATE JS -->
+    <script src="translate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openai@0.30.0/dist/openai.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+    "destinationName": "Paris",
+    "destinationLowestPrice": "500$",
+    "destinationSubtitle": "Explore the City of Love and Culture",
+    "destinationDescription": "Immerse yourself in the enchanting beauty of Paris, where romance, art, and history intertwine. Stroll along the elegant boulevards, admire the iconic landmarks, and savor the exquisite cuisine that makes Paris a culinary capital. From the majestic Eiffel Tower to the world-renowned Louvre Museum, Paris offers a wealth of cultural treasures and unforgettable experiences.",
+    "destinationPicture": "linear-gradient(187.13deg, rgba(4, 92, 164, 0.533) -51.2%, rgba(19, 37, 46, 0.445) 87.96%), url('https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900')",
+    
+    "attraction1title": "Eiffel Tower",
+    "attraction1content": "An iconic symbol of Paris, the Eiffel Tower offers breathtaking views of the city from its observation decks and is a must-visit attraction for any traveler.",
+    "attraction1image":"https://www.travelandleisure.com/thmb/SPUPzO88ZXq6P4Sm4mC5Xuinoik=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eiffel-tower-paris-france-EIFFEL0217-6ccc3553e98946f18c893018d5b42bde.jpg",
+
+    "attraction2title": "Louvre Museum",
+    "attraction2content": "Home to thousands of artworks, including the famous Mona Lisa, the Louvre Museum is the world's largest art museum and a cultural treasure.",
+    "attraction2image":"https://media.architecturaldigest.com/photos/5900cc370638dd3b70018b33/1:1/w_2066,h_2066,c_limit/Secrets%20of%20Louvre%201.jpg",
+
+    "attraction3title": "Notre-Dame Cathedral",
+    "attraction3content": "A masterpiece of Gothic architecture, Notre-Dame Cathedral is a historic landmark known for its stunning stained glass windows and majestic bell towers.",
+    "attraction3image": "https://www.friendsofnotredamedeparis.org/wp-content/uploads/2022/03/Notre-Dame_facade-occidentale_parvis.jpeg",
+
+
+    "video1": "https://www.youtube.com/embed/GljTvdEDqJM",
+    "video2": "https://www.youtube.com/embed/lznP52OEpQk",
+    "video3": "https://www.youtube.com/embed/AW2kppo3rtI",
+    "video4": "https://www.youtube.com/embed/7SoBNPCXyoc",
+
+    
+    "destinationContentImage": "https://media.timeout.com/images/105983530/image.jpg",
+    "destinationLead": "Paris, the City of Love and Culture, captivates visitors with its timeless beauty and artistic ambiance. Whether you're wandering through the charming streets of Montmartre, sipping coffee at a sidewalk cafe, or exploring the world-class museums, Paris offers a rich tapestry of experiences. Indulge in delectable French cuisine, from croissants and baguettes to gourmet delicacies, and immerse yourself in the vibrant nightlife of this cosmopolitan city.",
+
+    "hotel": "Experience the epitome of elegance and luxury at our carefully selected hotels in Paris, offering impeccable service and a central location.",
+    "car": "Discover the city's hidden gems and iconic landmarks at your own pace with our reliable car rental services, providing convenience and flexibility.",
+    "event": "Throughout the year, Paris hosts a wide range of cultural events, including art exhibitions, music festivals, and fashion shows.",
+    
+    "month1label": "JAN",
+    "month2label": "FEB",
+    "month3label": "MAR",
+    "month4label": "APR",
+    "month5label": "MAY",
+    "month6label": "JUN",
+    "month7label": "JUL",
+    "month8label": "AUG",
+    "month9label": "SEP",
+    "month10label": "OCT",
+    "month11label": "NOV",
+    "month12label": "DEC",
+
+    "poi1title": "Champs-Élysées",
+"poi1description": "One of the world's most famous avenues, the Champs-Élysées is lined with luxury shops, cafes, and iconic landmarks such as the Arc de Triomphe.",
+"poi2title": "Versailles Palace",
+"poi2description": "Step back in time and explore the opulent halls and gardens of Versailles Palace, a symbol of French royalty and grandeur.",
+"poi3title": "Montmartre",
+"poi3description": "Experience the bohemian charm of Montmartre, known for its artistic heritage, picturesque streets, and the iconic Sacré-Cœur Basilica.",
+
+"food1title": "Croissants and Pastries",
+"food1description": "Indulge in flaky croissants, buttery pastries, and delicate macarons at the charming patisseries scattered throughout Paris.",
+"food2title": "French Cheese and Wine",
+"food2description": "Savor the rich flavors of French cheese paired with a glass of fine wine, immersing yourself in the country's gastronomic traditions.",
+"food3title": "Escargots and Foie Gras",
+"food3description": "Embark on a culinary adventure and try escargots (snails) and foie gras, iconic French delicacies renowned for their unique taste.",
+
+"event1title": "Bastille Day",
+"event1description": "Celebrate France's national holiday on July 14th with parades, fireworks, and festive events throughout Paris.",
+"event2title": "Nuit Blanche",
+"event2description": "Experience a night of art and culture during Nuit Blanche, when museums, galleries, and public spaces stay open all night for exhibitions and performances.",
+"event3title": "Fashion Week",
+"event3description": "Witness the latest trends and haute couture designs during Paris Fashion Week, a major event in the fashion industry.",
+
+
+"mainTitle": "Fly to ",
+"mainTitleSecond": " for less than ",
+"bestDeals": "Best deals",
+"from": "from",
+"top3": "The top three must-see in ",
+"makesure": "Make sure not to miss them",
+"videostitle":"Some videos about ",
+"videostitle2":"to inspire you",
+"allyouwant":"All you want to know about ",
+"weathertitle":"What is the weather like in ",
+"weathersub":"Weather forecast along the year. Powered by ",
+"travelguide":" Travel Guide",
+"travelsub": "Let us suggest you what to do, what to visit, where to eat.",
+"poititle": "Points of interest",
+"fd":"Food and drinks",
+"events":"Events",
+"help": "Anything we can help you with?",
+"helpsub":"Find below a few services to enjoy ",
+"discoverbtn":"discover more",
+"knowbtn":"know more"
+}
+

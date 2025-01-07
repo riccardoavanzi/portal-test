@@ -1,0 +1,162 @@
+<html>
+<body></body>
+<script>
+
+  // Put here the url of YOUR demo site
+  var url = "https://uat.digital.airline.amadeus.com/0e/ku-booking-ku";
+
+
+  // Search configuration
+  var from = "LHR";
+  var to = "DXB";
+  var dep = "2023-12-25";
+  var arr = "2023-12-28";
+  var returnDate = "";
+
+  var bootstrapConfig;
+
+  //BCM key
+  var bcmKey; // ="putyourBCMkeyHereAndUncomment";
+
+  // Add static configuration
+  var staticConfig = JSON.stringify([/*{
+    name: 'CalendarContConfig',
+    config: {calendarPresCustomKey: 'calendarPresCustom'},
+    library: '@refx/booking-components'
+  }*/]);
+
+ // var promoCode = "";
+  var promoCode = "";
+  var login = ""
+
+
+  var request = {
+    "search": {
+      "travelers": [
+        {
+          "passengerTypeCode": "ADT"
+        },
+		{
+          "passengerTypeCode": "ADT"
+        }
+      ],
+      "commercialFareFamilies": [
+        "ECONOMY",
+        "BUSINESS"
+      ],
+      "itineraries": [
+        {
+          "originLocationCode": from,
+          "destinationLocationCode": to,
+          "departureDateTime": dep
+        },
+		{
+          "originLocationCode": to,
+          "destinationLocationCode": from,
+          "departureDateTime": arr
+        }
+      ]
+    },
+    "portalFacts": [{"key":"corporateCodes", "value":"000001"}],
+    "pointOfSale": "FR"
+
+  }
+
+  if(!!bcmKey) {
+    request.bcmConfigKey = bcmKey;
+  }
+  if(!!staticConfig) {
+    request.staticConfig = btoa(staticConfig);
+  }
+  if (!!bootstrapConfig) {
+    request.bootstrapConfig = btoa(bootstrapConfig);
+  }
+  if(!!promoCode){
+    request.search.promotion = {"code":promoCode}
+  }
+
+  if(!!returnDate){
+    request.search.itineraries.push({
+      "originLocationCode": to,
+      "destinationLocationCode": from,
+      "departureDateTime": returnDate
+    })
+  }
+
+  if(!!login){
+    request.lightLogin = login
+  }
+
+
+  openWindowWithPost(url+"?lang=en-GB", request);
+
+
+  function openWindowWithPost(url, data) {
+    var form = document.createElement("form");
+    form.target = "_blank";
+    form.method = "POST";
+    form.action = url;
+    form.style.display = "none";
+
+    for (var key in data) {
+      var input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      if (typeof data[key] === "string" || typeof data[key] === "boolean" || typeof data[key] === "number") {
+        input.value = data[key];
+      } else {
+        input.value = JSON.stringify(data[key]);
+      }
+      form.appendChild(input);
+    }
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+  }
+
+  const data = {
+      from: from,
+      to: to,
+      dep: dep,
+      arr: arr,
+      returnDate: returnDate,
+      creationDate: new Date().toISOString().split("T")[0], // Add the creation date
+    };
+
+    // localStorage.setItem("data", data);
+
+    function createAndSaveJSONFile() {
+      const currentDate = new Date().toISOString().split("T")[0]; // Get the current date in YYYY-MM-DD format
+      const fileName = `${data.from}-${data.to}-${currentDate}.json`;
+      const folderPath = "carts"; // Relative path to the "carts" folder
+
+      // Create the JSON file
+      const jsonData = JSON.stringify(data, null, 2);
+
+      // Create a Blob containing the JSON data
+      const blob = new Blob([jsonData], { type: "application/json" });
+
+      // Create a URL for the Blob
+      const blobUrl = URL.createObjectURL(blob);
+
+      // Create an anchor element to trigger the download
+      const a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = fileName;
+      a.style.display = "none";
+
+      // Append the anchor element to the document and trigger the click event
+      document.body.appendChild(a);
+      a.click();
+
+      // Clean up by revoking the Blob URL
+      URL.revokeObjectURL(blobUrl);
+      document.body.removeChild(a);
+      //    
+    
+    }
+
+    createAndSaveJSONFile();
+    
+</script>
+</html>

@@ -1,0 +1,92 @@
+{
+    "destinationName": "Nairobi",
+    "destinationLowestPrice": "500$",
+    "destinationSubtitle": "Discover the Vibrant Capital of Kenya",
+    "destinationDescription": "Immerse yourself in the vibrant culture and natural beauty of Nairobi, the capital city of Kenya. Known as the gateway to East Africa, Nairobi offers a unique blend of urban attractions and stunning wildlife experiences. Explore the bustling markets, visit world-class museums, and embark on thrilling safaris in nearby national parks. From the iconic Maasai Mara Reserve to the David Sheldrick Wildlife Trust, Nairobi promises unforgettable adventures and a glimpse into the rich heritage of Kenya.",
+    "destinationPicture": "linear-gradient(187.13deg, rgba(4, 92, 164, 0.533) -51.2%, rgba(19, 37, 46, 0.445) 87.96%), url('https://images.unsplash.com/photo-1634882285491-3ae11d171cba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjI0NjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODY5MTYyODh8&ixlib=rb-4.0.3&q=80&w=1080')",
+
+    "attraction1title": "Maasai Mara Reserve",
+    "attraction1content": "Experience the awe-inspiring wildlife of Kenya at Maasai Mara Reserve. Witness the annual Great Migration, where millions of wildebeest and zebras traverse the vast savannah.",
+    "attraction1image":"https://images.unsplash.com/photo-1561109572-56854d12722f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjI0NjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODY5MTYyNzB8&ixlib=rb-4.0.3&q=80&w=1080",
+
+    "attraction2title": "David Sheldrick Wildlife Trust",
+    "attraction2content": "Get up close and personal with orphaned elephants and rhinos at the David Sheldrick Wildlife Trust. Learn about conservation efforts and support the rehabilitation of these magnificent creatures.",
+    "attraction2image":"https://images.unsplash.com/photo-1523291156648-f729ceff89b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjI0NjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODY5MTYxODZ8&ixlib=rb-4.0.3&q=80&w=1080",
+
+    "attraction3title": "Nairobi National Museum",
+    "attraction3content": "Discover Kenya's rich history and diverse culture at the Nairobi National Museum. Explore fascinating exhibits on archaeology, paleontology, art, and ethnography.",
+    "attraction3image": "https://images.unsplash.com/photo-1634882285491-3ae11d171cba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjI0NjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODY5MTYyODh8&ixlib=rb-4.0.3&q=80&w=1080",
+
+    "video1": "https://www.youtube.com/embed/xzpJAECZkc4",
+    "video2": "https://www.youtube.com/embed/4nmv6GqN60U",
+    "video3": "https://www.youtube.com/embed/9QNBqJ2XMa0",
+    "video4": "https://www.youtube.com/embed/LCntpRvATGo",
+
+    "destinationContentImage": "https://images.unsplash.com/photo-1523291156648-f729ceff89b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjI0NjZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODY5MTYxODZ8&ixlib=rb-4.0.3&q=80&w=1080",
+    "destinationLead": "Nairobi, the vibrant capital of Kenya, welcomes visitors with its dynamic atmosphere and natural wonders. Whether you're exploring the bustling city center, encountering wildlife in nearby reserves, or immersing yourself in traditional Maasai culture, Nairobi offers a captivating blend of adventure and cultural experiences. Sample authentic Kenyan cuisine, from hearty nyama choma (grilled meat) to flavorful ugali, and embrace the warm hospitality of the Kenyan people.",
+
+    "hotel": "Experience comfort and convenience at our handpicked hotels in Nairobi, offering exceptional service and easy access to the city's attractions.",
+    "car": "Embark on thrilling safari adventures and explore Nairobi's surroundings with our reliable car rental services, providing freedom and flexibility.",
+    "event": "Throughout the year, Nairobi hosts a variety of cultural events, including music festivals, art exhibitions, and traditional dances.",
+
+    "month1label": "JAN",
+    "month2label": "FEB",
+    "month3label": "MAR",
+    "month4label": "APR",
+    "month5label": "MAY",
+    "month6label": "JUN",
+    "month7label": "JUL",
+    "month8label": "AUG",
+    "month9label": "SEP",
+    "month10label": "OCT",
+    "month11label": "NOV",
+    "month12label": "DEC",
+
+    "poi1title": "Nairobi National Park",
+    "poi1description": "Embark on an unforgettable wildlife safari within Nairobi's boundaries at Nairobi National Park. Encounter lions, giraffes, zebras, and other iconic African species.",
+    "poi2title": "Kazuri Beads Women's Cooperative",
+    "poi2description": "Visit the Kazuri Beads Women's Cooperative and witness the traditional art of bead-making. Support local artisans by purchasing unique handmade jewelry.",
+    "poi3title": "Karura Forest",
+    "poi3description": "Escape the urban hustle and bustle at Karura Forest, a peaceful oasis in Nairobi. Enjoy walking trails, waterfalls, and picnicking spots.",
+
+    "food1title": "Nyama Choma",
+    "food1description": "Savor the succulent flavors of Nyama Choma, a traditional Kenyan dish of grilled meat served with side dishes like ugali (maize porridge) and kachumbari (tomato and onion salad).",
+    "food2title": "Pilau",
+    "food2description": "Delight in the aromatic and flavorful Pilau, a fragrant rice dish cooked with spices, meat (such as chicken or beef), and vegetables.",
+    "food3title": "Mandazi",
+    "food3description": "Indulge in Mandazi, sweet fried doughnuts often served with tea. This popular Kenyan snack is perfect for breakfast or as a tasty treat throughout the day.",
+
+    "event1title": "Nairobi Safari Walk",
+    "event1description": "Experience a unique wildlife encounter during the Nairobi Safari Walk, where you can observe various animal species up close and learn about conservation efforts.",
+    "event2title": "Lamu Cultural Festival",
+    "event2description": "Immerse yourself in the vibrant traditions of the Swahili culture at the Lamu Cultural Festival. Enjoy music, dance, dhow sailing, and traditional crafts.",
+    "event3title": "KICC International Jazz Festival",
+    "event3description": "Enjoy the smooth sounds of jazz at the KICC International Jazz Festival, featuring renowned local and international jazz artists in Nairobi's iconic Kenyatta International Convention Centre.",
+
+
+    "mainTitle": "Fly to ",
+    "mainTitleSecond": " for less than ",
+    "bestDeals": "Best deals",
+    "from": "from",
+    "top3": "The top three must-see in ",
+    "makesure": "Make sure not to miss them",
+    "videostitle":"Some videos about ",
+    "videostitle2":"to inspire you",
+    "allyouwant":"All you want to know about ",
+    "weathertitle":"What is the weather like in ",
+    "weathersub":"Weather forecast along the year. Powered by ",
+    "travelguide":" Travel Guide",
+    "travelsub": "Let us suggest you what to do, what to visit, where to eat.",
+    "poititle": "Points of interest",
+    "fd":"Food and drinks",
+    "events":"Events",
+    "help": "Anything we can help you with?",
+    "helpsub":"Find below a few services to enjoy ",
+    "discoverbtn":"discover more",
+    "knowbtn":"know more"
+
+
+
+}
+
+

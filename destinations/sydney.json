@@ -1,0 +1,92 @@
+{
+    "destinationName": "Sydney",
+    "destinationLowestPrice": "400$",
+    "destinationSubtitle": "Discover the Beauty and Charm of Australia's Harbor City",
+    "destinationDescription": "Immerse yourself in the mesmerizing beauty of Sydney, where stunning harbor views, iconic landmarks, and a laid-back atmosphere await. Explore the vibrant streets, soak up the sun on pristine beaches, and indulge in a diverse culinary scene that reflects the city's multicultural heritage.",
+    "destinationPicture": "linear-gradient(187.13deg, rgba(4, 92, 164, 0.533) -51.2%, rgba(19, 37, 46, 0.445) 87.96%), url('https://www.trafalgar.com/media/hdwhk1r4/sydneaustralia-bay-bridge-ge-1042487778-2600x1300px.png')",
+    
+    "attraction1title": "Sydney Opera House",
+    "attraction1content": "Architectural masterpiece and a UNESCO World Heritage site, offering a range of performing arts and breathtaking views of Sydney Harbor.",
+    "attraction1image":"https://upload.wikimedia.org/wikipedia/commons/c/cd/Sydneyoperahouse_at_night.jpg",
+
+    "attraction2title": "Bondi Beach",
+    "attraction2content": "Famous beach known for its golden sands, crystal-clear waters, and world-class surfing opportunities.",
+    "attraction2image":"https://cdn.getyourguide.com/img/location/60b35801efa01.jpeg/68.jpg",
+
+    "attraction3title": "The Rocks",
+    "attraction3content": "Historic neighborhood with charming cobbled streets, boutique shops, lively pubs, and fascinating colonial-era architecture.",
+    "attraction3image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/02/50/02/sydney-s-first-street.jpg?w=1200&h=-1&s=1",
+    
+    
+    "video1": "https://www.youtube.com/embed/WAcohyeayRc",
+    "video2": "https://www.youtube.com/embed/OrIDTJH2ZZM",
+    "video3": "https://www.youtube.com/embed/2QVwEWIKMI8",
+    "video4": "https://www.youtube.com/embed/BV6uz_exT50",
+    
+    "destinationContentImage": "https://www.trafalgar.com/media/hdwhk1r4/sydneaustralia-bay-bridge-ge-1042487778-2600x1300px.png",
+    "destinationLead": "Sydney, the captivating harbor city of Australia, beckons travelers with its unique blend of natural beauty and cosmopolitan charm. Whether you're exploring the iconic Sydney Opera House, relaxing on the sun-kissed beaches, or immersing yourself in the vibrant local culture, Sydney offers an unforgettable experience. The city's diverse culinary scene is a treat for food enthusiasts, offering a fusion of flavors from around the world. From fresh seafood to multicultural street food, Sydney's food scene is a gastronomic delight that will satisfy every palate.",
+
+    "hotel": "Experience unparalleled luxury and warm hospitality at our top-rated hotels in Sydney, where comfort meets sophistication.",
+    "car": "Discover the freedom to explore the stunning attractions of Sydney at your own pace with our premium car rental services, providing convenience and comfort.",
+    "event": "Throughout the year, Sydney hosts a myriad of vibrant events, ensuring there's something exciting happening for everyone.",
+
+
+    "month1label": "JAN",
+    "month2label": "FEB",
+    "month3label": "MAR",
+    "month4label": "APR",
+    "month5label": "MAY",
+    "month6label": "JUN",
+    "month7label": "JUL",
+    "month8label": "AUG",
+    "month9label": "SEP",
+    "month10label": "OCT",
+    "month11label": "NOV",
+    "month12label": "DEC",
+
+    "poi1title":"Sydney Harbour Bridge",
+    "poi1description":"Iconic steel arch bridge offering panoramic views of Sydney's harbor and the city skyline.",
+    "poi2title":"Taronga Zoo",
+    "poi2description":"Australia's leading zoo, home to a wide variety of native and exotic animals with stunning harbor views.",
+    "poi3title":"Royal Botanic Garden",
+    "poi3description":"A tranquil oasis in the heart of Sydney, featuring beautifully landscaped gardens and diverse plant species.",
+
+    "food1title":"Pancakes on the Rocks",
+    "food1description":"A beloved Sydney institution known for its delicious pancakes, served with a variety of sweet and savory toppings.",
+    "food2title":"Sydney Fish Market",
+    "food2description":"The largest seafood market in the Southern Hemisphere, offering a wide selection of fresh seafood and gourmet delights.",
+    "food3title":"The Grounds of Alexandria",
+    "food3description":"A trendy and vibrant dining destination, featuring a café, restaurant, bakery, and beautiful garden spaces.",
+
+    "event1title":"Vivid Sydney",
+    "event1description":"A spectacular light and music festival transforming Sydney into a mesmerizing wonderland of color and creativity.",
+    "event2title":"Sydney New Year's Eve",
+    "event2description":"Experience one of the world's most renowned New Year's Eve celebrations with dazzling fireworks over Sydney Harbour.",
+    "event3title":"Sculpture by the Sea",
+    "event3description":"An annual outdoor sculpture exhibition along the breathtaking coastal walk from Bondi Beach to Tamarama Beach.",
+
+
+    "mainTitle": "Fly to ",
+    "mainTitleSecond": " for less than ",
+    "bestDeals": "Best deals",
+    "from": "from",
+    "top3": "The top three must-see in ",
+    "makesure": "Make sure not to miss them",
+    "videostitle":"Some videos about ",
+    "videostitle2":"to inspire you",
+    "allyouwant":"All you want to know about ",
+    "weathertitle":"What is the weather like in ",
+    "weathersub":"Weather forecast along the year. Powered by ",
+    "travelguide":" Travel Guide",
+    "travelsub": "Let us suggest you what to do, what to visit, where to eat.",
+    "poititle": "Points of interest",
+    "fd":"Food and drinks",
+    "events":"Events",
+    "help": "Anything we can help you with?",
+    "helpsub":"Find below a few services to enjoy ",
+    "discoverbtn":"discover more",
+    "knowbtn":"know more"
+}
+
+
+

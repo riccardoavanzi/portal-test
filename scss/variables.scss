@@ -1,0 +1,96 @@
+// FONT-FAMILY
+// $ibm: 'IBM Plex Sans', sans-serif;
+// $nunito: 'Nunito Sans', sans-serif;
+// $montserrat: 'Montserrat', sans-serif;
+// $outfit: 'Outfit', sans-serif;
+// $fira: 'Fira Sans', sans-serif;
+$vibrant: "Host Grotesk", sans-serif;
+
+// FONT-SIZES
+$xsmall: .7rem;
+$small: .85em;
+$paragraph: 1em;
+$subtitle: 1.2em;
+$title: 1.5em;
+$big: 2em;
+$huge: 2.7em;
+
+// FONT WEIGHT
+$regular: 400;
+$bold: 600;
+
+// COLORS
+$white: #FFFFFF;
+$almost_white: #FCFCFC;
+$primary_color: #08ade9;
+$darker_primary_color: #0a1f95;
+$gray: #8a8a8a;
+$light-gray: #ece5e5c2;
+$tertiary_color: #5e7fea;
+$light-turquoise: #0068ae;
+$azure: #a8d1ec;
+$paragraph: #554a4a;
+
+// SHADOWS
+$card_shadow: 0px 4px 30px rgba(225, 225, 225, 0.507);
+$title_shadow: 0px 1px 10px rgba(27,28,28,0.48);
+
+// BORDERS
+$small_radius: 8px;
+$radius: 22px;
+$round: 100px;
+
+// GRADIENTS
+$gradient_1: linear-gradient(187.13deg, rgba(14, 11, 11, 0.568) -51.2%, rgba(37, 38, 53, 0.678) 87.96%);
+$primary_gradient: linear-gradient(135deg, #1391bf 20%, #0a1f95 80%);
+$secondary_gradient: linear-gradient(353.03deg, rgba(38, 38, 46, 0.6) 50%, rgba(11, 17, 125, 0.411) 153.56%);
+$white_gradient: linear-gradient(102.37deg, rgba(49, 50, 107, 0) 0%, rgb(255, 255, 255) 100%);
+
+$dark_gradient_1: linear-gradient(180deg, rgb(43, 99, 98) 0%, rgb(56, 155, 147) 100%);
+$dark_gradient_2: linear-gradient(187.13deg, rgba(71, 176, 190, 0.7) -51.2%, rgba(255, 0, 0, 0.7)87.96%);
+
+// SECTION BACKGROUNDS
+$aaas: url('https://images.unsplash.com/photo-1542212726642-cc55beb83da8?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+$corporate: url('https://ezytravellers.com/wp-content/uploads/2024/06/Ezytravellers-Vietnam-Airlines-Cabin-Crew.jpg');
+
+// DESTINATIONS
+$dest1: url('https://images.unsplash.com/photo-1570543922355-c64a19ab2bc7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+$dest2: url('https://images.unsplash.com/photo-1598970605070-a38a6ccd3a2d?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+$dest3: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1096&q=80');
+$dest4: url('https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+// ANCILLARY SERVICES
+$aaas1: url('https://images.unsplash.com/photo-1525770041010-2a1233dd8152?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+$aaas2: url('https://images.unsplash.com/photo-1558413203-528a11565bf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+$aaas3: url('https://images.unsplash.com/photo-1543360458-36fada9295c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+$aaas4: url('https://images.unsplash.com/photo-1627750673161-02af15c7c722?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+
+// TRAVEL INFO
+$info1: url('https://as2.ftcdn.net/v2/jpg/03/32/38/01/1000_F_332380168_tOgOpdcYIOsOZrRBeWUJIDV0B2Stq3eZ.jpg');
+$info2: url('https://as1.ftcdn.net/v2/jpg/01/91/20/84/1000_F_191208411_4ednDULHqE9v0KfufolAHfFAMI5CNIQI.jpg');
+$info3: url('https://images.unsplash.com/photo-1655722725332-9925c96dd627?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+$info4: url('https://www.mummytravels.com/wp-content/uploads/2015/08/child-alone-plane-girl-Depositphotos133162762s.jpg');
+$info5: url('https://www.redmanpowerchair.com/wp-content/themes/yootheme/cache/side-view-disabled-airline-passenger-being-transported-airplane-by-experienced-employee-23a4b09b.webp');
+$info6: url('https://res.klook.com/image/upload/q_85/c_fill,w_750/v1596030407/blog/z4bwzuh2i4m7xr6s5c1a.jpg');
+
+// ATTRACTIONS
+$att1: url('https://images.unsplash.com/photo-1596627116762-bb01a46c233b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1463&q=80');
+$att2: url('https://images.unsplash.com/photo-1613677257528-055bf61d812d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+$att3: url('https://images.unsplash.com/photo-1603683319350-4c3fa44208ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80');
+
+// PARTNERS
+$hotel: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+$car_rental: url('https://images.unsplash.com/photo-1622210642960-0f6a2cdbdc9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+$events: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+
+$hotel_partner: url('../assets/img/partners/hotel_partner.png');
+$car_partner: url('../assets/img/partners/car_partner.png');
+$events_partner: url('../assets/img/partners/events_partner.png');
+
+// CONTENT PAGE
+
+$content_img1: url('https://cabincrewhq.com/wp-content/uploads/2022/10/Asiana-Airlines-female-flight-attendant.jpg');
+$content_img2: url('https://cabincrewhq.com/asiana-airlines-flight-attendant-requirements/attachment/asiana-airlines-female-cabin-crew-and-pilot/');
+$help_1: url('https://betteraviationjobs.com/storage/2019/07/Philippine-Airlines-Cabin-Crew.jpg');
+$help_2: url('https://www.luxair.lu/sites/default/files/styles/paragraph_2_column/public/content/202203/extra%20space%20%281%29_1.jpg?itok=6I8H2sGz');
+$help_3: url('https://www.concept-phones.com/wp-content/uploads/2021/05/smartphones-used-for-writing-long-texts.jpg');

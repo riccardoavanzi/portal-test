@@ -1,0 +1,523 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuwait Airways - My Trips - Premium flights to Kwait and to the world</title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- IMPORT ICONS CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="showLogin()">
+    <!-- LOGIN MODAL -->
+    <div class="modal" tabindex="-1" id="login-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Login to your Hainan account</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                  <input type="email" class="name" id="input" placeholder="your email here">
+                  <input type="password" class="pwd" placeholder="your password">
+              </form>
+              <div class="links">
+                <a href="#">Forgot the credentials?</a>
+                <a href="#">Already have an account?</a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="btn btn-primary" onclick="showLogin()" onclick="showComponent()" data-bs-dismiss="modal">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- DATEPICKER MODAL -->
+    <div class="modal" tabindex="-2" id="datePickerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- MOBILE MENU -->
+    <div class="modal" id="mobilemenu">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <ul>
+                                    <li class="nav-item dropdown">
+                                        <a href="index.html" id="book" class="nav-link dropdown-toggle">Book</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" id="manage" class="nav-link">Manage</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="destination.html" id="destinations" class="nav-link">Destinations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="content.html" id="help" class="nav-link">Help</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a href="#" id="loyalty" class="nav-link">Loyalty</a>
+                                    </li> -->
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-primary">
+                                    <i class="bx bxs-user-circle"></i>
+                                    <div>Fortune Wings</div>
+                                </button>
+                            </div>
+                        </div>
+    </div>
+
+    <!-- HEADER CONTAINER -->
+    <div class="container-fluid header_container" id="trips_header">
+        <!-- HEADER CONTENT -->
+        <div class="container header_content">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg nav_container fixed-top" id="navigationbar">
+                <!-- NAVBAR CONTENT -->
+                <div class="container">
+                    <!-- LOGO -->
+                        <a href="index.html" class="navbar-brand">
+                            <img src="assets/img/logo/logo.png" alt="logo" id="airline_logo">
+                        </a>
+
+                        <!-- BUTTON TO TRIGGER HAMBURGER MENU -->
+                        <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#mobilemenu"
+                        >
+                            <span>
+                                <i class='bx bx-menu-alt-right'></i>
+                            </span>
+                        </button>
+
+                    <!-- MENU LIST DESKTOP -->
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto menu">
+                            <li class="nav-item">
+                                <a href="index.thml" id="book" class="nav-link">Flights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" id="manage" class="nav-link">My booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="destinations.html" id="destinations" class="nav-link">Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="content.html" id="help" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item" id="mytrips">
+                                <a href="content.html" id="help" class="nav-link">My trips</a>
+                            </li>
+                            <li class="nav-item" id="avatar">
+                                <div id="avatarcontainer">
+                                    <div id="avatarpic"></div>
+                                </div>
+                            </li>
+                            <li class="nav-item" style="display: none;" id="login-li">
+                                <button class="btn btn-primary" id="login-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                                    login
+                                </button>
+                            </li>
+                        </ul>
+                    </div>                   
+                    <!-- END OF DESKTOP MENU LIST -->
+                </div>
+                
+            </nav>
+            <!-- HERO -->
+            <div class="container hero_container" id="trips_hero">
+                <div class="card col-9 hero_content">
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <h1 class="card-title">Your trips</h1>
+                            <p class="card-text">Here you can find all your searches, wish lists and past bookings.</p>
+                        </div>
+                        <!-- <button class="btn btn-secondary btn-lg">Book now</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF HEADER CONTENT -->
+    </div>
+    <div class="container-fluid">
+        <!-- BOOK AGAIN -->
+        <div class="container-fluid" id="bookAgain">
+            <div class="section_title" style="margin-top: 10rem;">
+                <h2>Here you can find all your searches, wish lists and past bookings.</h2>
+                <h5>Complete your bookings in only few clicks.</h5>
+            </div>
+            <div class="bookagaintabs2" style="background: none;">
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="flight4" data-bs-toggle="pill" data-bs-target="#flight4content" type="button" role="tab" aria-controls="pills-home" aria-selected="true">My trips</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="flight5" data-bs-toggle="pill" data-bs-target="#flight5content" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Past bookings</button>
+                    </li>
+                    <!-- <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="flight3" data-bs-toggle="pill" data-bs-target="#flight3content" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Beijing - Singapore</button>
+                    </li> -->
+                  </ul>
+                  <div class="tab-content d-flex justify-content-center" id="pills-tabContent">
+                    
+                    <!-- FLIGHT 1 -->
+                    <div class="tab-pane fade show active" id="flight4content" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div>
+                            <h5 style="margin-top: 2rem;">My trip to London</h5>
+                        </div>
+                        <div class="flight-container d-flex flex-wrap">
+                            <div class="img" id="flight4img">
+                            </div>
+                            <div class="flight-content">
+                                <div class="route">
+                                    <div class="d-flex flex-column">
+                                        <h5>London</h5>
+                                        <span class="text-muted small">LHR</span>           
+                                    </div>
+                                    <i class='bx bx-transfer-alt'></i>
+                                    <div class="d-flex flex-column">
+                                        <h5>Dubäi</h5>
+                                        <span class="text-muted small">DXB</span> 
+                                    </div>
+                                </div>
+                                <div class="pax">
+                                    <h6>2 pax</h6>
+                                </div>
+                                <div class="trip">
+                                    <p>Roundtrip</p>
+                                </div>
+                                <button class="btn btn-primary" id="launchSearch">Book now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="flight5content" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <!-- FLIGHT 2 -->
+                        <div class="tab-pane fade show active" id="flight5content" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="flight-container d-flex flex-wrap">
+                                <div class="img" id="flight5img"></div>
+                                <div class="flight-content">
+                                    <div class="route">
+                                        <div class="d-flex flex-column">
+                                            <h5>London</h5>
+                                            <span class="text-muted small">LHR</span> 
+                                        </div>
+                                        <i class='bx bx-transfer-alt'></i>
+                                        <div class="d-flex flex-column">
+                                            <h5>Dubäi</h5>
+                                            <span class="text-muted small">DXB</span> 
+                                        </div>
+                                    </div>
+                                    <div class="pax">
+                                        <h6>1 pax</h6>
+                                    </div>
+                                    <div class="trip">
+                                        <p>Roundtrip</p>
+                                    </div>
+                                    <button class="btn btn-primary ">Book again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- RECENT SEARCHES -->
+            <div class="container-fluid" id="recent_searches">
+                <div class="section_title">
+                    <h2>Your recent searches</h2>
+                </div>
+                <div class="cards d-flex justify-content-center">
+                    <!-- CARD1 -->
+                    <div class="card" id="card1">
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title" class="recent_destination">Bangkok</h5>
+                                <h6 class="card-subtitle mb-2" class="recent_dates">22 OCT 23</h6>
+                                <h6 class="card-subtitle mb-2" class="recent_pax">2 passengers</h6>
+                            </div>
+                        </div>
+                        <button class="btn-secondary continue_booking">Continue booking <i class='bx bx-chevron-right'></i></button>
+                    </div>
+                    <!-- CARD2 -->
+                    <div class="card" id="card2">
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title" class="recent_destination">Singapore</h5>
+                                <h6 class="card-subtitle mb-2" class="recent_dates">22 OCT 23</h6>
+                                <h6 class="card-subtitle mb-2" class="recent_pax">2 passengers</h6>
+                            </div>
+                        </div>
+                        <button class="btn-secondary continue_booking">Continue booking <i class='bx bx-chevron-right'></i></button>
+                    </div>
+                    <!-- CARD3 -->
+                    <div class="card" id="card3">
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title" class="recent_destination">Rome</h5>
+                                <h6 class="card-subtitle mb-2" class="recent_dates">22 OCT 23</h6>
+                                <h6 class="card-subtitle mb-2" class="recent_pax">2 passengers</h6>
+                            </div>
+                        </div>
+                        <button class="btn-secondary continue_booking">Continue booking <i class='bx bx-chevron-right'></i></button>
+                    </div>
+                    <!-- CARD4 -->
+                    <div class="card" id="card4">
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title" class="recent_destination">Sydney</h5>
+                                <h6 class="card-subtitle mb-2" class="recent_dates">22 OCT 23</h6>
+                                <h6 class="card-subtitle mb-2" class="recent_pax">2 passengers</h6>
+                            </div>
+                        </div>
+                        <button class="btn-secondary continue_booking">Continue booking <i class='bx bx-chevron-right'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- MOP - APPS -->
+    <section class="container-fluid d-flex" id="mop-apps">
+        <div class="d-flex flex-column justify-content-center w-100">
+            <div class="section_content">
+                <h4>Pay as you like, and download our apps</h4>
+            </div>
+            <div class="d-flex justify-content-between images-container flex-wrap">
+                <div class="payment d-flex align-items-center my-4 flex-wrap">
+                    <img src="/assets/img/cards/visa.png" alt="" class="mx-2">
+                    <img src="/assets/img/cards/mc.png" alt="" class="mx-2">
+                    <img src="/assets/img/cards/sofort.png" alt="" class="mx-2">
+                    <img src="/assets/img/cards/alipay.png" alt="" class="mx-2">
+                    <img src="/assets/img/cards/wc.png" alt="" class="mx-2">
+                </div>
+                <div class="apps flex-wrap">
+                    <img src="./assets/img/cards/google-play-badge.png" width="120" alt="">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" width="100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="container-fluid d-flex" id="newsletter">
+        <div class="p-5 mb-4 rounded-3 nl-container">
+            <form class="d-flex align-items-center">
+                <div class="mx-4">
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of what's new and exciting from us.</p>
+                </div>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+            </form>
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="container">
+            <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Our network</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+        
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Manage</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+        
+                <div class="col-6 col-md-2 mb-3">
+                <h5>Plan your trip</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Loyalty</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Book</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>About us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2023 Hainan Airlines. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-twitter' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxs-envelope' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-messenger' ></i></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><i class='bx bx-headphone' ></i></a></li>
+                </ul>
+            </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- SCROLLING NAV FUNCTION -->
+    <script>
+        window.onscroll = function() {bgFunction()};
+        function bgFunction(){
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navigationbar").style.background = "#131721";
+                document.getElementById("navigationbar").classList.add("fixed-top");
+                document.getElementById("navigationbar").style.padding = "20px 0px 15px 0px";
+                document.getElementById("airline_logo").src="../assets/img/logo/logo_white.png";
+            } else {
+                document.getElementById("navigationbar").style.background = "none";
+                document.getElementById("navigationbar").classList.remove("fixed-top");
+                document.getElementById("airline_logo").src="../assets/img/logo/logo.png";
+            }
+                        }
+</script>
+
+    <!-- SHOW AVATAR -->
+    <script>
+        function showLogin(){
+            document.getElementById('avatar').style.display = "flex";
+            let name = localStorage.getItem("username");
+            if(name === "Ammar"){
+                let avatarContainer = document.getElementById('avatarcontainer');
+                document.getElementById("avatarpic").style.background = "url('https://previews.123rf.com/images/zurijeta/zurijeta1501/zurijeta150100547/35163177-arabic-man-on-blue.jpg')";
+                let ammar = document.createElement("div");
+                ammar.innerHTML = "Ammar";
+                avatarContainer.appendChild(ammar);
+
+                let logoutBtn = document.createElement("button");
+                logoutBtn.setAttribute("id", "logout");
+                ammar.appendChild(logoutBtn);
+                logoutBtn.style.display = "none";
+
+                ammar.onmouseover = function() {
+                logoutBtn.style.display = "flex";
+                logoutBtn.innerHTML = "logout";
+                logoutBtn.classList.add("btn","btn-primary");
+                logoutBtn.onclick = logout;
+                };
+
+                ammar.onmouseout = function(){
+                    logoutBtn.style.display = "none";
+                }
+                avatarContainer.appendChild(ammar);
+                document.getElementById("bookAgain").style.display = "flex";
+            }
+            else{
+                let avatarContainer = document.getElementById('avatarcontainer');
+                document.getElementById("avatarpic").style.background = "url('https://kosmea.com.au/wp-content/uploads/2021/03/mature-asian-lady.jpeg')";
+                let jane = document.createElement("div");
+                jane.innerHTML = "Jane";
+                avatarContainer.appendChild(jane);
+
+                let logoutBtn = document.createElement("button");
+                logoutBtn.setAttribute("id", "logout");
+                jane.appendChild(logoutBtn);
+                logoutBtn.style.display = "none";
+
+                jane.onmouseover = function() {
+                logoutBtn.style.display = "flex";
+                logoutBtn.innerHTML = "logout";
+                logoutBtn.classList.add("btn","btn-primary");
+                logoutBtn.onclick = logout;
+                };
+
+                jane.onmouseout = function(){
+                    logoutBtn.style.display = "none";
+                }
+
+                avatarContainer.appendChild(jane);
+                document.getElementById("ancillaries_shortcut").style.background = "url('https://www.philippineairlines.com/-/media/images/new-pal-mm-web-images/homepage/home-page_hero-banner/flight-update/flight-update-1440-x-440.png?h=880&w=2880&hash=52E2CE9CBF119E6EF48C268B5DE2F331')";
+                var aaastitle = document.getElementById("aaas-title");
+                var aaasSubtitle = document.getElementById("aaas-subtitle");
+                aaastitle.innerHTML = "Jane, what about some comfort for you and the family?";
+                aaasSubtitle.innerHTML = "Check our family travel services, and let us take care of you and your dears all along the journey.";
+                aaastitle.style.color = "#FFFFFF";
+                aaasSubtitle.style.color = "#FFFFFF";
+            }
+            document.getElementById('login-btn').style.display = "none";
+        }
+    </script>
+    <script>
+        function logout(){
+            window.location.href="../index.html";
+        }
+    </script>
+    <!-- RUN REFX FLOW -->
+    <script>
+        document.getElementById("launchSearch").addEventListener("click", function (){
+             var htmlFilePath = "/refxLauncher.html";
+             window.open(htmlFilePath, "_blank");
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1104 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Philippine Airlines - Cheap flights to South Korea and the world - Destinations</title>
+        <!-- FAVICON -->
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- IMPORT ICONS CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="css/vibrant.css">
+        <!-- SWIPER JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- AI ALPACA JS -->
+        <script src="./alpaca.js"></script>
+        
+    </head>
+<body>
+    <!-- LOGIN MODAL -->
+    <div class="modal" tabindex="-1" id="login-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Login to your account</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                  <input type="email" class="name" id="input" placeholder="your email here">
+                  <input type="password" class="pwd" placeholder="your password">
+              </form>
+              <div class="links">
+                <a href="#">Forgot the credentials?</a>
+                <a href="#">Already have an account?</a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <button type="button" class="btn btn-primary" onclick="showLogin()" onclick="showComponent()" data-bs-dismiss="modal">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- MOBILE MENU -->
+    <div class="modal" id="mobilemenu">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <ul>
+                                    <li class="nav-item dropdown">
+                                        <a href="index.html" id="book" class="nav-link dropdown-toggle">Book</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" id="manage" class="nav-link">Manage</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="destination.html" id="destinations" class="nav-link">Destinations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="content.html" id="help" class="nav-link">Help</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a href="#" id="loyalty" class="nav-link">Loyalty</a>
+                                    </li> -->
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-primary">
+                                    <i class="bx bxs-user-circle"></i>
+                                    <div>Mabuhay Miles</div>
+                                </button>
+                            </div>
+                        </div>
+    </div>
+
+    <!-- HEADER CONTAINER -->
+    <div class="container-fluid header_container" id="destinations-container">
+        <!-- HEADER CONTENT -->
+        <div class="container header_content">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg nav_container fixed-top" id="navigationbar">
+                <!-- NAVBAR CONTENT -->
+                <div class="container">
+                    <!-- LOGO -->
+                        <a href="index.html" class="navbar-brand">
+                            <img src="assets/img/logo/logo.png" alt="logo" id="airline_logo">
+                        </a>
+
+                        <!-- BUTTON TO TRIGGER HAMBURGER MENU -->
+                        <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#mobilemenu"
+                        >
+                            <span>
+                                <i class='bx bx-menu-alt-right'></i>
+                            </span>
+                        </button>
+
+                    <!-- MENU LIST DESKTOP -->
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto menu">
+                          <li class="nav-item">
+                              <a href="index.thml" id="book" class="nav-link">Book</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="#" id="manage" class="nav-link">Manage</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="destinations.html" id="destinations" class="nav-link">Explore</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="content.html" id="help" class="nav-link">Support</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="content.html" id="help" class="nav-link">Mabuhay Miles</a>
+                          </li>
+                          <li class="nav-item" id="mytrips">
+                              <a href="trips.html" id="help" class="nav-link">My trips</a>
+                          </li>
+                          <li class="nav-item" id="lang">
+                              <div class="dropdown" id="language-dropdown-container">
+                                  <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class='bx bx-world'></i>
+                                  </button>
+                                    <ul class="dropdown-menu" id="langList" aria-labelledby="languageDropdown">
+                                      <li>
+                                          <a class="dropdown-item" href="index.html"><span class="fi fi-gb"></span>english</a>
+                                          <button class="dropdown-item" id="fr" onclick="translateFR()"><span class="fi fi-fr"></span> french</button>
+                                          <button class="dropdown-item" id="de" onclick="translateDE()"><span class="fi fi-de"> </span> german</button>
+                                          <button class="dropdown-item" id="zh" onclick="translateZH()"><span class="fi fi-cn"> </span> chinese</button>
+                                          <a class="dropdown-item" href="indexKR.html"><span class="fi fi-kr"></span>한국어</a>
+                                          <a class="dropdown-item" href="indexRTL.html" id="RTL"><span class="fi fi-ae"></span> اللغة العربية</a>
+                                      </li>
+                                    </ul>
+                                    <!-- <button id="translateButton" class="btn btn-primary">Translate Page</button> -->
+                              </div>
+                          </li>
+                          <li class="nav-item" id="search-magnet">
+                              <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#search-modal">
+                                  <i class='bx bx-search'></i>
+                              </button>
+                          </li>
+                          <li class="nav-item" id="avatar">
+                              <div id="avatarcontainer">
+                                  <div id="avatarpic"></div>
+                              </div>
+                          </li>
+                          <li class="nav-item">
+                              <button class="btn btn-primary" id="login-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                                  login
+                              </button>
+                          </li>
+                            <!-- <li>
+                                <button type="button" class="btn btn-primary">
+                                        <i class="bx bxs-user-circle"></i>
+                                    <div>Mabuhay Miles</div>
+                                </button>
+                            </li> -->
+                        </ul>
+                    </div>                   
+                    <!-- END OF DESKTOP MENU LIST -->
+                </div>
+                
+            </nav>
+            <!-- HERO -->
+            <div class="container hero_container">
+                <div class="card col-9 hero_content">
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <h1 class="card-title">Discover, enjoy, repeat.</h1>
+                            <p class="card-text">The world is waiting for you! Check our destinations and plan your next adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF HEADER CONTENT -->
+    </div>
+    <!-- MUTLIPURPOSE_COMPONENT DESKTOP -->
+    <div class="container-fluid multipurpose_component_desktop" id="search-destination">
+      <!-- <div class="tabs">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Book a flight</button>
+              </li>
+              <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-mmb" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Manage booking</button>
+              </li>
+              <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-ssci" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Check-in</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-status" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Flight status</button>
+              </li>
+          </ul>
+      </div> -->
+      <div class="mlt_container">
+          <div class="mlt_content">
+              <div class="tab-content" id="pills-tabContent">
+                  <!-- SEARCH -->
+                  <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <div class="search_container" id="search">
+                          <ul class="criteria">
+                              <li>
+                                  <input type="text" placeholder="Where to go?" id="search">
+                              </li>
+                              <!-- <li>
+                                  <input type="text" placeholder="Destination" id="destination">
+                              </li>
+                              <li>
+                                  <button id="cal" type="button">Add dates</button>
+                              </li>
+                              <li>
+                                  <button id="pax" type="button">Add passengers</button>
+                              </li> -->
+                          </ul>
+                          <button type="submit" class="submit">
+                              <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                          </button>
+                      </div>
+                  </div>
+                  <!-- MANAGE MY BOOKING -->
+                  <div class="tab-pane fade" id="pills-mmb" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <div class="mmb_container" id="mmb">
+                          <ul class="criteria">
+                              <li>
+                                  <input type="text" placeholder="Last name">
+                              </li>
+                              <li>
+                                  <a href="#" data-bs-toggle="tooltip" title="Booking reference is a 6 alphanumeric code" customClass="tooltips"><i class='bx bxs-info-circle' style='color:#8a8a8a'></i></a>
+                                  <input type="text" placeholder="Booking reference">
+                              </li>
+                          </ul>
+                          <button type="submit" class="submit">
+                              <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                          </button>
+                      </div>
+                  </div>
+                  <!-- CHECK-IN -->
+                  <div class="tab-pane fade" id="pills-ssci" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <div class="ssci_container" id="ssci">
+                          <ul class="criteria">
+                              <li>
+                                  <input type="text" placeholder="Last name">
+                              </li>
+                              <div class="dropdown">
+                                  <button class="btn dropdown-toggle" id="options" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Booking reference
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Ticket number</a></li>
+                                  <li><a class="dropdown-item" href="#">Frequent Flyer number</a></li>
+                                  </ul>
+                              </div>
+                          </ul>
+                          <button type="submit" class="submit">
+                              <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                          </button>
+                      </div>
+                  </div>
+                  <!-- FLIGHT-STATUS -->
+                  <div class="tab-pane fade" id="pills-status" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <div class="status_container" id="status">
+                          <ul class="criteria">
+                              <li>
+                                  <input type="text" placeholder="Flight number">
+                              </li>
+                          </ul>
+                          <button type="submit" class="submit">
+                              <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- MULTIPURPOSE COMPONENT MOBILE -->
+      <div class="container-fluid" id="multipurpose_component_mobile">
+          <!-- FORM -->
+          <div class="tab-content form_mobile" id="pills-tabContent">
+              <!-- SEARCH MOBILE FORM -->
+              <div aria-labelledby="pills-search-tab" class="tab-pane fade show active" id="pills-search-mobile" role="tabpanel">
+                  <div class="form">
+                      <!-- DEPARTURE BUTTON -->
+                      <div>
+                          <label for="mobile_departure_btn">FROM</label>
+                          <button id="mobile_departure_btn" onclick="">
+                              <i class='bx bx-map' ></i>
+                              Departure
+                          </button>
+                      </div>
+                      <!-- DESTINATION BUTTON -->
+                      <div>
+                          <label for="mobile_destination_btn">TO</label>
+                          <button id="mobile_destination_btn">
+                              <i class='bx bx-world' ></i>
+                              Destination
+                          </button>
+                      </div>
+                      <!-- DATES BUTTON -->
+                      <div>
+                          <label for="mobile_dates_btn">WHEN</label>
+                          <button id="mobile_dates_btn">
+                              <i class='bx bx-calendar' ></i>
+                              Add dates
+                          </button>
+                      </div>
+                      <!-- PAX BUTTON -->
+                      <div>
+                          <label for="mobile_pax_btn">WHO</label>
+                          <button id="mobile_pax_btn">
+                              <i class='bx bxs-user-circle' ></i>
+                              Add passengers
+                          </button>
+                      </div>
+                  </div>
+              <!-- SEARCH BTN -->
+              <button class="btn btn-primary search">
+                  SEARCH
+              </button>
+              </div>
+              <!-- MMB MOBILE FORM -->
+              <div aria-labelledby="pills-mmb-tab" class="tab-pane fade" id="pills-mmb-mobile" role="tabpanel">
+                  <form action="submit" class="mmb_form">
+                      <label for="last_name">LAST NAME</label>
+                      <input type="text" id="last_name" placeholder="Your Last name">
+                      <label for="booking_reference">BOOKING REFERENCE</label>
+                      <input type="text" maxlength="6" id="booking_reference" placeholder="Your booking reference">
+                  </form>
+                  <button type="submit" class="btn btn-primary btn_mmb">
+                      RETRIEVE BOOKING
+                  </button>
+              </div>
+              <!-- CHECK-IN MOBILE FORM -->
+              <div aria-labelledby="pills-ssci-tab" class="tab-pane fade" id="pills-ssci-mobile" role="tabpanel">
+                  <form action="submit">
+                      <label for="booking-reference-mobile">IDENTIFICATION</label>
+                      <input type="text" placeholder="Booking reference" id="booking-reference-mobile">
+                      <label for="lastname-mobile">LAST NAME</label>
+                      <input type="text" placeholder="Last name" id="lastname-mobile">
+                      <button class="btn btn-primary" id="mobile-btn-ssci">CHECK-IN</button>
+                  </form>
+              </div>
+              <!-- STATUS MOBILE FORM -->
+              <div aria-labelledby="pills-status-tab" class="tab-pane fade" id="pills-status-mobile" role="tabpanel">
+                  <form action="submit">
+                      <label for="flight_number_mobile">FLIGHT NUMBER</label>
+                      <input type="text" placeholder="Flight number" id="flight_number_mobile">
+                      <button class="btn btn-primary" id="mobile-btn-status">SEARCH</button>
+                  </form>
+              </div>
+          </div>
+          <!-- TABS -->
+           <ul class="nav nav-pills mobile-pills-tabs mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                  <button aria-controls="pills-search" aria-selected="true" class="nav-link" data-bs-target="#pills-search-mobile" data-bs-toggle="pill" id="pills-search-mobile-tab" role="tab" type="button">
+                      <i class='bx bx-world' ></i>
+                      <p>Search</p>
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button aria-controls="pills-mmb" aria-selected="true" class="nav-link" data-bs-target="#pills-mmb-mobile" data-bs-toggle="pill" id="pills-mmb-mobile-tab" role="tab" type="button">
+                      <i class='bx bxs-book-content' ></i>
+                      <p>Manage</p>
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button aria-controls="pills-ssci" aria-selected="false" class="nav-link" data-bs-target="#pills-ssci-mobile" data-bs-toggle="pill" id="pills-ssci-mobile-tab" role="tab" type="button">
+                      <i class='bx bxs-calendar-check' ></i>
+                      <p>Check-in</p>
+                  </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <button aria-controls="pills-status" aria-selected="false" class="nav-link" data-bs-target="#pills-status-mobile" data-bs-toggle="pill" id="pills-status-mobile-tab" role="tab" type="button">
+                      <i class='bx bxs-plane-take-off' ></i>
+                      <p>Status</p>
+                  </button>
+              </li>
+          </ul>
+      </div>
+
+      <!-- CONTINENTS -->
+      <div class="continent-container">
+        <!-- EUROPE -->
+        <div class="continent-content" id="europe">
+            <!-- EUROPE -->
+            <div class="section_title">
+                <h2>Europe</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/paris.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                      <h5 class="card-title">Paris (CDG)</h5>
+                      <p class="card-text">City of lights with iconic landmarks and romantic ambiance.</p>
+                      <a href="#" class="btn btn-primary">$1,600</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/barcelona.jpg" class="card-img-top" alt="Barcelona">
+                    <div class="card-body">
+                      <h5 class="card-title">Barcelona (BCN)</h5>
+                      <p class="card-text">Vibrant city with unique architecture and lively beaches.</p>
+                      <a href="#" class="btn btn-primary">$1,800</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/rome.jpg" class="card-img-top" alt="Rome">
+                    <div class="card-body">
+                      <h5 class="card-title">Rome (FCO)</h5>
+                      <p class="card-text">Eternal city with ancient ruins and artistic masterpieces.</p>
+                      <a href="#" class="btn btn-primary">$1,700</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/lisbon.jpg" class="card-img-top" alt="Lisbon">
+                    <div class="card-body">
+                      <h5 class="card-title">Lisbon (LIS)</h5>
+                      <p class="card-text">Cosmopolitan city with rich history and vibrant nightlife.</p>
+                      <a href="destination.html" class="btn btn-primary">$500</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <!-- NORTH AMERICA -->
+        <div class="continent-content" id="usa">
+            <div class="section_title">
+                <h2>North America</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/nyc.jpg" class="card-img-top" alt="New York City">
+                    <div class="card-body">
+                      <h5 class="card-title">New York City (JFK)</h5>
+                      <p class="card-text">Iconic city with cultural diversity and famous landmarks.</p>
+                      <a href="#" class="btn btn-primary">$1,200</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/lax.jpg" class="card-img-top" alt="Los Angeles">
+                    <div class="card-body">
+                      <h5 class="card-title">Los Angeles (LAX)</h5>
+                      <p class="card-text">City of entertainment with sunny beaches and Hollywood glamour.</p>
+                      <a href="#" class="btn btn-primary">$1,400</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/chicago.jpg" class="card-img-top" alt="Chicago">
+                    <div class="card-body">
+                      <h5 class="card-title">Chicago (ORD)</h5>
+                      <p class="card-text">Architectural gem with deep-dish pizza and vibrant art scene.</p>
+                      <a href="#" class="btn btn-primary">$1,300</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/sfo.jpg" class="card-img-top" alt="San Francisco">
+                    <div class="card-body">
+                        <h5 class="card-title">San Francisco (SFO)</h5>
+                        <p class="card-text">Foggy city known for Golden Gate Bridge and tech innovation.</p>
+                        <a href="#" class="btn btn-primary">$1,500</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/toronto.jpg" class="card-img-top" alt="Toronto">
+                    <div class="card-body">
+                      <h5 class="card-title">Toronto (YYZ)</h5>
+                      <p class="card-text">Diverse metropolis with iconic CN Tower and cultural festivals.</p>
+                      <a href="#" class="btn btn-primary">$1,600</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/vancouver.jpg" class="card-img-top" alt="Vancouver">
+                    <div class="card-body">
+                      <h5 class="card-title">Vancouver (YVR)</h5>
+                      <p class="card-text">Stunning city surrounded by mountains and ocean.</p>
+                      <a href="#" class="btn btn-primary">$1,700</a>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+        <!-- CENTRAL AMERICA -->
+        <div class="continent-content" id="midamerica">
+            <div class="section_title">
+                <h2>Central America</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/cancun.jpg" class="card-img-top" alt="Cancún">
+                    <div class="card-body">
+                      <h5 class="card-title">Cancún (CUN)</h5>
+                      <p class="card-text">Tropical paradise with beautiful beaches and vibrant nightlife.</p>
+                      <a href="#" class="btn btn-primary">$1,800</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/sjo.jpg" class="card-img-top" alt="San José">
+                    <div class="card-body">
+                      <h5 class="card-title">San José (SJO)</h5>
+                      <p class="card-text">Lively capital city with lush greenery and charming markets.</p>
+                      <a href="#" class="btn btn-primary">$2,200</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/panama.jpg" class="card-img-top" alt="Panama City">
+                    <div class="card-body">
+                      <h5 class="card-title">Panama City (PTY)</h5>
+                      <p class="card-text">Gateway to the canal with modern skyscrapers and historic sites.</p>
+                      <a href="#" class="btn btn-primary">$2,100</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/belize.jpg" class="card-img-top" alt="Belize City">
+                    <div class="card-body">
+                      <h5 class="card-title">Belize City (BZE)</h5>
+                      <p class="card-text">Diverse marine life and ancient Mayan ruins.</p>
+                      <a href="#" class="btn btn-primary">$2,300</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/guatemala.jpg" class="card-img-top" alt="Guatemala City">
+                    <div class="card-body">
+                      <h5 class="card-title">Guatemala City (GUA)</h5>
+                      <p class="card-text">Historic city with Mayan heritage and volcanic landscapes.</p>
+                      <a href="#" class="btn btn-primary">$2,300</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/havana.jpg" class="card-img-top" alt="Havana">
+                    <div class="card-body">
+                      <h5 class="card-title">Havana (HAV)</h5>
+                      <p class="card-text">Colorful city with vintage cars and lively salsa music.</p>
+                      <a href="#" class="btn btn-primary">$2,400</a>
+                    </div>
+                  </div>                  
+            </div>
+        </div>
+        <!-- LATIN AMERICA -->
+        <div class="continent-content" id="latin">
+          <div class="section_title">
+              <h2>Latin America</h2>
+          </div>
+          <div class="cards d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+              <div class="card-body">
+                <h5 class="card-title">Rio de Janeiro (GIG)</h5>
+                <p class="card-text">Iconic city with beaches, carnival, and Christ the Redeemer.</p>
+                <a href="#" class="btn btn-primary">$2,000</a>
+              </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/buenos.jpg" class="card-img-top" alt="Buenos Aires">
+              <div class="card-body">
+                <h5 class="card-title">Buenos Aires (EZE)</h5>
+                <p class="card-text">Cosmopolitan city with tango, steakhouses, and European flair.</p>
+                <a href="#" class="btn btn-primary">$2,100</a>
+              </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/machu.jpg" class="card-img-top" alt="Machu Picchu">
+              <div class="card-body">
+                <h5 class="card-title">Machu Picchu (CUZ)</h5>
+                <p class="card-text">Ancient Incan citadel with breathtaking mountain views.</p>
+                <a href="#" class="btn btn-primary">$2,300</a>
+              </div>
+            </div>
+            
+            <!-- Add two more destinations below -->
+            
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/sao.jpg" class="card-img-top" alt="São Paulo">
+              <div class="card-body">
+                <h5 class="card-title">São Paulo (GRU)</h5>
+                <p class="card-text">Vibrant metropolis with cultural diversity and lively arts scene.</p>
+                <a href="#" class="btn btn-primary">$2,200</a>
+              </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/cartagena.jpg" class="card-img-top" alt="Cartagena">
+              <div class="card-body">
+                <h5 class="card-title">Cartagena (CTG)</h5>
+                <p class="card-text">Colonial city with colorful streets and Caribbean charm.</p>
+                <a href="#" class="btn btn-primary">$2,400</a>
+              </div>
+            </div>
+                      
+          </div>
+        </div>
+        <!-- AFRICA -->
+        <div class="continent-content" id="africa">
+            <div class="section_title">
+                <h2>Africa</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/marra.jpg" class="card-img-top" alt="Marrakech">
+                    <div class="card-body">
+                      <h5 class="card-title">Marrakech (RAK)</h5>
+                      <p class="card-text">Exotic city with bustling markets and vibrant colors.</p>
+                      <a href="#" class="btn btn-primary">$1,800</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/cairo.jpg" class="card-img-top" alt="Cairo">
+                    <div class="card-body">
+                      <h5 class="card-title">Cairo (CAI)</h5>
+                      <p class="card-text">Ancient city with pyramids and rich history.</p>
+                      <a href="#" class="btn btn-primary">$1,900</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/lagos.jpg" class="card-img-top" alt="Lagos">
+                    <div class="card-body">
+                      <h5 class="card-title">Lagos (LOS)</h5>
+                      <p class="card-text">Vibrant city with bustling markets and lively music.</p>
+                      <a href="#" class="btn btn-primary">$2,100</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/dakar.jpg" class="card-img-top" alt="Dakar">
+                    <div class="card-body">
+                      <h5 class="card-title">Dakar (DKR)</h5>
+                      <p class="card-text">Colorful city with lively markets and rich history.</p>
+                      <a href="#" class="btn btn-primary">$2,200</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/nairobi.jpg" class="card-img-top" alt="Nairobi">
+                    <div class="card-body">
+                      <h5 class="card-title">Nairobi (NBO)</h5>
+                      <p class="card-text">African hub with wildlife safari and cultural heritage.</p>
+                      <a href="#" class="btn btn-primary">$2,000</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/addis.jpg" class="card-img-top" alt="Addis Ababa">
+                    <div class="card-body">
+                      <h5 class="card-title">Addis Ababa (ADD)</h5>
+                      <p class="card-text">Capital city with unique culture and delicious cuisine.</p>
+                      <a href="#" class="btn btn-primary">$2,300</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/cape.jpg" class="card-img-top" alt="Cape Town">
+                    <div class="card-body">
+                      <h5 class="card-title">Cape Town (CPT)</h5>
+                      <p class="card-text">Stunning city with Table Mountain and diverse landscapes.</p>
+                      <a href="#" class="btn btn-primary">$2,400</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/joh.jpg" class="card-img-top" alt="Johannesburg">
+                    <div class="card-body">
+                      <h5 class="card-title">Johannesburg (JNB)</h5>
+                      <p class="card-text">Cosmopolitan city with cultural diversity and historic sites.</p>
+                      <a href="#" class="btn btn-primary">$2,100</a>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+        <!-- MEA -->
+        <div class="continent-content" id="mea">
+          <div class="section_title">
+              <h2>Middle East</h2>
+          </div>
+          <div class="cards d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/dubai.jpg" class="card-img-top" alt="Dubai">
+              <div class="card-body">
+                <h5 class="card-title">Dubai (DXB)</h5>
+                <p class="card-text">Extravagant city with modern architecture and desert adventures.</p>
+                <a href="#" class="btn btn-primary">$2,000</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/jer.jpg" class="card-img-top" alt="Jerusalem">
+              <div class="card-body">
+                <h5 class="card-title">Jerusalem (JRS)</h5>
+                <p class="card-text">Sacred city with historical sites and religious significance.</p>
+                <a href="#" class="btn btn-primary">$2,100</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/ist.jpg" class="card-img-top" alt="Istanbul">
+              <div class="card-body">
+                <h5 class="card-title">Istanbul (IST)</h5>
+                <p class="card-text">Crossroads of Europe and Asia with rich heritage and bazaars.</p>
+                <a href="#" class="btn btn-primary">$2,200</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/petra.jpg" class="card-img-top" alt="Petra">
+              <div class="card-body">
+                <h5 class="card-title">Petra (PZM)</h5>
+                <p class="card-text">Ancient archaeological city with stunning rock-carved structures.</p>
+                <a href="#" class="btn btn-primary">$2,300</a>
+              </div>
+            </div>
+                        
+          </div>
+        </div>
+        <!-- ASIA -->
+        <div class="continent-content" id="asia">
+          <div class="section_title">
+            <h2>Asia</h2>
+        </div>
+          <div class="cards d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/beijing.jpg" class="card-img-top" alt="Beijing">
+              <div class="card-body">
+                <h5 class="card-title">Beijing (PEK)</h5>
+                <p class="card-text">Historic city with the Great Wall and Forbidden City.</p>
+                <a href="#" class="btn btn-primary">$1,800</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/shang.jpg" class="card-img-top" alt="Shanghai">
+              <div class="card-body">
+                <h5 class="card-title">Shanghai (PVG)</h5>
+                <p class="card-text">Modern metropolis with skyscrapers and shopping.</p>
+                <a href="#" class="btn btn-primary">$1,900</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/hong.jpg" class="card-img-top" alt="Hong Kong">
+              <div class="card-body">
+                <h5 class="card-title">Hong Kong (HKG)</h5>
+                <p class="card-text">Vibrant city with stunning harbor and dim sum.</p>
+                <a href="#" class="btn btn-primary">$2,100</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/moscow.jpg" class="card-img-top" alt="Moscow">
+              <div class="card-body">
+                <h5 class="card-title">Moscow (SVO)</h5>
+                <p class="card-text">Capital city with iconic Red Square and Kremlin.</p>
+                <a href="#" class="btn btn-primary">$2,000</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/stp.jpg" class="card-img-top" alt="St. Petersburg">
+              <div class="card-body">
+                <h5 class="card-title">St. Petersburg (LED)</h5>
+                <p class="card-text">Cultural hub with beautiful palaces and canals.</p>
+                <a href="#" class="btn btn-primary">$2,200</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/tok.jpg" class="card-img-top" alt="Tokyo">
+              <div class="card-body">
+                <h5 class="card-title">Tokyo (HND)</h5>
+                <p class="card-text">Futuristic city with sushi and cherry blossoms.</p>
+                <a href="#" class="btn btn-primary">$2,100</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/kyoto.jpg" class="card-img-top" alt="Kyoto">
+              <div class="card-body">
+                <h5 class="card-title">Kyoto (KIX)</h5>
+                <p class="card-text">Ancient city with traditional temples and gardens.</p>
+                <a href="#" class="btn btn-primary">$2,300</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/seoul.jpg" class="card-img-top" alt="Seoul">
+              <div class="card-body">
+                <h5 class="card-title">Seoul (ICN)</h5>
+                <p class="card-text">Dynamic city with K-pop and palaces.</p>
+                <a href="#" class="btn btn-primary">$2,400</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./assets/img/cities/ulan.jpg" class="card-img-top" alt="Ulaanbaatar">
+              <div class="card-body">
+                <h5 class="card-title">Ulaanbaatar (ULN)</h5>
+                <p class="card-text">Gateway to the Mongolian steppes and nomadic culture.</p>
+                <a href="#" class="btn btn-primary">$2,300</a>
+              </div>
+            </div>                                                                        
+          </div>
+        </div>
+        <!-- SOUTH ASIA -->
+        <div class="continent-content" id="southasia">
+            <div class="section_title">
+              <h2>South Asia</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/agra.jpg" class="card-img-top" alt="Taj Mahal">
+                <div class="card-body">
+                  <h5 class="card-title">Agra, India (AGR)</h5>
+                  <p class="card-text">Home to the iconic Taj Mahal and rich Mughal heritage.</p>
+                  <a href="#" class="btn btn-primary">$1,900</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/bangkok.jpg" class="card-img-top" alt="Bangkok">
+                <div class="card-body">
+                  <h5 class="card-title">Bangkok, Thailand (BKK)</h5>
+                  <p class="card-text">Bustling capital with vibrant street life and ornate temples.</p>
+                  <a href="#" class="btn btn-primary">$2,100</a>
+                </div>
+              </div>
+              
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/manila.jpg" class="card-img-top" alt="Manila">
+                <div class="card-body">
+                  <h5 class="card-title">Manila, Philippines (MNL)</h5>
+                  <p class="card-text">Urban hub with Spanish colonial architecture and lively markets.</p>
+                  <a href="#" class="btn btn-primary">$2,200</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/kuala.jpg" class="card-img-top" alt="Kuala Lumpur">
+                <div class="card-body">
+                  <h5 class="card-title">Kuala Lumpur, Malaysia (KUL)</h5>
+                  <p class="card-text">Modern city with iconic Petronas Towers and diverse cuisine.</p>
+                  <a href="#" class="btn btn-primary">$2,300</a>
+                </div>
+              </div>
+              
+              <!-- Add five more destinations below -->
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/jaipur.jpg" class="card-img-top" alt="Jaipur">
+                <div class="card-body">
+                  <h5 class="card-title">Jaipur, India (JAI)</h5>
+                  <p class="card-text">Pink city with majestic palaces and vibrant bazaars.</p>
+                  <a href="#" class="btn btn-primary">$2,100</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/chiang.jpg" class="card-img-top" alt="Chiang Mai">
+                <div class="card-body">
+                  <h5 class="card-title">Chiang Mai, Thailand (CNX)</h5>
+                  <p class="card-text">Ancient city with temples and beautiful mountain landscapes.</p>
+                  <a href="#" class="btn btn-primary">$2,300</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/luang.jpg" class="card-img-top" alt="Luang Prabang">
+                <div class="card-body">
+                  <h5 class="card-title">Luang Prabang, Laos (LPQ)</h5>
+                  <p class="card-text">Historic town with French colonial architecture and Mekong River.</p>
+                  <a href="#" class="btn btn-primary">$2,200</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/boracay.jpg" class="card-img-top" alt="Boracay">
+                <div class="card-body">
+                  <h5 class="card-title">Boracay, Philippines (MPH)</h5>
+                  <p class="card-text">Beautiful island with white sandy beaches and crystal-clear waters.</p>
+                  <a href="#" class="btn btn-primary">$2,400</a>
+                </div>
+              </div>
+              
+              <div class="card" style="width: 18rem;">
+                <img src="./assets/img/cities/penang.jpg" class="card-img-top" alt="Penang">
+                <div class="card-body">
+                  <h5 class="card-title">Penang, Malaysia (PEN)</h5>
+                  <p class="card-text">Cultural melting pot with heritage buildings and street art.</p>
+                  <a href="#" class="btn btn-primary">$2,300</a>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        <!-- OCEANIA -->
+        <div class="continent-content" id="oceania">
+            <div class="section_title">
+                <h2>Oceania</h2>
+            </div>
+            <div class="cards d-flex justify-content-center">
+                <!-- SYDNEY -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/syd.jpg" class="card-img-top" alt="Sydney">
+                    <div class="card-body">
+                    <h5 class="card-title">Sydney (SYD)</h5>
+                    <p class="card-text">Lively city with iconic landmarks and beautiful harbor.</p>
+                    <a href="#" class="btn btn-primary">from $1,800</a>
+                    </div>
+                </div>
+                <!-- AUCKLAND -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/auck.jpg" class="card-img-top" alt="Auckland">
+                    <div class="card-body">
+                    <h5 class="card-title">Auckland (AKL)</h5>
+                    <p class="card-text">Picturesque city surrounded by nature and Maori culture.</p>
+                    <a href="#" class="btn btn-primary">from $2,000</a>
+                    </div>
+                </div>
+                <!-- MELBOURNE -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/melb.jpg" class="card-img-top" alt="Melbourne">
+                    <div class="card-body">
+                    <h5 class="card-title">Melbourne (MEL)</h5>
+                    <p class="card-text">Artistic city known for coffee culture and vibrant street art.</p>
+                    <a href="#" class="btn btn-primary">from $1,900</a>
+                    </div>
+                </div>
+                <!-- QUEENSTOWN -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/cities/queen.jpg" class="card-img-top" alt="Queenstown">
+                    <div class="card-body">
+                    <h5 class="card-title">Queenstown (ZQN)</h5>
+                    <p class="card-text">Adventure paradise with stunning lakes and mountain views.</p>
+                    <a href="#" class="btn btn-primary">from $2,300</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+        <!-- FOOTER -->
+        <section class="footer">
+            <div class="container">
+                <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                    </div>
+            
+                    <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                    </div>
+            
+                    <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                    </div>
+            
+                    <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                  <div>
+                  <img src="/assets/img/logo/logo.png" alt="">
+                  <p>© 2024 Philippine Airlines. All rights reserved.</p>
+                  </div>
+                  <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-twitter' ></i></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxs-envelope' ></i></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><i class='bx bxl-messenger' ></i></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><i class='bx bx-headphone' ></i></a></li>
+                  </ul>
+              </div>
+              </footer>
+            </div>
+        </section>
+
+    <!-- ======== LIBRARIES IMPORT -->
+    <!-- POPPER TOOLTIPS -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- SCROLLING NAV FUNCTION -->
+    <script>
+            window.onscroll = function() {bgFunction()};
+            function bgFunction(){
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("navigationbar").style.background = "#252523";
+                    document.getElementById("navigationbar").style.padding = "20px 0px 15px 0px";
+                    document.getElementById("airline_logo").src="../assets/img/logo/logo_white.png";
+                } else {
+                    document.getElementById("navigationbar").style.background = "none";
+                    document.getElementById("airline_logo").src="../assets/img/logo/logo_white.png";
+                }
+                            }
+    </script>
+
+    <!-- SHOW AVATAR -->
+    <script>
+        function showLogin(){
+            document.getElementById('avatar').style.display = "flex";
+            let inputValue = document.getElementById("input").value;
+            if(inputValue === "ryan@gmail.com"){
+                let avatarContainer = document.getElementById('avatarcontainer');
+                document.getElementById("avatarpic").style.background = "url('https://www.themodestman.com/wp-content/uploads/2020/01/Swooping-Fringe.jpg')";
+                document.getElementById('loyalty').style.display = "flex";
+                let ryan = document.createElement("div");
+                ryan.innerHTML = "Ryan";
+
+                let logoutBtn = document.createElement("button");
+                logoutBtn.setAttribute("id", "logout");
+                ryan.appendChild(logoutBtn);
+                logoutBtn.style.display = "none";
+
+                ryan.onmouseover = function() {
+                logoutBtn.style.display = "flex";
+                logoutBtn.innerHTML = "logout";
+                logoutBtn.classList.add("btn","btn-primary");
+                logoutBtn.onclick = logout;
+                };
+
+                ryan.onmouseout = function(){
+                    logoutBtn.style.display = "none";
+                }
+                avatarContainer.appendChild(ryan);
+                document.getElementById("bookAgain").style.display = "flex";
+            }
+            else{
+                let avatarContainer = document.getElementById('avatarcontainer');
+                document.getElementById("avatarpic").style.background = "url('https://kosmea.com.au/wp-content/uploads/2021/03/mature-asian-lady.jpeg')";
+                document.getElementById('inspiration').style.display = "flex";
+                let jane = document.createElement("div");
+                jane.innerHTML = "Jane";
+
+                let logoutBtn = document.createElement("button");
+                logoutBtn.setAttribute("id", "logout");
+                jane.appendChild(logoutBtn);
+                logoutBtn.style.display = "none";
+
+                jane.onmouseover = function() {
+                logoutBtn.style.display = "flex";
+                logoutBtn.innerHTML = "logout";
+                logoutBtn.classList.add("btn","btn-primary");
+                logoutBtn.onclick = logout;
+                };
+
+                jane.onmouseout = function(){
+                    logoutBtn.style.display = "none";
+                }
+
+                avatarContainer.appendChild(jane);
+                document.getElementById("ancillaries_shortcut").style.background = "url('https://www.philippineairlines.com/-/media/images/new-pal-mm-web-images/homepage/home-page_hero-banner/flight-update/flight-update-1440-x-440.png?h=880&w=2880&hash=52E2CE9CBF119E6EF48C268B5DE2F331')";
+                var aaastitle = document.getElementById("aaas-title");
+                var aaasSubtitle = document.getElementById("aaas-subtitle");
+                aaastitle.innerHTML = "Jane, what about some comfort for you and the family?";
+                aaasSubtitle.innerHTML = "Check our family travel services, and let us take care of you and your dears all along the journey.";
+                aaastitle.style.color = "#FFFFFF";
+                aaasSubtitle.style.color = "#FFFFFF";
+            }
+            document.getElementById('login-btn').style.display = "none";
+        }
+    </script>
+    <script>
+        function logout(){
+            location.reload();
+        }
+    </script>
+    <script src="/planetary.js"></script>
+
+</body>
+</html>

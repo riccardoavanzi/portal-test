@@ -1,0 +1,223 @@
+{
+    "BookingAndReservations": [
+      {
+        "Question": "How do I book a flight online on your website?",
+        "Answer": "To book a flight online, visit our website, select the 'Book a Flight' option, enter your departure and destination cities, choose your travel dates, and follow the prompts to select your preferred flight and complete the booking process."
+      },
+      {
+        "Question": "Can I make changes to my flight reservation online, and if so, how?",
+        "Answer": "Yes, you can make changes to your flight reservation online by logging into your account on our website, navigating to the 'Manage Booking' section, and following the instructions to modify your reservation details."
+      },
+      {
+        "Question": "What is the process for booking a multi-city itinerary?",
+        "Answer": "For a multi-city itinerary, select the 'Multi-City' option on our booking page. Enter the cities and travel dates for each segment of your journey, and proceed with selecting your flights and completing the booking as directed."
+      },
+      {
+        "Question": "Are there any discounts or promotions available for online bookings?",
+        "Answer": "Yes, we often offer discounts and promotions for online bookings. Check our 'Deals' or 'Promotions' section on the website for the latest offers and exclusive discounts available for online reservations."
+      },
+      {
+        "Question": "Can I reserve seats for my flight during the booking process?",
+        "Answer": "Certainly! You can reserve seats during the booking process. Once you've selected your flights, you'll be prompted to choose your seats. Follow the instructions to select and confirm your preferred seating arrangement."
+      }
+    ],
+    "CheckInProcess": [
+      {
+        "Question": "How do I check in for my flight online, and when can I do it?",
+        "Answer": "Online check-in can be done on our website. Log in to your account, navigate to the 'Check-In' section, enter your booking details, and follow the prompts to complete the online check-in process. Online check-in is typically available 24 hours before the scheduled departure time."
+      },
+      {
+        "Question": "What are the options for mobile check-in?",
+        "Answer": "We offer mobile check-in through our official mobile app. Download the app, log in to your account, and follow the mobile check-in instructions. You can access your mobile boarding pass and other travel information through the app."
+      },
+      {
+        "Question": "Is there a deadline for checking in before my flight departure?",
+        "Answer": "The deadline for check-in varies, but it's generally recommended to complete the process at least 45 minutes to 1 hour before domestic flights and 1.5 to 2 hours before international flights. Check the specific deadline for your flight on our website or contact our customer service for assistance."
+      },
+      {
+        "Question": "Can I print my boarding pass at home, or do I need to pick it up at the airport?",
+        "Answer": "You can print your boarding pass at home after completing online check-in. Alternatively, you can use the mobile boarding pass available on our app. If you encounter any issues, our airport kiosks and customer service desks can assist you in obtaining a printed boarding pass."
+      },
+      {
+        "Question": "What should I do if I encounter issues during the online check-in process?",
+        "Answer": "If you experience any issues during online check-in, please contact our customer support for assistance. Our team will guide you through the process or provide alternative solutions to ensure a smooth check-in experience."
+      }
+    ],
+    "BaggageInformation": [
+      {
+        "Question": "What is the baggage allowance for my flight?",
+        "Answer": "Baggage allowances vary depending on your ticket type and destination. Refer to our 'Baggage' section on the website or your booking confirmation for detailed information about the allowed number, size, and weight of bags for your specific flight."
+      },
+      {
+        "Question": "How can I purchase additional baggage allowance?",
+        "Answer": "You can purchase additional baggage allowance during the booking process on our website or by logging into your account and modifying your booking in the 'Manage Booking' section. Additional baggage fees apply, and the pricing details can be found on our website."
+      },
+      {
+        "Question": "Are there restrictions on the size and weight of carry-on luggage?",
+        "Answer": "Yes, there are restrictions on the size and weight of carry-on luggage. Check our 'Baggage' section for specific dimensions and weight limits for carry-on items. Ensure your carry-on meets these requirements to avoid any inconvenience during boarding."
+      },
+      {
+        "Question": "What should I do if my checked baggage is delayed or lost?",
+        "Answer": "In the rare event of delayed or lost baggage, please contact our baggage services at the airport or report the issue through our website. Our team will assist you in locating your baggage and provide compensation for essential items if necessary."
+      },
+      {
+        "Question": "Can I bring sports equipment or special items on board?",
+        "Answer": "Yes, you can bring sports equipment or special items on board, but specific rules and fees may apply. Refer to our 'Special Items' or 'Sports Equipment' section on the website for guidelines and information on how to transport such items safely."
+      }
+    ],
+    "FlightStatusAndSchedules": [
+      {
+        "Question": "How can I check the status of my upcoming flight?",
+        "Answer": "You can check the status of your upcoming flight on our website by entering your flight details in the 'Flight Status' or 'Manage Booking' section. Additionally, you can sign up for flight status notifications to receive updates via email or SMS."
+      },
+      {
+        "Question": "Are there any changes to the flight schedule due to weather or other factors?",
+        "Answer": "Flight schedules may be subject to changes due to various factors, including weather conditions. Check our website for real-time updates on any schedule changes. If your flight is affected, we will make every effort to notify you in advance through the contact information provided during booking."
+      },
+      {
+        "Question": "Can I sign up for notifications about flight delays or cancellations?",
+        "Answer": "Yes, you can sign up for flight status notifications through your account on our website. Select your preferred notification method (email or SMS), and we will keep you informed about any delays, cancellations, or other important updates related to your flight."
+      },
+      {
+        "Question": "What should I do if I miss my connecting flight?",
+        "Answer": "If you miss your connecting flight, please contact our customer support or visit the nearest customer service desk at the airport immediately. Our team will assist you in rebooking on the next available flight and provide information on any necessary accommodations."
+      },
+      {
+        "Question": "How far in advance can I view the flight schedule for future dates?",
+        "Answer": "You can view the flight schedule for future dates on our website up to 11 months in advance. Use the 'Flight Schedule' or 'Book a Flight' section to plan your travel and explore available flights for your desired dates."
+      }
+    ],
+    "TravelDocumentation": [
+        {
+            "Question": "What travel documents do I need for international travel?",
+            "Answer": "For international travel, you typically need a valid passport, and depending on your destination, a visa. Check the entry requirements for the specific country you are visiting on our website or consult with the respective embassy or consulate."
+          },
+          {
+            "Question": "Can I use an electronic boarding pass for international flights?",
+            "Answer": "Yes, you can use an electronic boarding pass for international flights. After completing online check-in, you can either print the boarding pass or use the mobile boarding pass available on our app for a paperless travel experience."
+          },
+          {
+            "Question": "What is the procedure for obtaining a refund if I am denied boarding due to documentation issues?",
+            "Answer": "If you are denied boarding due to documentation issues, please contact our customer support for assistance. Depending on the circumstances, you may be eligible for a refund or rebooking. Ensure that your travel documents are in order to avoid such situations."
+          },
+          {
+            "Question": "Are there any specific entry requirements for the destination country?",
+            "Answer": "Yes, each country may have specific entry requirements, such as visa regulations, health declarations, or COVID-19 testing. Visit our 'Travel Information' or 'Destination Guide' section on the website to find detailed information about entry requirements for your destination."
+          },
+          {
+            "Question": "Can I check in online if I have a visa or other travel restrictions?",
+            "Answer": "Yes, you can check in online even if you have a visa or travel restrictions. However, it's essential to ensure that you meet all entry requirements for your destination. If you have specific concerns, contact our customer support for guidance before your journey."
+          }
+        ],
+        "FrequentFlyerPrograms": [
+          {
+            "Question": "How do I join the airline's loyalty program?",
+            "Answer": "To join our loyalty program, visit our website and look for the 'Frequent Flyer' or 'Loyalty Program' section. Follow the instructions to create an account and start earning miles and enjoying exclusive benefits."
+          },
+          {
+            "Question": "What are the benefits of being a frequent flyer?",
+            "Answer": "As a frequent flyer, you can enjoy benefits such as priority boarding, lounge access, extra baggage allowance, and the ability to redeem miles for free flights or upgrades. Explore the 'Frequent Flyer' section on our website for a detailed overview of program benefits."
+          },
+          {
+            "Question": "How can I redeem miles for flights or upgrades?",
+            "Answer": "To redeem miles for flights or upgrades, log in to your frequent flyer account on our website. Navigate to the 'Redeem Miles' or 'Award Travel' section and follow the prompts to select your desired flight or upgrade. Review the available options and complete the redemption process."
+          },
+          {
+            "Question": "Are there any restrictions on using frequent flyer miles?",
+            "Answer": "Certain restrictions may apply when using frequent flyer miles, such as blackout dates or limited availability. Check the terms and conditions on our website or contact our frequent flyer customer service for detailed information on using and redeeming your miles."
+          },
+          {
+            "Question": "How can I track my mileage balance and recent transactions?",
+            "Answer": "You can track your mileage balance and recent transactions by logging into your frequent flyer account on our website. The account dashboard will display your current mileage balance, recent activities, and any upcoming benefits or promotions."
+          }
+        ],
+        "SpecialAssistance": [
+          {
+            "Question": "How can I request special assistance for passengers with disabilities?",
+            "Answer": "Passengers with disabilities can request special assistance during the booking process or by contacting our special assistance team. Visit the 'Special Assistance' or 'Accessibility' section on our website for information on the services available and how to request assistance."
+          },
+          {
+            "Question": "What are the policies for traveling with infants or pets?",
+            "Answer": "For information on traveling with infants or pets, check our 'Traveling with Infants' or 'Pet Travel' section on the website. You'll find details on age restrictions, required documentation, and any fees associated with bringing infants or pets on board."
+          },
+          {
+            "Question": "Is there assistance available for elderly passengers?",
+            "Answer": "Yes, we provide assistance for elderly passengers. Elderly passengers can request wheelchair assistance, priority boarding, and other services to ensure a comfortable journey. Contact our customer support or specify your needs during the booking process for assistance."
+          },
+          {
+            "Question": "What should I do if I require special assistance during the flight?",
+            "Answer": "If you require special assistance during the flight, inform our cabin crew upon boarding, and they will assist you accordingly. Our crew is trained to provide support for various needs, ensuring a safe and comfortable travel experience."
+          },
+          {
+            "Question": "Are there additional services for passengers with medical conditions?",
+            "Answer": "Passengers with medical conditions can request additional services by contacting our special assistance team. Inform us of your specific needs, and we will work to accommodate your requirements, ensuring a smooth and safe journey."
+          }
+        ],
+        "RefundsAndCancellations": [
+          {
+            "Question": "What is the refund policy for cancellations?",
+            "Answer": "Our refund policy for cancellations may vary depending on the ticket type and the timing of the cancellation. Review the 'Refund Policy' section on our website or check the terms and conditions of your ticket for detailed information on eligibility and refund processes."
+          },
+          {
+            "Question": "How can I cancel or change my flight?",
+            "Answer": "You can cancel or change your flight by logging into your account on our website and navigating to the 'Manage Booking' section. Follow the instructions to modify or cancel your reservation, and review any applicable fees or conditions associated with the changes."
+          },
+          {
+            "Question": "What happens if my flight is canceled by the airline?",
+            "Answer": "If your flight is canceled by the airline, we will notify you as soon as possible. You will be provided with options for rebooking on the next available flight, receiving a refund, or arranging alternative travel plans. Check our website or contact customer support for further assistance."
+          },
+          {
+            "Question": "Are there any fees for canceling or changing a flight?",
+            "Answer": "Fees for canceling or changing a flight depend on the ticket type and the timing of the changes. Refer to the 'Fees and Charges' section on our website or review the terms and conditions of your ticket for detailed information on applicable fees."
+          },
+          {
+            "Question": "Can I purchase travel insurance to protect against cancellations?",
+            "Answer": "Yes, we offer travel insurance options that can provide coverage for cancellations, trip interruptions, and other unforeseen circumstances. Explore the 'Travel Insurance' section during the booking process or contact our customer support for information on available insurance plans."
+          }
+        ],
+        "InFlightServices": [
+            {
+                "Question": "What amenities are available on board?",
+                "Answer": "Our flights offer a variety of amenities, including in-flight entertainment with movies and music, complimentary meals or snacks depending on the flight duration, and a selection of beverages. Details of specific amenities are provided on our website and may vary by flight."
+              },
+              {
+                "Question": "Can I pre-order meals or special dietary options?",
+                "Answer": "Yes, you can pre-order meals or request special dietary options during the booking process. Navigate to the 'Manage Booking' section on our website, select your reservation, and follow the prompts to specify your meal preferences or dietary restrictions."
+              },
+              {
+                "Question": "Is there Wi-Fi on the flight, and how can I access it?",
+                "Answer": "Yes, Wi-Fi is available on select flights. To access Wi-Fi, connect to the in-flight network and follow the instructions provided on the onboard connectivity portal. Wi-Fi availability may be limited based on the aircraft and route, so check our website for details before your flight."
+              },
+              {
+                "Question": "What entertainment options are available during the flight?",
+                "Answer": "Our in-flight entertainment includes a selection of movies, TV shows, music, and more. Seat-back screens or personal devices can be used to access the entertainment system. Specific options may vary, so check the details on our website or in the onboard entertainment guide."
+              },
+              {
+                "Question": "Are there power outlets or USB ports available on the plane?",
+                "Answer": "Many of our aircraft are equipped with power outlets or USB ports to charge electronic devices. Check the seat features on our website or contact our customer support for information on the availability of power outlets or USB ports on your specific flight."
+              }
+            ],
+            "ContactInformation": [
+              {
+                "Question": "What are the customer service contact details?",
+                "Answer": "You can reach our customer service team by calling the customer support hotline at [insert phone number]. Additionally, you can find alternative contact methods, such as email or live chat, on the 'Contact Us' page of our website."
+              },
+              {
+                "Question": "How can I reach the airline in case of an emergency?",
+                "Answer": "In case of an emergency, please contact our emergency hotline at [insert emergency phone number]. This number is available 24/7 for urgent matters. For non-emergency inquiries, you can use the regular customer service contact details provided on our website."
+              },
+              {
+                "Question": "Is there a 24/7 customer support hotline?",
+                "Answer": "Yes, we have a 24/7 customer support hotline that you can call for assistance. The hotline is available at [insert 24/7 customer support phone number]. Our dedicated team is ready to assist you with any inquiries or issues around the clock."
+              },
+              {
+                "Question": "How can I provide feedback about my travel experience?",
+                "Answer": "We welcome your feedback! You can provide feedback about your travel experience by visiting the 'Feedback' or 'Contact Us' section on our website. Alternatively, you can share your thoughts through our official social media channels or email our customer support."
+              },
+              {
+                "Question": "What should I do if I have lost an item during my journey?",
+                "Answer": "If you have lost an item during your journey, please contact our lost and found department by visiting the airport's lost and found office or by calling our customer support. Provide details about the lost item, and our team will assist you in locating or recovering it."
+              }
+            ]
+          }
+          
