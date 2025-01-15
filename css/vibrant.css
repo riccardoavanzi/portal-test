@@ -163,6 +163,11 @@ button {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat; }
+  .header_container#loyalty-header {
+    background: linear-gradient(187.13deg, rgba(14, 11, 11, 0.568) -51.2%, rgba(37, 38, 53, 0.678) 87.96%), url("https://www.vietnamairlines.com/~/media/Images/VNANew/Lotusmile/News-and-Promotions/2023/Uu-dai-danh-cho-hoi-vien-2000x780-final.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; }
 
 .navbar-toggler {
   outline: none !important; }
@@ -277,6 +282,7 @@ button {
           color: #08ade9;
           font-weight: 600; }
   .multipurpose_component_desktop .mlt_container {
+    width: fit-content;
     margin: auto;
     margin-top: 30px;
     height: 90px;
@@ -883,6 +889,7 @@ button {
         font-size: 1rem; }
 
 #ancillaries_shortcut {
+  display: flex;
   margin-top: 10rem;
   margin-bottom: 10rem;
   background: linear-gradient(187.13deg, rgba(14, 11, 11, 0.568) -51.2%, rgba(37, 38, 53, 0.678) 87.96%), url("https://images.unsplash.com/photo-1542212726642-cc55beb83da8?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -3193,4 +3200,172 @@ button {
           width: 100%;
           margin: auto; } }
 
-/*# sourceMappingURL=vibrant.css.map */
+#loyalty-hero .hero_content .card-title {
+  margin-right: 0rem !important; }
+
+#loyalty-mlt-container {
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem; }
+
+#account-pill-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content; }
+  #account-pill-container .account-left {
+    padding-right: 1rem;
+    border-right: 1px dotted #ece5e5c2; }
+    #account-pill-container .account-left .account-left-content {
+      display: flex;
+      flex-direction: column; }
+      #account-pill-container .account-left .account-left-content .account-details .user-details {
+        display: flex;
+        align-items: center; }
+        #account-pill-container .account-left .account-left-content .account-details .user-details .avatar img {
+          content: url("https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=2517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          object-fit: cover; }
+        #account-pill-container .account-left .account-left-content .account-details .user-details .name {
+          font-size: 1.5em;
+          margin-left: 1rem;
+          display: flex;
+          flex-direction: column; }
+          #account-pill-container .account-left .account-left-content .account-details .user-details .name .name-surname {
+            display: flex;
+            align-items: center; }
+            #account-pill-container .account-left .account-left-content .account-details .user-details .name .name-surname .ns-details {
+              display: flex;
+              margin-right: .5rem; }
+              #account-pill-container .account-left .account-left-content .account-details .user-details .name .name-surname .ns-details #userName {
+                margin-right: .2rem;
+                color: #554a4a; }
+            #account-pill-container .account-left .account-left-content .account-details .user-details .name .name-surname #ffNumber {
+              font-size: 0.7rem;
+              padding: .2rem .5rem;
+              background: #a8d1ec;
+              border-radius: 22px;
+              color: #0a1f95;
+              font-weight: 600;
+              line-height: 1rem; }
+          #account-pill-container .account-left .account-left-content .account-details .user-details .name .miles {
+            font-size: 1rem !important;
+            color: #8a8a8a; }
+      #account-pill-container .account-left .account-left-content .account-card {
+        margin-top: 2rem; }
+        #account-pill-container .account-left .account-left-content .account-card img {
+          content: url("https://vietnamairlines.statusmatch.com/images/card_lotusmiles_black.jpg");
+          width: 300px;
+          height: 180px;
+          object-fit: cover; }
+  #account-pill-container .account-right {
+    margin-left: 2rem; }
+    #account-pill-container .account-right ul li {
+      display: flex;
+      align-items: center; }
+      #account-pill-container .account-right ul li .key {
+        margin-right: 1rem;
+        font-weight: 600; }
+      #account-pill-container .account-right ul li button {
+        margin: .5rem auto; }
+      #account-pill-container .account-right ul li#toNextTier {
+        margin-bottom: 1rem; }
+
+#million-miler-banner {
+  margin-top: 1.5rem;
+  height: 100px;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1454359960956-27f7f24d09e0?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px; }
+  #million-miler-banner .million-miler-banner-container {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #million-miler-banner .million-miler-banner-container .million-miler-title {
+      width: 50%; }
+
+#aaas-personalized {
+  display: none;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  background: linear-gradient(187.13deg, rgba(14, 11, 11, 0.568) -51.2%, rgba(37, 38, 53, 0.678) 87.96%), url("https://images.unsplash.com/photo-1513492702219-923ec8c62a2f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  padding: 50px 0px;
+  background-position: top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  color: #FFFFFF; }
+  #aaas-personalized .section_content .ancillaries_list {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    justify-content: center; }
+    #aaas-personalized .section_content .ancillaries_list .card {
+      width: 15rem;
+      height: 12rem;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      color: #FFFFFF;
+      transition: transform ease-in-out 0.15s; }
+      #aaas-personalized .section_content .ancillaries_list .card#AAAS1P {
+        background: linear-gradient(353.03deg, rgba(38, 38, 46, 0.6) 50%, rgba(11, 17, 125, 0.411) 153.56%), url("https://www.flyingwithababy.com/wp-content/uploads/2020/02/Luton-stroller-1024x768.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      #aaas-personalized .section_content .ancillaries_list .card#AAAS2P {
+        background: linear-gradient(353.03deg, rgba(38, 38, 46, 0.6) 50%, rgba(11, 17, 125, 0.411) 153.56%), url("https://images.unsplash.com/photo-1558413203-528a11565bf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      #aaas-personalized .section_content .ancillaries_list .card#AAAS3P {
+        background: linear-gradient(353.03deg, rgba(38, 38, 46, 0.6) 50%, rgba(11, 17, 125, 0.411) 153.56%), url("https://images.unsplash.com/photo-1543360458-36fada9295c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      #aaas-personalized .section_content .ancillaries_list .card#AAAS4P {
+        background: linear-gradient(353.03deg, rgba(38, 38, 46, 0.6) 50%, rgba(11, 17, 125, 0.411) 153.56%), url("https://images.unsplash.com/photo-1627750673161-02af15c7c722?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      #aaas-personalized .section_content .ancillaries_list .card:hover {
+        transform: scale(1.01); }
+      #aaas-personalized .section_content .ancillaries_list .card .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #aaas-personalized .section_content .ancillaries_list .card .card-body .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          #aaas-personalized .section_content .ancillaries_list .card .card-body .text .card-title {
+            color: #FFFFFF;
+            font-size: 1.5em;
+            font-weight: 600; }
+          #aaas-personalized .section_content .ancillaries_list .card .card-body .text h6 {
+            color: #FFFFFF; }
+      #aaas-personalized .section_content .ancillaries_list .card .continue_booking {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0px 0px 4px 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        #aaas-personalized .section_content .ancillaries_list .card .continue_booking:hover {
+          transform: scale(1);
+          background: linear-gradient(135deg, #1391bf 20%, #0a1f95 80%);
+          color: #FFFFFF; }
+          #aaas-personalized .section_content .ancillaries_list .card .continue_booking:hover i {
+            color: #FFFFFF; }

@@ -326,19 +326,8 @@
             </div>
         </div>
 
-        <!-- NEWS -->
-        <div class="news-top">
-            <div class="news-top-container">
-                <i class='bx bxs-info-circle'></i>
-                <div class="text">
-                    <p class="notice">Flight notice</p>
-                    <p id="news-text">New terminal opening in 2024: release notes accessible via the dedicated section in the website.</p>    
-                </div>
-            </div>
-        </div>
-
         <!-- HEADER CONTAINER -->
-        <div class="container-fluid header_container">
+        <div class="container-fluid header_container" id="loyalty-header">
             <!-- HEADER CONTENT -->
             <div class="container header_content">
                 <!-- NAVBAR -->
@@ -346,7 +335,7 @@
                     <!-- NAVBAR CONTENT -->
                     <div class="container">
                         <!-- LOGO -->
-                            <a href="#" class="navbar-brand">
+                            <a href="index.html" class="navbar-brand">
                                 <img src="assets/img/logo/logo_white.png" alt="logo" id="airline_logo">
                             </a>
                             <div class="d-flex align-items-center">
@@ -390,7 +379,7 @@
                                     <a href="content.html" id="help" class="nav-link">Support</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="loyalty.html" id="help" class="nav-link">Lotus Miles</a>
+                                    <a href="content.html" id="help" class="nav-link">Lotus Miles</a>
                                 </li>
                                 <li class="nav-item" id="mytrips">
                                     <a href="trips.html" id="help" class="nav-link">My trips</a>
@@ -418,18 +407,18 @@
                                         <i class='bx bx-search'></i>
                                     </button>
                                 </li>
-                                <li class="nav-item" id="avatar">
-                                    <div id="avatarcontainer">
-                                        <div id="avatarpic">
+                                <li class="nav-item" id="avatar" style="display: flex !important;">
+                                    <div id="avatarcontainer" style="display: flex !important;">
+                                        <div id="avatarpic" style="display: flex !important;">
                                             <img src="" alt="">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="btn btn-primary" id="login-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                                    <!-- <button class="btn btn-primary" id="login-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
                                         login
-                                    </button>
-                                    <button class="btn btn-primary" id="logout-btn" onclick="logout()">
+                                    </button> -->
+                                    <button class="btn btn-primary" id="logout-btn" onclick="logout()" style="display: flex !important;">
                                         logout
                                     </button>
                                 </li>
@@ -440,14 +429,14 @@
                     
                 </nav>
                 <!-- HERO -->
-                <div class="container hero_container">
+                <div class="container hero_container" id="loyalty-hero">
                     <div class="card col-9 hero_content">
-                        <div class="card-body d-flex justify-content-between">
+                        <div class="card-body d-flex justify-content-center">
                             <div>
-                                <h1 class="card-title">Fly to the world with Vietnam Airlines.</h1>
-                                <p class="card-text">Hundreds of destinations, three clicks away.<br> Book your next adventure right away.</p>
+                                <h1 class="card-title" >Welcome back, Jane!</h1>
+                                <!-- <p class="card-text">Miles balance: <span id="milesAccrual"></span><br>Tier status: <span id="loyaltyTier"></span></p> -->
                             </div>
-                            <button class="btn btn-secondary btn-lg">Explore</button>
+                            <!-- <button class="btn btn-secondary btn-lg">Explore</button> -->
                         </div>
                     </div>
                 </div>
@@ -460,88 +449,84 @@
             <div class="tabs">
                 <ul class="nav nav-pills d-flex" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="showCookiesSearch()">Book a flight</button>
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-account" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Summary</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-mmb" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="hideCookiesSearch()">Manage booking</button>
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-history" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="hideCookiesSearch()">History</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-ssci" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Check-in</button>
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-settings" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Settings</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-status" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Flight status</button>
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-calculator" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Calculator</button>
                     </li>
                 </ul>
             </div>
-            <div class="mlt_container">
+            <div class="mlt_container" id="loyalty-mlt-container">
                 <div class="mlt_content">
                     <div class="tab-content" id="pills-tabContent">
-                        <!-- SEARCH -->
-                        <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <div class="search_container" id="search">
-                                <ul class="criteria">
-                                    <li class="d-flex flex-column">
-                                        <label for="">Departure</label>
-                                        <input type="text" placeholder="From" id="departureInput">
-                                    </li>
-                                    <li class="d-flex flex-column">
-                                        <label for="">Destination</label>
-                                        <input type="text" placeholder="To" id="arrivalInput">
-                                    </li>
-                                    <li class="d-flex flex-column">
-                                        <label for="">Dates</label>
-                                        <button id="cal" data-bs-toggle="modal" data-bs-target="#datePickerModal">20/11 - 22/11</button>
-                                    </li>
-                                    <li class="d-flex flex-column">
-                                        <label for="">Pax and cabin</label>
-                                        <button id="pax" data-bs-toggle="modal" data-bs-target="#pax-class">
-                                            <div id="pax-recap">--</div>
-                                            <div id="cabin-recap"></div>
-                                        </button>
-                                    </li>
-                                </ul>
-                                <button type="submit" class="submit" id="launchSearch" onclick="launchRefX()">
-                                    <i class='bx bxs-plane-take-off' style='color:#ffffff'></i>
-                                </button>
-                            </div>
-                            <!-- AIRPORT LIST -->
-                            <div id="airportListContainer">
-                                <ul id="airportList">
-                                    <!-- <li class="airport-li">
-                                        <button class="airport-item">
-                                            <div class="airport-details">
-                                                <div class="airport-location">
-                                                    <h6 class="airport-city-label"></h5>
-                                                    <h6 class="separator"> - </h6>
-                                                    <h6 class="airport-country-label"></h5>
+                        <!-- SUMMARY -->
+                        <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="account-pill-container" id="account-pill-container">
+                                <div class="account-left">
+                                    <div class="account-left-content">
+                                        <div class="account-details">
+                                            <div class="user-details">
+                                                <div class="avatar"><img src="" alt=""></div>
+                                                <div class="name">
+                                                    <div class="name-surname">
+                                                        <div class="ns-details"><span id="userName"></span><span id="userSurname"></span></div>
+                                                        <div id="ffNumber"></div>
+                                                    </div>
+                                                    <div class="miles">Miles balance: <span id="milesAccrual"></span><br>Tier status: <span id="loyaltyTier"></span></div>
                                                 </div>
-                                                <div class="airport-name"></div>
                                             </div>
-                                            <div class="airport-iata-code"></div>
-                                        </button>
-                                    </li> -->
-                                </ul>
+                                        </div>
+                                        <div class="account-card">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-right">
+                                    <ul>
+                                        <li id="expiryDate">
+                                            <div class="key">Expiry date</div>
+                                            <div class="value" id="expiryDateValue"></div>
+                                        </li>
+                                        <li id="toNextTier">
+                                            <div class="key">To next tier</div>
+                                            <div class="value" id="toNextTierValue"></div>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn-tertiary">Redeem miles</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn-tertiary">Purchase miles</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="million-miler-banner">
+                                <div class="million-miler-banner-container">
+                                    <div class="million-miler-title">Become a Million miler with an addition of 150000 Miles</div>
+                                    <div class="million-miler-CTA">
+                                        <button class="btn btn-primary">Add miles</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- MANAGE MY BOOKING -->
-                        <div class="tab-pane fade" id="pills-mmb" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            <div class="mmb_container" id="mmb">
-                                <ul class="criteria">
-                                    <li>
-                                        <input type="text" placeholder="Last name">
-                                    </li>
-                                    <li>
-                                        <a href="#" data-bs-toggle="tooltip" title="Booking reference is a 6 alphanumeric code" customClass="tooltips"><i class='bx bxs-info-circle' style='color:#8a8a8a'></i></a>
-                                        <input type="text" placeholder="Booking reference">
-                                    </li>
-                                </ul>
-                                <button type="submit" class="submit">
-                                    <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
-                                </button>
+                        <!-- HISTORY -->
+                        <div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="history-pill-container" id="history-pill-container">
+                                <div class="history-top">
+                                    <div class="history-title"></div>
+
+                                </div>
+                                <div class="history-bottom"></div>
                             </div>
                         </div>
-                        <!-- CHECK-IN -->
-                        <div class="tab-pane fade" id="pills-ssci" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <!-- PASSOWRD -->
+                        <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-contact-tab">
                             <div class="ssci_container" id="ssci">
                                 <ul class="criteria">
                                     <li>
@@ -563,7 +548,7 @@
                             </div>
                         </div>
                         <!-- FLIGHT-STATUS -->
-                        <div class="tab-pane fade" id="pills-status" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="tab-pane fade" id="pills-calculator" role="tabpanel" aria-labelledby="pills-contact-tab">
                             <div class="status_container" id="status">
                                 <ul class="criteria">
                                     <li>
@@ -868,15 +853,14 @@
          <!-- SUPPORT OPTIONS -->
          <section id="support-options">
             <div class="section_title">
-                <h2>How can we help you?</h2>
-                <h6>Choose the option fitting the best</h6>
+                <h2>The best Lotus Advantages</h2>
             </div>
             <div class="support-options-items mx-auto">
                 <ul>
                     <!-- CARD 1 -->
                     <li>
                         <div class="card">
-                            <img alt="help1" class="card-img-top" src="" id="help_1">
+                            <img alt="loy1" class="card-img-top" src="" id="loy_1">
                             <div class="card-body">
                                 <h5 class="card-title">Call center</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -887,7 +871,7 @@
                     <!-- CARD 2 -->
                     <li>
                         <div class="card">
-                            <img alt="help2" class="card-img-top" src="" id="help_2">
+                            <img alt="loy2" class="card-img-top" src="" id="loy_2">
                             <div class="card-body">
                                 <h5 class="card-title">Our website</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -898,7 +882,18 @@
                     <!-- CARD 3 -->
                     <li>
                         <div class="card">
-                            <img alt="help3" class="card-img-top" src="" id="help_3">
+                            <img alt="loy3" class="card-img-top" src="" id="loy_3">
+                            <div class="card-body">
+                                <h5 class="card-title">Chatbot</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a class="btn btn-primary" href="#">Know more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- CARD 4 -->
+                    <li>
+                        <div class="card">
+                            <img alt="loy4" class="card-img-top" src="" id="loy_4">
                             <div class="card-body">
                                 <h5 class="card-title">Chatbot</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -964,59 +959,8 @@
             <button class="btn btn-primary btn-lg load_more">see all searches</button>
         </div>
         
-        <!-- ANCILLARY SERVICES -->
-        <section class="container-fluid justify-content-center" id="ancillaries_shortcut">
-            <div class="section_content">
-                <div class="row align-items-center justify-content-between container">
-                    <div class="col-md p-5">
-                        <h2 class="fw-bolder" id="aaas-title">Make travelling the best experience</h2>
-                        <p class="lead" id="aaas-subtitle">Add a bag, book your chaffeur or connect on the plane with our WiFi services.</p>
-                    </div>
-                    <div class="col-md ancillaries_list">
-                        <!-- ANCILLARY ONE -->
-                        <div class="card" id="AAAS1">
-                            <div class="card-body">
-                                <div class="text">
-                                    <h6 class="card-subtitle mb-2" class="recent_dates">Connectivity</h6>
-                                    <h5 class="card-title" class="recent_destination">WiFi Voucher</h5>
-                                </div>
-                            </div>
-                            <button class="btn-secondary continue_booking">Start connecting<i class='bx bx-chevron-right'></i></button>
-                        </div>
-                        <div class="card" id="AAAS2">
-                            <div class="card-body">
-                                <div class="text">                                
-                                    <h6 class="card-subtitle mb-2" class="recent_pax">Comfort</h6>
-                                    <h5 class="card-title" class="recent_destination">Extra Bags</h5>
-                                </div>
-                            </div>
-                            <button class="btn-secondary continue_booking">Add your bags<i class='bx bx-chevron-right'></i></button>
-                        </div>
-                        <div class="card" id="AAAS3">
-                            <div class="card-body">
-                                <div class="text">
-                                    <h6 class="card-subtitle mb-2" class="recent_pax">Comfort</h6>
-                                    <h6 class="card-title" class="recent_dates">Seats</h6>
-                                </div>
-                            </div>
-                            <button class="btn-secondary continue_booking">Get your seat<i class='bx bx-chevron-right'></i></button>
-                        </div>
-                        <div class="card" id="AAAS4">
-                            <div class="card-body">
-                                <div class="text">
-                                    <h6 class="card-subtitle mb-2" class="recent_dates">Relax</h6>
-                                    <h5 class="card-title" class="recent_destination">Lounge access</h5>
-                                </div>
-                            </div>
-                            <button class="btn-secondary continue_booking">Book access<i class='bx bx-chevron-right'></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- PERSONALIZED ANCILLARY SERVICES -->
-        <section class="container-fluid justify-content-center" id="aaas-personalized">
+        <section class="container-fluid d-flex justify-content-center" id="aaas-personalized">
             <div class="section_content">
                 <div class="row align-items-center justify-content-between container">
                     <div class="col-md ancillaries_list">
@@ -1064,7 +1008,7 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section> 
 
         <!-- DESTINTIONS SECTION -->
         <section class="container-fluid d-flex justify-content-center" id="destinations_list">
@@ -1160,19 +1104,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- LOYALTY TEASER -->
-        <div class="container-fluid" id="loyalty_banner">
-            <div class="section_content">
-                <div class="p-5 mb-4 rounded-3 banner-container">
-                    <div class="container-fluid py-5">
-                      <h1 class="display-5 fw-bold">Get the best!</h1>
-                      <p class="col-md-8 fs-4">Exclusive offers, special rewards and  <br> amazing privileges with our loyalty program.</p>
-                      <button class="btn btn-primary btn-lg" type="button">Join Lotus Miles!</button>
-                    </div>
-                  </div>
-            </div>
-        </div>
 
         <!-- CROSS SELL CARDS -->
         <section class="container-fluid" id="cross_sell">
@@ -1586,260 +1517,6 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-<!-- ======== SCRIPTS -->
-
-
-        <script>
-
-            mockLoginData ={
-                "name": "nono",
-                "userId": "nono",
-                "listCart": [
-                    {
-                        "tripName": "My trip to LHR",
-                        "id": "11AP7HZX8SR78D4R",
-                        "departure_code": "JFK",
-                        "arrival_code": "LHR",
-                        "pax_number": 1,
-                        "price": 1081.2,
-                        "type": "Return",
-                        "outbound_date": "25Dec",
-                        "dico_location": {
-                            "NYC": {
-                                "type": "city",
-                                "cityCode": "NYC",
-                                "cityName": "NEW YORK",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LON": {
-                                "type": "city",
-                                "cityCode": "LON",
-                                "cityName": "LONDON",
-                                "countryCode": "GB"
-                            },
-                            "LGW": {
-                                "type": "airport",
-                                "airportName": "GATWICK",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            },
-                            "JFK": {
-                                "type": "airport",
-                                "airportName": "JOHN F KENNEDY INTL",
-                                "cityCode": "NYC",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LHR": {
-                                "type": "airport",
-                                "airportName": "HEATHROW",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            }
-                        },
-                        "dico_country": {
-                            "US": "UNITED STATES OF AMERICA",
-                            "GB": "UNITED KINGDOM"
-                        },
-                        "inbound_date": "29Dec"
-                    },
-                    {
-                        "tripName": "London trip!",
-                        "id": "11AP7HZX8SR78D4R",
-                        "departure_code": "JFK",
-                        "arrival_code": "LHR",
-                        "pax_number": 1,
-                        "price": 1081.2,
-                        "type": "Return",
-                        "outbound_date": "25Dec",
-                        "dico_location": {
-                            "NYC": {
-                                "type": "city",
-                                "cityCode": "NYC",
-                                "cityName": "NEW YORK",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LON": {
-                                "type": "city",
-                                "cityCode": "LON",
-                                "cityName": "LONDON",
-                                "countryCode": "GB"
-                            },
-                            "LGW": {
-                                "type": "airport",
-                                "airportName": "GATWICK",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            },
-                            "JFK": {
-                                "type": "airport",
-                                "airportName": "JOHN F KENNEDY INTL",
-                                "cityCode": "NYC",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LHR": {
-                                "type": "airport",
-                                "airportName": "HEATHROW",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            }
-                        },
-                        "dico_country": {
-                            "US": "UNITED STATES OF AMERICA",
-                            "GB": "UNITED KINGDOM"
-                        },
-                        "inbound_date": "29Dec"
-                    },
-                    {
-                        "tripName": "London ?",
-                        "id": "11AP7HZX8SR78D4R",
-                        "departure_code": "JFK",
-                        "arrival_code": "LHR",
-                        "pax_number": 1,
-                        "price": 1081.2,
-                        "type": "Return",
-                        "outbound_date": "25Dec",
-                        "dico_location": {
-                            "NYC": {
-                                "type": "city",
-                                "cityCode": "NYC",
-                                "cityName": "NEW YORK",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LON": {
-                                "type": "city",
-                                "cityCode": "LON",
-                                "cityName": "LONDON",
-                                "countryCode": "GB"
-                            },
-                            "LGW": {
-                                "type": "airport",
-                                "airportName": "GATWICK",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            },
-                            "JFK": {
-                                "type": "airport",
-                                "airportName": "JOHN F KENNEDY INTL",
-                                "cityCode": "NYC",
-                                "stateCode": "NY",
-                                "countryCode": "US"
-                            },
-                            "LHR": {
-                                "type": "airport",
-                                "airportName": "HEATHROW",
-                                "cityCode": "LON",
-                                "countryCode": "GB"
-                            }
-                        },
-                        "dico_country": {
-                            "US": "UNITED STATES OF AMERICA",
-                            "GB": "UNITED KINGDOM"
-                        },
-                        "inbound_date": "29Dec"
-                    }
-                ]
-            }
-
-                        function login(){
-                              fetch(urlServer+'/api/login', {
-                                method: 'POST',
-                                headers: {
-                                    "Content-Type": "application/json"
-                                },
-                                body: JSON.stringify({name:document.getElementById("username").value,pwd:document.getElementById("password").value})
-                            })
-                            .then(function(response) {
-                                return response.json();
-                            })
-                            .then(function(data) {
-                                window.userName = data.name;
-                                window.userId = data.userId;
-                                displaySavedTrip(data);
-
-                            })
-                            .catch(function(error) {
-                                // Handle any errors that occurred during the fetch
-                                displaySavedTrip(mockLoginData);
-                            });
-                        }
-
-            function displaySavedTrip(data){
-                if( data.listCart &&  data.listCart.length){
-                    var index = 0;
-                    var listHtml = "";
-                    var listMenuHtml = "";
-                    for (const cart of data.listCart) {
-                        listMenuHtml += `<li class="nav-item" role="presentation">
-                            <button class="nav-link `+(index == 0 ? 'active' :'')+`" id="flight`+(index+1)+`" data-bs-toggle="pill" data-bs-target="#flight`+(index+1)+`content" type="button" role="tab" aria-controls="pills-home" aria-selected="true">`+(cart.tripName)+`</button>
-                        </li>`;
-
-
-                        listHtml += `<div class="tab-pane fade `+(index == 0 ? 'show active' :'')+`" id="flight`+(index+1)+`content" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="`+(index+1)+`">
-                            <!-- FLIGHT 2 -->
-                                <div class="flight-container d-flex flex-wrap">
-                                    <div class="img" id="flight2img"></div>
-                                    <div class="flight-content">
-                                        <div class="route">
-                                            <div class="d-flex flex-column">
-                                                <h5>`+getCityName(cart.departure_code,cart.dico_location)+`</h5>
-                                                <span class="text-muted small">`+cart.departure_code+`</span> 
-                                            </div>
-                                            <i class='bx bx-transfer-alt'></i>
-                                            <div class="d-flex flex-column">
-                                                <h5>`+getCityName(cart.arrival_code,cart.dico_location)+`</h5>
-                                                <span class="text-muted small">`+cart.arrival_code+`</span> 
-                                            </div>
-                                        </div>
-                                        <div class="pax">
-                                            <h6>`+cart.pax_number+` pax</h6>
-                                        </div>
-                                        <div class="trip">
-                                            <p>`+cart.type+`</p>
-                                        </div>
-                                        <button class="btn btn-primary" onclick="launchDeepLink('`+cart.id+`')">Book now</button>
-                                    </div>
-                                </div>
-                        </div>`;
-                        index++;
-                    };
-
-                    ///////////////////////////////////////
-                    ///////////////////////////////////////
-                    //////////////////////////
-                    //////////////////////////
-                    /////////////
-                    /////////////
-                    /////////////
-                    // PERSONALIZATION
-
-                    document.getElementById("contentSavedTrip").innerHTML = listHtml;
-                    document.getElementById("cookies-search").style = "display:block";
-                    // document.getElementById("bookAgain").style = "display:block";
-                    document.getElementById("login-btn").style = "display:none";
-                    document.getElementById("logout-btn").style = "display:flex";
-                    document.getElementById("tabMenuTripWishList").innerHTML = listMenuHtml;
-                    document.getElementById("aaas-personalized").style = "display:flex";
-                    document.getElementById("ancillaries_shortcut").style = "display:none";
-                    document.getElementById("loyalty_banner").style = "display:none";
-                }  
-            }
-
-            function getCityName(code,dico){
-                return dico[code].cityName != null ? dico[code].cityName : dico[dico[code].cityCode].cityName
-            }
-
-            function launchDeepLink(cartId){
-                openWindowWithPost(urlRefX+"/shopping-cart?cartId="+cartId+"&type=cart");
-            }
-
-        </script>
    
 
     <!-- SCROLLING NAV FUNCTION -->
@@ -2052,13 +1729,6 @@
             document.getElementById("logout-btn").style ="display:none";
         }
     </script>
-    <!-- RUN REFX FLOW 2 -->
-    <script>
-        document.getElementById("launchSearch2").addEventListener("click", function (){
-             var htmlFilePath = "/refxLauncher_2.html";
-             window.open(htmlFilePath, "_blank");
-        })
-    </script>
 
 <!-- SHOW COOKIES SEARCH -->
     <script>
@@ -2069,542 +1739,6 @@
             document.getElementById("cookies-search").style.display = "none";
         }
     </script>
-    
-<!-- Initialize Swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      centeredSlides: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-        
-</script>
-
-<script src="./calendar.js"></script>
-    
-<script>
-    function logout(){
-        location.reload();
-    }
-</script>
-
-<!-- RUN REFX FLOW -->
-<script>
-   
-// Search configuration
-var from = "SIN";
-var to = "LHR";
-var dep = "2025-03-20";
-var returnDate = "2025-04-10";
-
-var bootstrapConfig;
-
-//BCM key
-var bcmKey; // ="putyourBCMkeyHereAndUncomment";
-
-// Add static configuration
-var staticConfig  = JSON.stringify([{ 'name': 'PageTitlePresConfig',
-'config': {
-  'backgroundImgMobilePath': '',
-  'backgroundImgTabletPath': '',
-  'backgroundImgDesktopPath': 'img/'+to+'.png',
-  'shouldApplyCustomStyling': true,
-  'shouldDisplayBackgroundImage': true
-},
-'library': '@refx/shared-components'
-},{
-'name': 'RefxComponentsCommonRuntimeConfig',
-'config': {
-  'globalDisplayDiscountOptions': true,
-  'globalDisplayAncillariesDiscounts': true,
-  'globalEnableHighlightOrdering': true,
-  'globalEnablePrimaryPassengerRememberMeOption': true,
-  'globalDisplayDiscounts': true,
-  "globalEnableGETQueryParamsDeeplinkForPage": [
-    { "pageId": "SHOPPINGCART", "type": "cart" },
-    { "pageId": "SEATMAP" },
-    { "pageId": "SERVICES" },
-    { "pageId": "CONFIRMATION" },
-    { "pageId": "MANAGEBOOKING" },
-    { "pageId": "self-reaccommodation/availability" } ,
-    { "pageId": "refund/review" },
-    { "pageId": "IDENTIFICATION" },
-    { "pageId": "JOURNEYSELECTION" },
-    { "pageId": "OVERVIEW" }
-  ]
-},
-'library': '@refx/shared-common'
-},{
-'name': 'AppConfig',
-'config': {
-  'enableNewFeature': true,
-},
-'library': '@va/booking'
-}]);
-
-// Add bootstrap config (CO2 Panel activation example)
-// bootstrapConfig = JSON.stringify({
-//   'activateCo2Panel' : true
-// });
-
-var environment = '6x'; //0eskl or 6x
-var cffOverride;
-
-if (environment === '6x') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': 'hHTGWHFDeUFVdOztQWTC7zoe63E0k8zu',
-  'gatewayClientSecret': 'Zw2qeL9q2LXd6Ez0'
-});
-// Override with 6X fare families
-cffOverride = ["DEMOALL", "NDCTALL"];
-//bcmKey = undefined;
-} else if (environment === '0eskl') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': '3GAAzoyrc81iw3CdAladDGKTXAGeZihg',
-  'gatewayClientSecret': 'YRTSzscJKH6E0ONM'
-});
-//bcmKey = undefined;
-} else if (environment === '0e') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': 'CQZddrc7RFTBmG6Hbl7pQTyiPtHUuOAq',
-  'gatewayClientSecret': 'NaeP7dKAgV2emuvi'
-});
-//bcmKey = undefined;
-} else if (environment === '0eUAT') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-"gatewayBaseUrl":"https://test.airlines.api.amadeus.com",
-"gatewayClientId":"MAc35CupTZnqj02YoSWuO202cb5SHpLG",
-"gatewayClientSecret":"La8Wq90nddnbP5lG"
-});
-//bcmKey = undefined;
-}
-
-
-
-// This needs to be added AFTER the request definition
-
-function getRequest(){
-
-var from = document.getElementById('departureInput').value.split("- ")[1];
-var to = document.getElementById('arrivalInput').value.split("- ")[1];
-
-var promoCode = "";
-var login = [
-{
-  "id":window.userId,
-  "isPrimaryTraveler": true,
-  "nickName": "",
-  "avatarLogoUrl": "https://i.pinimg.com/originals/e7/da/8d/e7da8d8b6a269d073efa11108041928d.jpg",
-  "passengerTypeCode": "ADT",
-  "nationalityCountryCodes": [
-    "FR"
-  ],
-  "names": [
-    {
-      "firstName": window.userName,
-      "lastName": "Smith",
-      "title": "MS"
-    }
-  ],
-  "frequentFlyerCard": {
-    "companyCode": "ZZ",
-    "cardNumber": "8855"
-  },
-  "milesAssetBalance": [
-    {
-      "assetType": "Miles",
-      "assetValue": "10030"
-    }
-  ],
-  "gender": "female",
-  "dateOfBirth": "05/05/1950",
-  "contacts": [
-    {
-      "contactType": "Phone",
-      "category": "Other",
-      "countryPhoneExtension": "+93",
-      "number": "987654321"
-    },
-    {
-      "contactType": "Email",
-      "address": "marie@smith.com"
-    }
-  ],
-  "regulatoryDetails": [
-    {
-      "regulatoryApisType": "ApisDetailRegulatoryDocument",
-      "regulatoryDocument": {
-        "documentType": "passport",
-        "nationalityCode": "FR",
-        "number": "M08324244",
-        "issuanceCountryCode": "FR",
-        "expiryDate": "2031-05-05",
-        "issuanceLocation": "FR"
-      }
-    }
-  ],
-  "entitlementDocuments": [
-    {
-      "documentType": "SpanishResidentCard",
-      "travelerType": "spanishCitizen",
-      "identityCardNumber": "61974134J",
-      "postalCode": "070012",
-      "name": {
-        "firstName": "Marie",
-        "lastName": "Smith",
-        "secondLastName": ""
-      }
-    }
-  ]
-}
-]
-
-var request = {
-"search": {
-  "travelers": [
-    {
-      "passengerTypeCode": "ADT"
-    }
-  ],
-  "commercialFareFamilies": [
-    "ECONOMY",
-    "BUSINESS"
-  ],
-  "itineraries": [
-    {
-      "originLocationCode": from,
-      "destinationLocationCode": to,//selected_startDate
-      "departureDateTime": selected_startDate.getFullYear()+"-"+(selected_startDate.getMonth()+1)+"-"+selected_startDate.getDate()
-    }
-  ]
-},
-"portalFacts": [{"key":"corporateCodes", "value":"000001"}],
-"pointOfSale": "FR"
-}
-
-if (!!cffOverride) {
-request.search.commercialFareFamilies = cffOverride;
-}
-
-if(!!bcmKey) {
-request.bcmConfigKey = bcmKey;
-}
-if(!!staticConfig) {
-request.staticConfig = btoa(staticConfig);
-}
-if (!!bootstrapConfig) {
-request.bootstrapConfig = btoa(bootstrapConfig);
-}
-if(!!promoCode){
-request.search.promotion = {"code":promoCode}
-}
-
-if(!!returnDate){
-request.search.itineraries.push({
-  "originLocationCode": to,
-  "destinationLocationCode": from,
-  "departureDateTime": selected_endDate.getFullYear()+"-"+(selected_endDate.getMonth()+1)+"-"+selected_endDate.getDate()
-})
-}
-
-if(!!login){
-request.lightLogin = login
-}
-return request;
-}
-var urlServer = "http://localhost:3000";;
-var urlRefX = "https://uat.digital.airline.amadeus.com/0e/0e-booking-va";
-function launchRefX(){
-    openWindowWithPost(urlRefX, getRequest())
-
-}
-function clik(cartId){
-openWindowWithPost("https://uat.digital.airline.amadeus.com/0e/0e-booking-va/shopping-cart?cartId="+cartId+"&type=cart", getRequest());
-//openWindowWithPost(urlRefX+"?lang=en-GB", request);
-}
-
-function openWindowWithPost(url, data) {
-var form = document.createElement("form");
-form.target = "_blank";
-form.method = "POST";
-form.action = url;
-form.style.display = "none";
-
-for (var key in data) {
-  var input = document.createElement("input");
-  input.type = "hidden";
-  input.name = key;
-  if (typeof data[key] === "string" || typeof data[key] === "boolean" || typeof data[key] === "number") {
-    input.value = data[key];
-  } else {
-    input.value = JSON.stringify(data[key]);
-  }
-  form.appendChild(input);
-}
-document.body.appendChild(form);
-form.submit();
-document.body.removeChild(form);
-}
-
-</script>
-
-<!-- AIRPORT LIST -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const airportListContainer = document.getElementById('airportListContainer');
-    const airportList = document.getElementById('airportList');
-    const departureInput = document.getElementById('departureInput');
-    const arrivalInput = document.getElementById('arrivalInput');
-
-
-            // Event listeners for user input on the departure and arrival inputs
-            departureInput.addEventListener('input', function () {
-                renderFilteredAirports('departure');
-            });
-            arrivalInput.addEventListener('input', function () {
-                renderFilteredAirports('arrival');
-            });
-
-            // Event listener for focusing back on the input fields
-            departureInput.addEventListener('focus', function () {
-                showSelectedAirport('departure');
-            });
-            arrivalInput.addEventListener('focus', function () {
-                showSelectedAirport('arrival');
-            });
-
-            // Event listener for clicking outside the input and airport list
-            document.addEventListener('click', function (event) {
-                const target = event.target;
-                if (!target.closest('#departureInput') && !target.closest('#arrivalInput') && !target.closest('#airportListContainer')) {
-                    hideAirportList();
-                }
-            });
-
-    // Function to show the selected airport when the input is focused
-    function showSelectedAirport(type) {
-        const activeAirportItem = document.querySelector(`.airport-item.active-${type}`);
-        if (activeAirportItem) {
-            const airportCity = activeAirportItem.querySelector('.airport-city-label').textContent;
-            const airportIataCode = activeAirportItem.querySelector('.airport-iata-code').textContent;
-            const inputFieldValue = `${airportCity} - ${airportIataCode}`;
-            
-            if (type === 'departure') {
-                departureInput.value = inputFieldValue;
-            } else if (type === 'arrival') {
-                arrivalInput.value = inputFieldValue;
-            }
-
-            airportListContainer.classList.add('visible');
-        }
-    }
-
-    // Function to hide the airport list container
-    function hideAirportList() {
-        airportListContainer.classList.remove('visible');
-    }
-
-    // Function to render the list of airports
-    function renderAirports(airportArray, type) {
-        // Clear the previous list
-        airportList.innerHTML = '';
-
-        if (airportArray.length === 0) {
-            const noResultsItem = document.createElement('li');
-            noResultsItem.textContent = 'No airports found';
-            airportList.appendChild(noResultsItem);
-        } else {
-            // Create and append list items for each airport
-            airportArray.forEach(airport => {
-                const listItem = document.createElement('li');
-                listItem.className = 'airport-li';
-
-                const airportItem = document.createElement('button');
-                airportItem.className = 'airport-item';
-
-                const airportDetails = document.createElement('div');
-                airportDetails.className = 'airport-details';
-
-                const airportLocation = document.createElement('div');
-                airportLocation.className = 'airport-location';
-
-                const cityLabel = document.createElement('h6');
-                cityLabel.className = 'airport-city-label';
-                cityLabel.textContent = airport.city;
-
-                const separator = document.createElement('h6');
-                separator.className = 'separator';
-                separator.textContent = ' - ';
-
-                const countryLabel = document.createElement('h6');
-                countryLabel.className = 'airport-country-label';
-                countryLabel.textContent = airport.country;
-
-                const airportName = document.createElement('div');
-                airportName.className = 'airport-name';
-                airportName.textContent = airport.name;
-
-                const iataCode = document.createElement('div');
-                iataCode.className = 'airport-iata-code';
-                iataCode.textContent = airport.iata_code;
-
-                airportLocation.appendChild(cityLabel);
-                airportLocation.appendChild(separator);
-                airportLocation.appendChild(countryLabel);
-
-                airportDetails.appendChild(airportLocation);
-                airportDetails.appendChild(airportName);
-
-                airportItem.appendChild(airportDetails);
-
-                // Add click event listener for airportItem buttons
-                airportItem.addEventListener('click', function () {
-                    // Remove 'active' class from all airport items
-                    document.querySelectorAll('.airport-item').forEach(item => {
-                        item.classList.remove('active-departure', 'active-arrival');
-                    });
-
-                    // Add 'active' class based on the input type
-                    airportItem.classList.add(`active-${type}`);
-
-                    // Set the city name and IATA code in the input field
-                    let inputFieldValue = `${airport.city}`;
-                    if (type === 'departure') {
-                        inputFieldValue += ` - ${airport.iata_code}`;
-                        departureInput.value = inputFieldValue;
-                    } else if (type === 'arrival') {
-                        inputFieldValue += ` - ${airport.iata_code}`;
-                        arrivalInput.value = inputFieldValue;
-                    }
-
-                    // Hide the airport list container
-                    hideAirportList();
-                });
-
-                airportItem.appendChild(iataCode);
-
-                listItem.appendChild(airportItem);
-                airportList.appendChild(listItem);
-            });
-        }
-    }
-
-    // Function to filter and render the list based on user input
-    function renderFilteredAirports(type) {
-        const departureValue = departureInput.value.toLowerCase();
-        const arrivalValue = arrivalInput.value.toLowerCase();
-
-        // Filter airports based on the input value in the city name
-        const filteredDepartureAirports = airports.filter(airport =>
-            airport.city.toLowerCase().startsWith(departureValue)
-        );
-
-        const filteredArrivalAirports = airports.filter(airport =>
-            airport.city.toLowerCase().startsWith(arrivalValue)
-        );
-
-        if (type === 'departure') {
-            renderAirports(filteredDepartureAirports, 'departure');
-        } else if (type === 'arrival') {
-            renderAirports(filteredArrivalAirports, 'arrival');
-        }
-
-        // Display or hide the airport list container based on input values
-        airportListContainer.classList.toggle('visible', (departureInput.value || arrivalInput.value));
-    }
-});
-
-
-</script>
-<!-- PAX SCRIPT -->
-<script>
-    // Initialize count variables
-    let adultCount = 0;
-    let childCount = 0;
-    let infantCount = 0;
-
-    // Function to update count and display
-    function updateCount(type, increment) {
-        switch (type) {
-            case 'adult':
-                adultCount += increment;
-                document.getElementById('adult-count').innerText = adultCount;
-                break;
-            case 'child':
-                childCount += increment;
-                document.getElementById('child-count').innerText = childCount;
-                break;
-            case 'infant':
-                infantCount += increment;
-                document.getElementById('infant-count').innerText = infantCount;
-                break;
-            default:
-                break;
-        }
-    }
-</script>
-
-<!-- NEWS SCRIPT -->
-<script>
-    function replaceContent() {
-        var element = document.getElementById("news-text");
-        var sentences = [
-            "Due to airport strike in Paris Charles de Gaulle (CDG) flights might be delayed. More information on Philippine Airlines mobile app.",
-            "Due to severe weather conditions at Heathrow Airport (LHR), flight schedules may experience delays.",
-            "Temporary security measures are in place at Los Angeles International Airport (LAX), potentially affecting flight operations."
-        ];
-
-        var count = 0;
-
-        setInterval(function () {
-            element.style.opacity = 0; // Set opacity to 0 before changing content
-
-            setTimeout(function () {
-                element.innerHTML = sentences[count];
-                element.style.opacity = 1; // Set opacity back to 1 after changing content
-                count++;
-
-                // Reset the count when all sentences have been displayed
-                if (count === sentences.length) {
-                    count = 0;
-                }
-            }, 1000); // Wait for 1 second (1000 milliseconds) before changing content
-        }, 5000); // Replace content every 5 seconds
-    }
-
-    // Call the function when the page loads
-    replaceContent();
-</script>
-
-<!-- <script>
-    let video = document.getElementById("stopover-video");
-    video.volume = 0;
-    video.playbackRate = 2;
-</script> -->
-<!-- TRANSLATE KR SCRIPT -->
-<script>
-    const inputs = document.querySelectorAll('input');
-
-inputs.forEach(input => {
-  input.addEventListener('click', function() {
-    // Scroll the form container into view smoothly
-    document.getElementById('formContainer').scrollIntoView({ behavior: 'smooth' });
-  });
-});
-</script>
 
 <!-- FETCH USER FROM JSON -->
 <script>
@@ -2622,6 +1756,13 @@ async function loadUserData() {
         const user = data.user;
         
         // Update the DOM elements
+        document.getElementById('userName').textContent = user.name;
+        document.getElementById('userSurname').textContent = user.surname;
+        document.getElementById('milesAccrual').textContent = user.milesAccrual;
+        document.getElementById('loyaltyTier').textContent = user.loyaltyTier;
+        document.getElementById('ffNumber').textContent = user.FFnumber;
+        document.getElementById('expiryDateValue').textContent = user.expiryDate;
+        document.getElementById('toNextTierValue').textContent = user.toNextTier;
         document.getElementById('preferred-aaas').textContent = user.preferredAAAS;
     } catch (error) {
         console.error('Error loading user data:', error);
@@ -2632,5 +1773,6 @@ async function loadUserData() {
 document.addEventListener('DOMContentLoaded', loadUserData);
 </script>
 
+</script>
 </body>
 </html>

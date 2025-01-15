@@ -1,0 +1,22 @@
+{
+    "user": {
+      "name": "Jane",
+      "surname": "Doe",
+      "email": "jane@gmail.com",
+      "password": "123asd456ghf",
+      "telephoneNumber": "+8568542541232",
+      "travellerSegment": "family",
+      "averagePNRValue": 1500,
+      "totalPastBookings": 20,
+      "yearlyPastBookings": 5,
+      "country": "Vietnam",
+      "preferredDevice": "desktop",
+      "preferredAAAS": "Baby Stroller",
+      "profileImage": "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=2517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "FFnumber": "15245625",
+      "milesAccrual": 283990,
+      "toNextTier": 18000,
+      "loyaltyTier": "Platinum",
+      "expiryDate": "2025/06/30"
+    }
+  }
