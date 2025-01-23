@@ -4782,7 +4782,71 @@ button{
                     margin-bottom: 1rem;
                     .change-pwd-item{
                         margin: .5rem;
+
                     }
+                }
+            }
+        }
+    }
+}
+#pills-calculator{
+    .calculator-container{
+        .calculator-content{
+            .calculator-content-main{
+                .container {
+                    // max-width: 600px;
+                    margin: auto;
+                }
+                #miles-calculator-form{
+                    width: 400px;
+                }
+                .form-group {
+                    display: flex;
+                    align-items: center;
+                }
+                label {
+                    display: inline;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    margin-right: 1rem;
+                }
+                select, input, button {
+                    width: 100%;
+                    padding: 8px;
+                    margin: 5px 0;
+                    box-sizing: border-box;
+                }
+                button {
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #0056b3;
+                }
+                .result {
+                    margin-top: 20px;
+                    border: 1px solid #ddd;
+                    padding: 15px;
+                    border-radius: 5px;
+                }
+                .result h4 {
+                    margin-top: 0;
+                }
+                .table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                }
+                .table th, .table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                }
+                .table th {
+                    background-color: #f4f4f4;
+                    font-weight: bold;
                 }
             }
         }

@@ -667,8 +667,67 @@
                         <div class="tab-pane fade" id="pills-calculator" role="tabpanel" aria-labelledby="pills-contact-tab">
                             <div class="calculator-container">
                                 <div class="calculator-content">
-                                    <div class="calculator-content-top"></div>
-                                    <div class="calculator-content-main"></div>
+                                    <div class="calculator-content-top">
+                                        <div class="calculator-title">Miles calculator</div>
+                                    </div>
+                                    <div class="calculator-content-main">
+                                        <div class="container">
+                                            <form id="miles-calculator-form">
+                                                <div class="form-group">
+                                                    <label for="carrier">Carrier *</label>
+                                                    <select id="carrier" required>
+                                                        <option value="Vietnam Airlines - VN">Vietnam Airlines - VN</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="booking-class">Booking Class *</label>
+                                                    <select id="booking-class" required>
+                                                        <option value="Economy">Economy</option>
+                                                        <option value="Premium Economy">Premium Economy</option>
+                                                        <option value="Business">Business</option>
+                                                        <option value="First Class">First Class</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="departure">From *</label>
+                                                    <select id="departure" required>
+                                                        <!-- Airports populated by JS -->
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="arrival">To *</label>
+                                                    <select id="arrival" required>
+                                                        <!-- Airports populated by JS -->
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="departure-date">Departure Date *</label>
+                                                    <input type="date" id="departure-date" required>
+                                                </div>
+                                                <button type="submit">CALCULATE</button>
+                                            </form>
+                                            <div id="result" class="result" style="display: none;">
+                                                <h4>Result</h4>
+                                                <p>Itinerary</p>
+                                                <p id="itinerary"></p>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>BONUS MILES</th>
+                                                            <th>QUALIFYING MILES</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td id="bonus-miles"></td>
+                                                            <td id="qualifying-miles"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
                                     <div class="calculator-content-bottom"></div>
                                 </div>
                             </div>
@@ -1923,6 +1982,55 @@ document.addEventListener('DOMContentLoaded', loadUserData);
 
         // Show the success alert
         passwordChangedAlert.style.display = 'block';
+    });
+</script>
+<!-- Miles Calculator -->
+<script>
+    // Airports
+    const airports = [
+        "HA NOI - HAN", "HO CHI MINH CITY - SGN", "DA NANG - DAD", "NHA TRANG - CXR",
+        "PHU QUOC - PQC", "HUE - HUI", "CAN THO - VCA", "PLEIKU - PXU",
+        "VINH - VII", "QUY NHON - UIH", "DONG HOI - VDH", "HA LONG - HLG",
+        "CAM RANH - CXR", "RACH GIA - VKG", "CON DAO - VCS"
+    ];
+
+    // Populate airport options
+    const departureSelect = document.getElementById("departure");
+    const arrivalSelect = document.getElementById("arrival");
+
+    airports.forEach(airport => {
+        const option1 = document.createElement("option");
+        option1.value = airport;
+        option1.textContent = airport;
+
+        const option2 = option1.cloneNode(true); // Clone for arrival select
+
+        departureSelect.appendChild(option1);
+        arrivalSelect.appendChild(option2);
+    });
+
+    // Handle form submission
+    document.getElementById("miles-calculator-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const departure = departureSelect.value;
+        const arrival = arrivalSelect.value;
+
+        // Prevent same departure and arrival
+        if (departure === arrival) {
+            alert("Departure and arrival cannot be the same.");
+            return;
+        }
+
+        const bonusMiles = Math.floor(Math.random() * 2000) + 500; // Random between 500-2500
+        const qualifyingMiles = Math.floor(Math.random() * 2000) + 500;
+
+        // Update result
+        document.getElementById("itinerary").textContent = `${departure} ➝ ${arrival}`;
+        document.getElementById("bonus-miles").textContent = bonusMiles;
+        document.getElementById("qualifying-miles").textContent = qualifyingMiles;
+
+        document.getElementById("result").style.display = "block";
     });
 </script>
 </body>
