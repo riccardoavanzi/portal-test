@@ -3469,7 +3469,8 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 2rem; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main button:hover {
   background-color: #0056b3; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .result {
