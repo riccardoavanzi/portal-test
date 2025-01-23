@@ -3443,12 +3443,17 @@ button {
       #pills-settings .settings-container .settings-content .settings-main .change-password-inputs .change-pwd-item {
         margin: .5rem; }
 
+#pills-calculator .calculator-container .calculator-content .calculator-content-top .calculator-title {
+  display: flex;
+  justify-content: center;
+  font-style: 1.5em; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .container {
+  display: flex;
+  align-items: center;
   margin: auto; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main #miles-calculator-form {
   width: 400px; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .form-group {
-  display: flex;
   align-items: center; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main label {
   display: inline;
@@ -3469,9 +3474,9 @@ button {
   background-color: #0056b3; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .result {
   margin-top: 20px;
-  border: 1px solid #ddd;
   padding: 15px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-left: 2rem; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .result h4 {
   margin-top: 0; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .table {
