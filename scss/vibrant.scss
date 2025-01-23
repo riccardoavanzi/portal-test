@@ -2632,6 +2632,18 @@ button{
                     &#help_3{
                         content: $help_3;
                     }
+                    &#loy_1{
+                        content: $loy_1;
+                    }
+                    &#loy_2{
+                        content: $loy_2;
+                    }
+                    &#loy_3{
+                        content: $loy_3;
+                    }
+                    &#loy_4{
+                        content: $loy_4;
+                    }
                 }
             }
         }
@@ -4673,5 +4685,106 @@ button{
             }
         }
 
+    }
+}
+
+#history-pill-container{
+    .history-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .history-title{
+            margin-bottom: 2rem;
+            font-size: $title;
+        }
+        .history-content{
+            .history-content-top{
+                .history-form{
+                    .input-dates{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .input-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin: .5rem;
+                            input{
+                                padding: .5rem 1rem;
+                                border-radius: 2px;
+                                border: 1px solid $light_gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .history-content-bottom{
+                margin-top: 2rem;
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border-bottom: 1px solid #ddd;
+                    padding: 1rem 1.5rem;
+                    text-align: left;
+                }
+                // th {
+                //     color: #143142;
+                // }
+                // tr:nth-child(even) {
+                //     background-color: #f2f2f2;
+                // }
+                // tr:hover {
+                //     background-color: #ddd;
+                // }
+                .detail-link {
+                    color: #0066a2;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .history-bottom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+#pills-settings{
+    .settings-container{
+        .settings-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .settings-top{
+                margin-bottom: 2rem;
+                font-size: $title;
+            }
+            .settings-main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;                
+                .alert{
+                    display: flex;
+                    width: fit-content;
+                    margin: auto;
+                    text-align: center;
+                }
+                .change-password-inputs{
+                    margin-top: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                    .change-pwd-item{
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
     }
 }

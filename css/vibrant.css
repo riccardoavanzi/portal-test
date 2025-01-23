@@ -1958,11 +1958,19 @@ button {
         box-shadow: 0px 4px 30px rgba(225, 225, 225, 0.507);
         flex-wrap: wrap; }
         #support-options .support-options-items ul .card img#help_1 {
-          content: url("https://betteraviationjobs.com/storage/2019/07/Philippine-Airlines-Cabin-Crew.jpg"); }
+          content: url("https://plus.unsplash.com/premium_photo-1661299251279-117a49a32548?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
         #support-options .support-options-items ul .card img#help_2 {
-          content: url("https://www.luxair.lu/sites/default/files/styles/paragraph_2_column/public/content/202203/extra%20space%20%281%29_1.jpg?itok=6I8H2sGz"); }
+          content: url("https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
         #support-options .support-options-items ul .card img#help_3 {
-          content: url("https://www.concept-phones.com/wp-content/uploads/2021/05/smartphones-used-for-writing-long-texts.jpg"); }
+          content: url("https://images.unsplash.com/photo-1521931961826-fe48677230a5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
+        #support-options .support-options-items ul .card img#loy_1 {
+          content: url("https://plus.unsplash.com/premium_photo-1661299251279-117a49a32548?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
+        #support-options .support-options-items ul .card img#loy_2 {
+          content: url("https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
+        #support-options .support-options-items ul .card img#loy_3 {
+          content: url("https://images.unsplash.com/photo-1627750673161-02af15c7c722?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
+        #support-options .support-options-items ul .card img#loy_4 {
+          content: url("https://images.unsplash.com/photo-1587893904903-52bdb6ad0c0c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); }
 
 #contact-form {
   margin: 150px auto; }
@@ -3369,3 +3377,68 @@ button {
           color: #FFFFFF; }
           #aaas-personalized .section_content .ancillaries_list .card .continue_booking:hover i {
             color: #FFFFFF; }
+
+#history-pill-container .history-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #history-pill-container .history-top .history-title {
+    margin-bottom: 2rem;
+    font-size: 1.5em; }
+  #history-pill-container .history-top .history-content .history-content-top .history-form .input-dates {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #history-pill-container .history-top .history-content .history-content-top .history-form .input-dates .input-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: .5rem; }
+      #history-pill-container .history-top .history-content .history-content-top .history-form .input-dates .input-box input {
+        padding: .5rem 1rem;
+        border-radius: 2px;
+        border: 1px solid #ece5e5c2; }
+  #history-pill-container .history-top .history-content .history-content-bottom {
+    margin-top: 2rem; }
+    #history-pill-container .history-top .history-content .history-content-bottom table {
+      width: 100%;
+      border-collapse: collapse; }
+    #history-pill-container .history-top .history-content .history-content-bottom th, #history-pill-container .history-top .history-content .history-content-bottom td {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 1.5rem;
+      text-align: left; }
+    #history-pill-container .history-top .history-content .history-content-bottom .detail-link {
+      color: #0066a2;
+      text-decoration: underline;
+      cursor: pointer; }
+#history-pill-container .history-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; }
+
+#pills-settings .settings-container .settings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #pills-settings .settings-container .settings-content .settings-top {
+    margin-bottom: 2rem;
+    font-size: 1.5em; }
+  #pills-settings .settings-container .settings-content .settings-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #pills-settings .settings-container .settings-content .settings-main .alert {
+      display: flex;
+      width: fit-content;
+      margin: auto;
+      text-align: center; }
+    #pills-settings .settings-container .settings-content .settings-main .change-password-inputs {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem; }
+      #pills-settings .settings-container .settings-content .settings-main .change-password-inputs .change-pwd-item {
+        margin: .5rem; }

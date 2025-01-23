@@ -455,7 +455,7 @@
                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-history" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="hideCookiesSearch()">History</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-settings" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Settings</button>
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-settings" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Password</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-calculator" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="hideCookiesSearch()">Calculator</button>
@@ -519,45 +519,158 @@
                         <div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <div class="history-pill-container" id="history-pill-container">
                                 <div class="history-top">
-                                    <div class="history-title"></div>
-
+                                    <div class="history-title">Your recent activities</div>
+                                    <div class="history-content">
+                                        <div class="history-content-top">
+                                            <div class="history-form">
+                                                <div class="input-dates">
+                                                    <div class="input-box">
+                                                        <label for="">From</label>
+                                                        <input type="date">
+                                                    </div>
+                                                    <div class="input-box">
+                                                        <label for="">To</label>
+                                                        <input type="date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="history-content-bottom">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Reference</th>
+                                                        <th>Reference</th>
+                                                        <th>Bonus Miles</th>
+                                                        <th>Comment</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2025/01/11</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>793</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025/01/10</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>793</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2025/01/01</td>
+                                                        <td>Points Expiration</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>-120</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/11/21</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>793</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/11/19</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>793</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/11/01</td>
+                                                        <td>Points Expiration</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>-448</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/10/01</td>
+                                                        <td>Points Expiration</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>-1000</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/09/21</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>716</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2024/09/19</td>
+                                                        <td>Airline Issuance</td>
+                                                        <td>Vietnam Airlines</td>
+                                                        <td>276</td>
+                                                        <td><span class="detail-link">Detail</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="history-bottom"></div>
+                                <div class="history-bottom">
+                                    <button class="btn btn-primary">See all activities</button>
+                                </div>
                             </div>
                         </div>
                         <!-- PASSOWRD -->
                         <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-contact-tab">
-                            <div class="ssci_container" id="ssci">
-                                <ul class="criteria">
-                                    <li>
-                                        <input type="text" placeholder="Last name">
-                                    </li>
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle" id="options" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Booking reference
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Ticket number</a></li>
-                                        <li><a class="dropdown-item" href="#">Frequent Flyer number</a></li>
-                                        </ul>
+                            <div class="settings-container">
+                                <div class="settings-content">
+                                    <div class="settings-top">
+                                        Change password
                                     </div>
-                                </ul>
-                                <button type="submit" class="submit">
-                                    <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
-                                </button>
+                                    <div class="settings-main">
+                                        <div class="alert alert-info" role="alert" id="password-requirements">
+                                            The password must contain at least 8 characters, with unlimnited maximum length. <br> Password must contain at least 1 number digit, 1 uppercase letter, 1 lowercase letter and 1 special character.
+                                        </div>
+                                        <div class="alert alert-success" role="alert" id="password-changed">
+                                            Password successfully changed
+                                          </div>
+                                        <div class="change-password-inputs">
+                                            <div class="change-pwd-item">
+                                                <label for="current-pwd">Type the current password</label>
+                                                <div class="input-container-pwd">
+                                                    <input type="password" id="current-pwd">
+                                                    <button type="button" id="set-current"><i class='bx bx-low-vision'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="change-pwd-item">
+                                                <label for="new-pwd">Type the new password</label>
+                                                <div class="input-container-pwd">
+                                                    <input type="password" id="new-pwd">
+                                                    <button type="button" id="set-new"><i class='bx bx-low-vision'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="change-pwd-item">
+                                                <label for="new-pwd2">Confirm the new password</label>
+                                                <div class="input-container-pwd">
+                                                    <input type="password" id="new-pwd2">
+                                                    <button type="button" id="confirm-current"><i class='bx bx-low-vision'></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button id="change-password">change password</button>
+                                    </div>
+                                    <div class="settings-footer"></div>
+                                </div>
                             </div>
                         </div>
                         <!-- FLIGHT-STATUS -->
                         <div class="tab-pane fade" id="pills-calculator" role="tabpanel" aria-labelledby="pills-contact-tab">
-                            <div class="status_container" id="status">
-                                <ul class="criteria">
-                                    <li>
-                                        <input type="text" placeholder="Flight number">
-                                    </li>
-                                </ul>
-                                <button type="submit" class="submit">
-                                    <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
-                                </button>
+                            <div class="calculator-container">
+                                <div class="calculator-content">
+                                    <div class="calculator-content-top"></div>
+                                    <div class="calculator-content-main"></div>
+                                    <div class="calculator-content-bottom"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -884,7 +997,7 @@
                         <div class="card">
                             <img alt="loy3" class="card-img-top" src="" id="loy_3">
                             <div class="card-body">
-                                <h5 class="card-title">Chatbot</h5>
+                                <h5 class="card-title">Lounge access</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a class="btn btn-primary" href="#">Know more</a>
                             </div>
@@ -895,7 +1008,7 @@
                         <div class="card">
                             <img alt="loy4" class="card-img-top" src="" id="loy_4">
                             <div class="card-body">
-                                <h5 class="card-title">Chatbot</h5>
+                                <h5 class="card-title">In flight</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a class="btn btn-primary" href="#">Know more</a>
                             </div>
@@ -1773,6 +1886,44 @@ async function loadUserData() {
 document.addEventListener('DOMContentLoaded', loadUserData);
 </script>
 
+</script>
+<!-- Change password -->
+<script>
+    // Function to toggle password visibility
+    function togglePasswordVisibility(inputId, buttonId) {
+        const input = document.getElementById(inputId);
+        const button = document.getElementById(buttonId);
+
+        button.addEventListener('click', () => {
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+
+            const icon = button.querySelector('i');
+            icon.className = isPassword ? 'bx bx-show' : 'bx bx-low-vision';
+        });
+    }
+
+    // Attach toggle functionality to each input-button pair
+    togglePasswordVisibility('current-pwd', 'set-current');
+    togglePasswordVisibility('new-pwd', 'set-new');
+    togglePasswordVisibility('new-pwd2', 'confirm-current');
+
+    // Show/Hide alerts when the "Change Password" button is clicked
+    const changePasswordButton = document.getElementById('change-password');
+    const passwordRequirementsAlert = document.getElementById('password-requirements');
+    const passwordChangedAlert = document.getElementById('password-changed');
+
+    // Initially show the requirements alert and hide the success alert
+    passwordRequirementsAlert.style.display = 'block';
+    passwordChangedAlert.style.display = 'none';
+
+    changePasswordButton.addEventListener('click', () => {
+        // Hide the requirements alert
+        passwordRequirementsAlert.style.display = 'none';
+
+        // Show the success alert
+        passwordChangedAlert.style.display = 'block';
+    });
 </script>
 </body>
 </html>
