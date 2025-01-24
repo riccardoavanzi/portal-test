@@ -4744,6 +4744,23 @@ button{
                     text-decoration: underline;
                     cursor: pointer;
                 }
+                .pagination {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+                .pagination button {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                    background-color: #0066a2;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                .pagination button:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
             }
         }
     }
@@ -4780,6 +4797,10 @@ button{
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 1rem;
+                    input{
+                        border-radius: 2px;
+                                border: 1px solid $light_gray;
+                    }
                     .change-pwd-item{
                         margin: .5rem;
 
@@ -4810,6 +4831,7 @@ button{
                 }
                 .form-group {
                     align-items: center;
+                    margin-bottom: .5rem;
                 }
                 label {
                     display: inline;
@@ -4822,6 +4844,8 @@ button{
                     padding: 8px;
                     margin: 5px 0;
                     box-sizing: border-box;
+                    border-radius: 2px;
+                    border: 1px solid $light_gray;
                 }
                 button {
                     background-color: #007bff;

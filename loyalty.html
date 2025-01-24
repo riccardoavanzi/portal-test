@@ -526,17 +526,17 @@
                                                 <div class="input-dates">
                                                     <div class="input-box">
                                                         <label for="">From</label>
-                                                        <input type="date">
+                                                        <input type="date" id="start-date">
                                                     </div>
                                                     <div class="input-box">
                                                         <label for="">To</label>
-                                                        <input type="date">
+                                                        <input type="date" id="end-date">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="history-content-bottom">
-                                            <table>
+                                            <!-- <table>
                                                 <thead>
                                                     <tr>
                                                         <th>Date</th>
@@ -611,7 +611,25 @@
                                                         <td><span class="detail-link">Detail</span></td>
                                                     </tr>
                                                 </tbody>
+                                            </table> -->
+                                            <table id="bonusMilesTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Reference</th>
+                                                        <th>Reference</th>
+                                                        <th>Bonus Miles</th>
+                                                        <th>Comment</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tableBody">
+                                                    <!-- Rows will be dynamically added -->
+                                                </tbody>
                                             </table>
+                                            <div class="pagination">
+                                                <button id="prevButton" onclick="prevPage()"><i class='bx bx-chevron-left'></i></button>
+                                                <button id="nextButton" onclick="nextPage()"><i class='bx bx-chevron-right'></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1945,6 +1963,91 @@ async function loadUserData() {
 document.addEventListener('DOMContentLoaded', loadUserData);
 </script>
 
+</script>
+<!-- History table filter and pagination -->
+<script>
+    // Sample data for the table
+const data = [
+    { date: '2025/01/11', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2025/01/10', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2025/01/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -120, comment: 'Detail' },
+    { date: '2024/11/21', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2024/11/19', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2024/11/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -448, comment: 'Detail' },
+    { date: '2024/10/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -1000, comment: 'Detail' },
+    { date: '2024/09/21', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 716, comment: 'Detail' },
+    { date: '2024/09/19', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 276, comment: 'Detail' },
+];
+
+const rowsPerPage = 3;
+let currentPage = 1;
+let filteredData = [...data]; // Initialize with all data
+
+function renderTable() {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = ''; // Clear previous rows
+
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    const rows = filteredData.slice(startIndex, endIndex);
+
+    rows.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${row.date}</td>
+            <td>${row.reference1}</td>
+            <td>${row.reference2}</td>
+            <td>${row.miles}</td>
+            <td><span class="detail-link">${row.comment}</span></td>
+        `;
+        tableBody.appendChild(tr);
+    });
+
+    // Disable/Enable buttons based on the current page
+    document.getElementById('prevButton').disabled = currentPage === 1;
+    document.getElementById('nextButton').disabled = (currentPage * rowsPerPage) >= filteredData.length;
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    if ((currentPage * rowsPerPage) < filteredData.length) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function filterData() {
+    const fromDate = document.getElementById('start-date').value;
+    const toDate = document.getElementById('end-date').value;
+
+    if (fromDate || toDate) {
+        filteredData = data.filter(row => {
+            const rowDate = new Date(row.date);
+            const fromDateObj = fromDate ? new Date(fromDate) : null;
+            const toDateObj = toDate ? new Date(toDate) : null;
+
+            return (!fromDateObj || rowDate >= fromDateObj) && (!toDateObj || rowDate <= toDateObj);
+        });
+    } else {
+        filteredData = [...data]; // Reset to all data
+    }
+
+    currentPage = 1; // Reset to the first page after filtering
+    renderTable();
+}
+
+// Add event listeners to the date inputs
+document.getElementById('start-date').addEventListener('change', filterData);
+document.getElementById('end-date').addEventListener('change', filterData);
+
+// Initial render
+renderTable();
 </script>
 <!-- Change password -->
 <script>

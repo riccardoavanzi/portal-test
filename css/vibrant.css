@@ -3412,6 +3412,20 @@ button {
       color: #0066a2;
       text-decoration: underline;
       cursor: pointer; }
+    #history-pill-container .history-top .history-content .history-content-bottom .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; }
+    #history-pill-container .history-top .history-content .history-content-bottom .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      background-color: #0066a2;
+      color: white;
+      border: none;
+      cursor: pointer; }
+    #history-pill-container .history-top .history-content .history-content-bottom .pagination button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed; }
 #history-pill-container .history-bottom {
   width: 100%;
   display: flex;
@@ -3440,6 +3454,9 @@ button {
       align-items: center;
       justify-content: center;
       margin-bottom: 1rem; }
+      #pills-settings .settings-container .settings-content .settings-main .change-password-inputs input {
+        border-radius: 2px;
+        border: 1px solid #ece5e5c2; }
       #pills-settings .settings-container .settings-content .settings-main .change-password-inputs .change-pwd-item {
         margin: .5rem; }
 
@@ -3454,7 +3471,8 @@ button {
 #pills-calculator .calculator-container .calculator-content .calculator-content-main #miles-calculator-form {
   width: 400px; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main .form-group {
-  align-items: center; }
+  align-items: center;
+  margin-bottom: .5rem; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main label {
   display: inline;
   margin-bottom: 5px;
@@ -3464,7 +3482,9 @@ button {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid #ece5e5c2; }
 #pills-calculator .calculator-container .calculator-content .calculator-content-main button {
   background-color: #007bff;
   color: white;
