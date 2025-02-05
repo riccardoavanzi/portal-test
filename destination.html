@@ -141,47 +141,61 @@
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ms-auto menu">
                             <li class="nav-item">
-                                <a href="index.html" id="book" class="nav-link">Book</a>
+                                <a href="index.thml" id="book" class="nav-link">Book</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" id="manage" class="nav-link">Manage</a>
                             </li>
                             <li class="nav-item">
-                                <a href="destination.html" id="destinations" class="nav-link">Destinations</a>
+                                <a href="destinations.html" id="destinations" class="nav-link">Explore</a>
                             </li>
                             <li class="nav-item">
-                                <a href="content.html" id="help" class="nav-link">Help</a>
+                                <a href="content.html" id="help" class="nav-link">Support</a>
                             </li>
                             <li class="nav-item">
-                                <input type="text" id="searchDest" placeholder="search destination" onkeydown="handleSearch(event)">
+                                <a href="loyalty.html" id="help" class="nav-link">Lotus Miles</a>
                             </li>
-                            <li>
+                            <li class="nav-item" id="mytrips">
+                                <a href="trips.html" id="help" class="nav-link">My trips</a>
+                            </li>
+                            <li class="nav-item" id="lang">
                                 <div class="dropdown" id="language-dropdown-container">
                                     <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class='bx bx-world'></i>
                                     </button>
                                       <ul class="dropdown-menu" id="langList" aria-labelledby="languageDropdown">
                                         <li>
-                                            <button class="dropdown-item" id="en" onclick="translateEN()">English</button>
-                                            <button class="dropdown-item" id="fr" onclick="translateFR()">French</button>
-                                            <button class="dropdown-item" id="de" onclick="translateDE()">German</button>
-                                            <button class="dropdown-item" id="kr" onclick="translateKR()">Korean</button>
-                                            <button class="dropdown-item" id="zh" onclick="translateZH()">Chinese</button>
-                                            <button class="dropdown-item" id="zh" onclick="translateVN()">Vietnamese</button>
+                                            <a class="dropdown-item" href="index.html"><span class="fi fi-gb"></span>english</a>
+                                            <button class="dropdown-item" id="fr" onclick="translateFR()"><span class="fi fi-fr"></span> french</button>
+                                            <button class="dropdown-item" id="de" onclick="translateDE()"><span class="fi fi-de"> </span> german</button>
+                                            <button class="dropdown-item" id="zh" onclick="translateZH()"><span class="fi fi-cn"> </span> chinese</button>
+                                            <a class="dropdown-item" href="indexKR.html"><span class="fi fi-kr"></span>한국어</a>
+                                            <a class="dropdown-item" href="indexRTL.html" id="RTL"><span class="fi fi-ae"></span> اللغة العربية</a>
                                         </li>
                                       </ul>
                                       <!-- <button id="translateButton" class="btn btn-primary">Translate Page</button> -->
-                                    </div>
+                                </div>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a href="#" id="loyalty" class="nav-link">Loyalty</a>
-                            </li>
-                            <li>
-                                <button type="button" class="btn btn-primary">
-                                        <i class="bx bxs-user-circle"></i>
-                                    <div>Login</div>
+                            <li class="nav-item" id="search-magnet">
+                                <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#search-modal">
+                                    <i class='bx bx-search'></i>
                                 </button>
-                            </li> -->
+                            </li>
+                            <li class="nav-item" id="avatar">
+                                <div id="avatarcontainer">
+                                    <div id="avatarpic">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary" id="login-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+                                    login
+                                </button>
+                                <button class="btn btn-primary" id="logout-btn" onclick="logout()">
+                                    logout
+                                </button>
+                            </li>
                         </ul>
                     </div>                   
                     <!-- END OF DESKTOP MENU LIST -->
