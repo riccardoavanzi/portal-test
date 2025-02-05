@@ -51,7 +51,7 @@
     <script>
         async function fetchUserProfile() {
             try {
-                const response = await fetch('/users-db/user1.json');
+                const response = await fetch('../users-db/user1.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
