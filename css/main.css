@@ -1669,6 +1669,7 @@ button:hover {
   }
   #ancillaries_shortcut .ancillaries_list {
     transform: scale(0.8);
+    grid-template-columns: auto;
   }
   #ancillaries_shortcut .ancillaries_list .card {
     width: 12rem !important;
