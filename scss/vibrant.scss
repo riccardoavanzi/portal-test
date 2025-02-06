@@ -1763,6 +1763,7 @@ button{
         }
             .ancillaries_list{
                 transform: scale(.8);
+                grid-template-columns: auto;
                 .card{
                    width: 12rem !important; 
                 }
