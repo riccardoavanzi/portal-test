@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vietnam Airlines - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Font: Rubik -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- (Optional) Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    /* Global body styling */
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    /* Remove navbar shadow */
+    nav.navbar {
+      border-bottom: 1px solid #eee; /* optional thin border */
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    /* Additional vertical margins for sections */
+    .my-section {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Hero section */
+    .hero-section {
+      margin-top: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 2rem;
+    }
+    .hero-text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      color: #fff;
+      background-color: rgba(0,0,0,0.4);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    /* Flight-search form */
+    .flight-search-form {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-top: -2rem;
+      z-index: 2;
+      position: relative;
+    }
+    .flight-search-form select,
+    .flight-search-form input {
+      border: 1px solid #ddd;
+    }
+    .flight-search-form .form-control:focus {
+      box-shadow: none;
+      border-color: #00a6d6; /* A teal-blue highlight */
+    }
+    .flight-search-form .btn {
+      background-color: #00a6d6; 
+      border: none;
+      color: #fff;
+    }
+    .flight-search-form .btn:hover {
+      background-color: #008fb9;
+    }
+
+    /* Full-width LotusMiles banner */
+    .lotusmiles-banner {
+      background-color: #00a6d6;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    .lotusmiles-banner img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    /* Section Headings */
+    .section-title {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    /* Cards (smaller images) */
+    .card {
+      background-color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 200px; /* smaller card images */
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    /* Carousel pagination controls */
+    .carousel-indicators button {
+      background-color: #333;
+    }
+    .carousel-indicators .active {
+      background-color: #00a6d6;
+    }
+
+    /* Modal Backdrop Blur */
+    .modal-backdrop.show {
+      backdrop-filter: blur(5px);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f1f1f1;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    footer a {
+      text-decoration: none;
+      color: #333;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Left: Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img 
+        src="https://www.vietnamairlines.com/~/media/Images/VNANew/Home/Logo/logo_vna.png" 
+        alt="Vietnam Airlines Logo"
+      />
+    </a>
+
+    <!-- Center: Menu items -->
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarContent" 
+      aria-controls="navbarContent" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">Explore</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">Book &amp; Manage</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">Prepare</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">Lotus Miles</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Search Icon + Login Button -->
+    <div class="d-flex align-items-center">
+      <!-- Search triggers modal -->
+      <button class="btn btn-link text-dark me-2" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <i class="ri-search-line" style="font-size: 1.25rem;"></i>
+      </button>
+      <!-- Login -->
+      <a href="#" class="btn btn-outline-primary">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION AS A CAROUSEL -->
+<div class="container position-relative my-5">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <!-- Background image via CSS inline style -->
+          <div 
+            class="d-block w-100"
+            style="
+              height: 450px;
+              background: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+              center/cover no-repeat;
+              border-radius: 1rem;
+            "
+          ></div>
+          <!-- Slide content centered in a 50% width block -->
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" 
+               style="top: 50%; transform: translateY(-50%);">
+            <div class="w-50 mx-auto text-center">
+              <h2>Discover the world</h2>
+              <p>Experience unforgettable adventures across the globe</p>
+              <a href="#" class="btn btn-primary">Discover</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div 
+            class="d-block w-100"
+            style="
+              height: 450px;
+              background: url('https://images.unsplash.com/photo-1581847797580-a3ac8010d37c?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+              center/cover no-repeat;
+              border-radius: 1rem;
+            "
+          ></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" 
+               style="top: 50%; transform: translateY(-50%);">
+            <div class="w-50 mx-auto text-center">
+              <h2>Hanoi - SFO from $500</h2>
+              <p>Fly further at an incredible price!</p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div 
+            class="d-block w-100"
+            style="
+              height: 450px;
+              background: url('https://images.unsplash.com/photo-1514355315815-2b64b0216b14?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+              center/cover no-repeat;
+              border-radius: 1rem;
+            "
+          ></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center" 
+               style="top: 50%; transform: translateY(-50%);">
+            <div class="w-50 mx-auto text-center">
+              <h2>Students Offer</h2>
+              <p>Get the best advantages for your academic travels</p>
+              <a href="#" class="btn btn-primary">Know More</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- No pagination indicators as requested -->
+      <!-- Optional Previous/Next controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+
+<!-- FLIGHT SEARCH FORM -->
+<div class="container mb-5" style="margin-top: -5rem;">
+  <div class="row justify-content-center">
+    <div class="col-md-10 flight-search-form">
+      <form class="row gy-3 gx-3">
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">From</label>
+          <input type="text" class="form-control" placeholder="e.g. Paris (CDG)">
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">To</label>
+          <input type="text" class="form-control" placeholder="e.g. Hanoi (HAN)">
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">Departure Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">Return Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">Class</label>
+          <select class="form-select">
+            <option selected>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <label class="form-label">Passengers</label>
+          <select class="form-select">
+            <option selected>1 Adult</option>
+            <option>2 Passengers</option>
+            <option>3 Passengers</option>
+          </select>
+        </div>
+        <div class="col-12 text-end">
+          <button type="submit" class="btn">Search Flights</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- LOTUSMILES BANNER -->
+<div class="container-fluid lotusmiles-banner">
+  <img 
+    src="https://lotusmall.vietnamairlines.com/images/logo-vna.png"
+    alt="LotusMiles Logo"
+  >
+  <h2>LotusMiles Program</h2>
+  <p>Earn miles, enjoy exclusive benefits, and explore more with Vietnam Airlines.</p>
+  <a href="#" class="btn btn-light">Join Now</a>
+</div>
+
+<!-- OFFERS & SERVICES SECTION -->
+<div class="container my-section">
+    <h2 class="section-title">Offers & Services</h2>
+    <div class="row gy-4">
+      <!-- Card 1: Seat -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img 
+            src="https://plus.unsplash.com/premium_photo-1723527888369-a769544d69cd?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            class="card-img-top" 
+            alt="Seat Selection">
+          <div class="card-body">
+            <h5 class="card-title">Seat Selection</h5>
+            <p class="card-text">Choose your preferred seat and travel in comfort.</p>
+            <a href="#" class="btn btn-outline-primary">Select Seat</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2: Extra Bag -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img 
+            src="https://plus.unsplash.com/premium_photo-1677657419521-cff414041271?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            class="card-img-top" 
+            alt="Extra Baggage">
+          <div class="card-body">
+            <h5 class="card-title">Extra Baggage</h5>
+            <p class="card-text">Travel worry-free with additional luggage allowance.</p>
+            <a href="#" class="btn btn-outline-primary">Add Bag</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3: Special Meal -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img 
+            src="https://plus.unsplash.com/premium_photo-1723489259530-b8d767f75f8e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGxhbmUlMjBtZWFsfGVufDB8fDB8fHww" 
+            class="card-img-top" 
+            alt="Special Meal">
+          <div class="card-body">
+            <h5 class="card-title">Special Meal</h5>
+            <p class="card-text">Cater to your dietary needs by requesting a special meal in advance.</p>
+            <a href="#" class="btn btn-outline-primary">Select Meal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- POPULAR DESTINATIONS SECTION -->
+<div class="container my-section">
+  <h2 class="section-title">Popular Destinations</h2>
+  <div class="row gy-4">
+    <!-- Card 1: Hanoi -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img 
+          src="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?q=80&w=3023&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          class="card-img-top" 
+          alt="Hanoi">
+        <div class="card-body">
+          <h5 class="card-title">Hanoi</h5>
+          <p class="card-text">Experience Vietnam's culture in the heart of its capital city.</p>
+          <button class="btn btn-secondary">Know more</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2: Ho Chi Minh City -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img 
+          src="https://images.unsplash.com/photo-1598544919456-fcb105fa7a6f?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          class="card-img-top" 
+          alt="Ho Chi Minh City">
+        <div class="card-body">
+          <h5 class="card-title">Ho Chi Minh City</h5>
+          <p class="card-text">A vibrant, modern city with a rich historical heritage.</p>
+          <button class="btn btn-secondary">Know more</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3: Da Nang -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img 
+          src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          class="card-img-top" 
+          alt="Da Nang">
+        <div class="card-body">
+          <h5 class="card-title">Da Nang</h5>
+          <p class="card-text">Enjoy pristine beaches and stunning mountainous landscapes.</p>
+          <button class="btn btn-secondary">Know more</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4: Phu Quoc -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img 
+          src="https://images.unsplash.com/photo-1621094305060-081171d1c171?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          class="card-img-top" 
+          alt="Phu Quoc">
+        <div class="card-body">
+          <h5 class="card-title">Phu Quoc</h5>
+          <p class="card-text">An island paradise, perfect for relaxing and snorkeling.</p>
+          <button class="btn btn-secondary">Know more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT & NEWS SECTION -->
+<div class="container my-section">
+  <h2 class="section-title">Support & News</h2>
+  <div class="row">
+    <!-- Left half: Carousel -->
+    <div class="col-md-6 mb-4">
+      <div id="supportCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators (pagination) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#supportCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#supportCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#supportCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Slide 1: Call Center -->
+          <div class="carousel-item active">
+            <div class="card">
+              <img 
+                src="https://plus.unsplash.com/premium_photo-1661582120130-03b9bdc47a75?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                class="card-img-top" 
+                alt="Call Center">
+              <div class="card-body">
+                <h5 class="card-title">Call Center</h5>
+                <p class="card-text">24/7 hotline for reservations, ticket changes, or any inquiries.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Ticket Counter -->
+          <div class="carousel-item">
+            <div class="card">
+              <img 
+                src="https://plus.unsplash.com/premium_photo-1661301099470-47542887e011?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                class="card-img-top" 
+                alt="Ticket Counter">
+              <div class="card-body">
+                <h5 class="card-title">Ticket Counter</h5>
+                <p class="card-text">Visit our airport or city offices for ticketing, baggage, or other travel assistance.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Mobile Apps -->
+          <div class="carousel-item">
+            <div class="card">
+              <img 
+                src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                class="card-img-top" 
+                alt="Mobile Apps">
+              <div class="card-body">
+                <h5 class="card-title">Mobile Apps</h5>
+                <p class="card-text">Manage your booking, check-in, and track flights with our official app.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#supportCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#supportCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right half: News Accordion -->
+    <div class="col-md-6 mb-4">
+      <div class="accordion" id="newsAccordion">
+        <!-- News Item #1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              New Routes Announcement
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#newsAccordion">
+            <div class="accordion-body">
+              Vietnam Airlines launches new direct routes to major Asian cities, offering more convenience for travelers.
+            </div>
+          </div>
+        </div>
+        <!-- News Item #2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              In-Flight Health & Safety
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#newsAccordion">
+            <div class="accordion-body">
+              Learn about our enhanced safety protocols, from onboard cleaning procedures to contactless services.
+            </div>
+          </div>
+        </div>
+        <!-- News Item #3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Revised Baggage Policy
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#newsAccordion">
+            <div class="accordion-body">
+              Updated free baggage allowances for Economy, Premium Economy, and Business Class travelers to enhance your travel experience.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER BANNER -->
+<div class="container my-5 p-4 newsletter-banner text-center" style="background-color: #f5f5f5; border-radius: .5rem;">
+    <h3 class="mb-3">Stay Updated</h3>
+    <p class="mb-4">Join our mailing list to receive the latest news, offers, and travel tips.</p>
+    <div class="row justify-content-center">
+      <div class="col-sm-8 col-md-6">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FOOTER -->
+  <div class="container-fluid" style="background-color: #006e7f; color: #fff;">
+    <!-- Top text area -->
+    <div class="row text-center py-4">
+      <div class="col">
+        <p class="mb-1 fw-bold" style="font-size: 1rem;">
+          Vietnam Airlines is proud to be a leading 4-star global airline
+        </p>
+        <p class="mb-0">
+          Our sincere thanks to all valued customers and partners for your support!
+        </p>
+      </div>
+    </div>
+  
+    <!-- Main links area -->
+    <div class="container py-4">
+      <div class="row">
+        <!-- Column 1: Vietnam Airlines -->
+        <div class="col-6 col-md-2 mb-4">
+          <h6 class="fw-bold">Vietnam Airlines</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Our Fleet</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Partners &amp; Subsidiaries <i class="bi bi-box-arrow-up-right small"></i>
+            </a></li>
+            <li><a href="#" class="text-white text-decoration-none">Press Room</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Corporate Social Responsibility</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Investor Relation</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Procurement</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Career</a></li>
+          </ul>
+        </div>
+        <!-- Column 2: Legal -->
+        <div class="col-6 col-md-2 mb-4">
+          <h6 class="fw-bold">Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Terms &amp; Conditions</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Conditions Of Carriage</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Cookies Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Support -->
+        <div class="col-6 col-md-2 mb-4">
+          <h6 class="fw-bold">Support</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Claim/Suggestion</a></li>
+            <li><a href="#" class="text-white text-decoration-none">HelpDesk</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Web Accessibility</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Vietnam Airlines' Branch Offices</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Customer Service Plan</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Vietnam Airlines Virtual Assistant</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Vietnam Airlines App</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Cargo -->
+        <div class="col-6 col-md-2 mb-4">
+          <h6 class="fw-bold">Cargo</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">
+              Cargo Website <i class="bi bi-box-arrow-up-right small"></i>
+            </a></li>
+          </ul>
+        </div>
+        <!-- Column 5: Useful Information -->
+        <div class="col-6 col-md-2 mb-4">
+          <h6 class="fw-bold">Useful Information</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Partnership With Lotusmiles</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Heritage Magazine</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Travel Guide</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Optional &amp; Special Service Charges <i class="bi bi-box-arrow-up-right small"></i>
+            </a></li>
+            <li><a href="#" class="text-white text-decoration-none">Tarmac Delay Plan</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Note -->
+      <p class="text-white-50 small">
+        Note: <i class="bi bi-box-arrow-up-right small"></i> Link opens in new window. Site may not meet accessibility guidelines.
+      </p>
+  
+      <!-- Bottom row: logos, social, contact -->
+      <div class="row mt-4">
+        <div class="col-md-6 mb-4">
+          <!-- Alliance / Social -->
+          <div class="d-flex align-items-center mb-3">
+            <!-- SkyTeam Logo placeholder -->
+            <img src="https://via.placeholder.com/80x30?text=SkyTeam" alt="SkyTeam" class="me-4" style="height: 30px;">
+            <!-- Social Icons (Remix Icon or your choice) -->
+            <a href="#" class="text-white me-3"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="text-white me-3"><i class="ri-youtube-fill"></i></a>
+            <a href="#" class="text-white me-3"><i class="ri-instagram-line"></i></a>
+          </div>
+          <div>
+            <a href="#" class="text-white me-3">Agency</a>
+            <span class="text-white me-3">|</span>
+            <a href="#" class="text-white me-3">Feedback</a>
+            <span class="text-white me-3">|</span>
+            <a href="#" class="text-white">Sitemap</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mb-4">
+          <!-- Contact Info -->
+          <p class="mb-1">Contact Center for calls within Vietnam (24/7): <strong>1900 1100</strong></p>
+          <p class="mb-1">For Lotusmiles members: <strong>1900 1800</strong></p>
+          <p class="mb-1">For calls from outside Vietnam (24/7): <strong>+84 24 38320320</strong></p>
+          <p class="mb-1">Email: <a href="mailto:Telesales@vietnamairlines.com" class="text-white">Telesales@vietnamairlines.com</a></p>
+        </div>
+      </div>
+  
+      <!-- Partner / Awards logos row -->
+      <div class="row mt-4 align-items-center">
+        <div class="col-md-6 d-flex flex-wrap align-items-center">
+          <!-- Partner Logos placeholders -->
+          <img src="https://via.placeholder.com/120x30?text=VNA" alt="VietnamAirlines" class="me-3 mb-2" style="height: 30px;">
+          <img src="https://via.placeholder.com/120x30?text=PACIFIC" alt="PacificAirlines" class="me-3 mb-2" style="height: 30px;">
+          <img src="https://via.placeholder.com/80x30?text=VASCO" alt="VASCO" class="mb-2" style="height: 30px;">
+        </div>
+        <div class="col-md-6 text-end">
+          <!-- Awards placeholders -->
+          <span class="me-3">Our Awards</span>
+          <img src="https://via.placeholder.com/60x40?text=WTA" alt="World Travel Awards" class="me-2" style="height: 40px;">
+          <img src="https://via.placeholder.com/60x40?text=TripAdvisor" alt="TripAdvisor" style="height: 40px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- SEARCH MODAL -->
+<div class="modal fade" id="searchModal" data-bs-backdrop="true" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel"><i class="ri-search-line"></i> Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Search Input -->
+        <div class="mb-3">
+          <label for="searchInput" class="form-label">Find your destination</label>
+          <input type="text" class="form-control" id="searchInput" placeholder="e.g. Tokyo, New York">
+        </div>
+        <!-- Suggested searches -->
+        <div>
+          <h6>Suggested Searches:</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Flights to Hanoi</a></li>
+            <li><a href="#" class="text-decoration-none">Check-in Online</a></li>
+            <li><a href="#" class="text-decoration-none">Baggage Allowance</a></li>
+            <li><a href="#" class="text-decoration-none">Redeem LotusMiles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
