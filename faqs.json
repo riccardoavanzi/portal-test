@@ -1,0 +1,331 @@
+{
+    "faqsData": [
+      {
+        "category": "Baggage",
+        "subCategories": [
+          {
+            "title": "Baggage calculator",
+            "faqs": [
+              {
+                "question": "What is the Baggage Calculator, and how does it help me?",
+                "answer": "The Baggage Calculator is an online tool that shows you your total baggage allowance based on your itinerary. It helps you plan for any extra fees by calculating free allowances and possible excess charges."
+              },
+              {
+                "question": "Do I have to pay to use the Baggage Calculator?",
+                "answer": "No, the tool is free to use on Vietnam Airlines’ website. Simply enter your flight details to view your allowance."
+              },
+              {
+                "question": "Can I use the Baggage Calculator for codeshare flights?",
+                "answer": "Yes, though baggage rules may differ if another airline operates the flight. Always confirm directly with the operating carrier."
+              }
+            ]
+          },
+          {
+            "title": "Hand baggage",
+            "faqs": [
+              {
+                "question": "What is the hand baggage allowance on Vietnam Airlines?",
+                "answer": "Economy Class typically allows one carry-on (up to 7 kg) plus a personal item. Exact allowances can vary by ticket type and route."
+              },
+              {
+                "question": "Are liquids allowed in my hand baggage?",
+                "answer": "Yes, but follow the 100 ml per container rule (in many international airports) and place them in a clear, resealable bag. Domestic flights in Vietnam may have slightly different rules."
+              },
+              {
+                "question": "Can I bring my laptop or camera in my hand baggage?",
+                "answer": "Yes, electronics like laptops or cameras are allowed as long as they fit within weight and size limits."
+              }
+            ]
+          },
+          {
+            "title": "Free checked baggage",
+            "faqs": [
+              {
+                "question": "How many pieces of checked baggage am I allowed for free?",
+                "answer": "It depends on class and route. Economy often allows at least one piece (23 kg), while Business Class can allow two (32 kg each). Always verify your ticket details."
+              },
+              {
+                "question": "Can I pool my free checked baggage allowance with a travel companion?",
+                "answer": "If you share the same booking, you may be able to combine allowances. Policies vary by fare rules, so confirm beforehand."
+              },
+              {
+                "question": "What happens if my bag exceeds the free weight allowance?",
+                "answer": "Excess baggage fees will apply. The cost depends on how much over the limit you are and your travel route."
+              }
+            ]
+          },
+          {
+            "title": "Excess baggage",
+            "faqs": [
+              {
+                "question": "How are excess baggage fees calculated?",
+                "answer": "They can be charged per extra kilogram or per piece, depending on the route. Check Vietnam Airlines’ website or use their Baggage Calculator for specifics."
+              },
+              {
+                "question": "Can I purchase excess baggage online in advance?",
+                "answer": "Yes, and pre-purchasing online may be cheaper than paying at the airport. Check the airline’s website for details."
+              },
+              {
+                "question": "What if my baggage exceeds both size and weight limits?",
+                "answer": "You may face additional fees for oversized and overweight items. It’s best to arrange extra allowance beforehand."
+              }
+            ]
+          },
+          {
+            "title": "Special baggage",
+            "faqs": [
+              {
+                "question": "What is considered special baggage?",
+                "answer": "Items like sports equipment (surfboards, bicycles), musical instruments, or wheelchairs. They require special handling and sometimes extra fees."
+              },
+              {
+                "question": "Do I need to inform Vietnam Airlines in advance for special baggage?",
+                "answer": "Yes, notify them at least 24–48 hours before departure to ensure proper handling and space availability."
+              },
+              {
+                "question": "Are there any additional fees for musical instruments?",
+                "answer": "It depends on size and weight. Smaller instruments may fit within standard allowances, while larger ones might require extra fees or a separate seat."
+              }
+            ]
+          },
+          {
+            "title": "Restricted baggage",
+            "faqs": [
+              {
+                "question": "What items are considered restricted or dangerous goods?",
+                "answer": "Explosives, flammable liquids, corrosives, and compressed gases are restricted. Certain everyday items like lithium batteries also have limitations."
+              },
+              {
+                "question": "Can I travel with a power bank or spare batteries?",
+                "answer": "Yes, but power banks and spare lithium batteries must go in your hand baggage. Check watt-hour limits and quantity rules."
+              },
+              {
+                "question": "Are there any restrictions on liquids for domestic flights?",
+                "answer": "Domestic flights allow liquids above 100 ml in checked baggage, but carry-on rules may still be similar to international guidelines. Check the latest airport regulations."
+              }
+            ]
+          },
+          {
+            "title": "Baggage claim",
+            "faqs": [
+              {
+                "question": "How do I locate the baggage claim area at my arrival airport?",
+                "answer": "Follow the 'Arrivals' or 'Baggage Claim' signs after disembarking. Airport monitors often list carousel numbers by flight."
+              },
+              {
+                "question": "What should I do if my baggage is lost or delayed?",
+                "answer": "Report it immediately to the Vietnam Airlines service desk. You’ll fill out a Property Irregularity Report (PIR), and they’ll track your bag."
+              },
+              {
+                "question": "How long does it take to get compensation for lost baggage?",
+                "answer": "It varies. You’ll usually receive an update within a few days, and final resolution can take a few weeks depending on the investigation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Check-in",
+        "subCategories": [
+          {
+            "title": "Online check-in",
+            "faqs": [
+              {
+                "question": "When does online check-in open and close?",
+                "answer": "It typically opens 24 hours before departure and closes 1–2 hours prior, depending on your route. Check the airline’s site for specifics."
+              },
+              {
+                "question": "Is online check-in available for all flights?",
+                "answer": "Most domestic and international routes are eligible, but some special fare classes or routes may require airport check-in. Verify on the website."
+              },
+              {
+                "question": "Can I check in my bags online?",
+                "answer": "You can’t physically check bags online. Complete your seat assignment via online check-in, then drop off your luggage at the airport."
+              }
+            ]
+          },
+          {
+            "title": "Kiosk check-in",
+            "faqs": [
+              {
+                "question": "Do all airports have Vietnam Airlines kiosks?",
+                "answer": "Major airports in Vietnam typically do, but smaller regional or international partner airports might not. Look for kiosks or ask airport staff."
+              },
+              {
+                "question": "Can I check in my entire family at a kiosk?",
+                "answer": "Yes, if everyone is on the same booking or if the kiosk allows multiple check-ins. You may need each traveler’s ID or passport information."
+              },
+              {
+                "question": "What if the kiosk isn’t printing my boarding pass properly?",
+                "answer": "Seek help at the nearest Vietnam Airlines check-in counter. An agent can assist and reprint your boarding pass if needed."
+              }
+            ]
+          },
+          {
+            "title": "Airport check-in",
+            "faqs": [
+              {
+                "question": "How early should I arrive at the airport for check-in?",
+                "answer": "Arrive at least 1–2 hours before domestic flights and 2–3 hours before international flights. Factor in security lines and traffic."
+              },
+              {
+                "question": "What documents do I need at the check-in counter?",
+                "answer": "A valid ID (passport for international flights, or a government-issued ID for domestic), your booking reference, and any required visas."
+              },
+              {
+                "question": "What happens if I arrive late for check-in?",
+                "answer": "You may be denied boarding if the check-in deadline has passed. Contact Vietnam Airlines if you’re running late to explore your options."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Airport information",
+        "subCategories": [
+          {
+            "title": "Airport guides",
+            "faqs": [
+              {
+                "question": "Where can I find Vietnam Airlines’ airport guides?",
+                "answer": "They’re available on the airline’s website under 'Airport Information' and sometimes in print at major airports."
+              },
+              {
+                "question": "Do these guides include dining and shopping details?",
+                "answer": "Yes, most airport guides highlight dining options, shops, lounges, and key facilities. Some also offer info on transfers and customs."
+              },
+              {
+                "question": "How can I ensure I have the most up-to-date airport guide?",
+                "answer": "Check Vietnam Airlines’ website or app for digital versions. Airport layouts and services can change frequently."
+              }
+            ]
+          },
+          {
+            "title": "Business lounge",
+            "faqs": [
+              {
+                "question": "Who has access to the Vietnam Airlines business lounge?",
+                "answer": "Business Class passengers, SkyTeam Elite Plus members, and certain frequent flyers typically have lounge access."
+              },
+              {
+                "question": "What facilities are available in the business lounge?",
+                "answer": "Expect comfortable seating, complimentary snacks and drinks, Wi-Fi, workstations, and sometimes shower facilities or rest areas."
+              },
+              {
+                "question": "Can I purchase lounge access if I’m not flying Business Class?",
+                "answer": "Some lounges allow walk-in or pre-booked access for a fee. Check the airline’s website or inquire at the lounge reception."
+              }
+            ]
+          },
+          {
+            "title": "SkyPriority",
+            "faqs": [
+              {
+                "question": "Who is eligible for SkyPriority benefits?",
+                "answer": "SkyTeam Elite Plus members, Business Class, and certain Premium Economy passengers get SkyPriority services."
+              },
+              {
+                "question": "What advantages does SkyPriority provide at the airport?",
+                "answer": "Priority check-in counters, expedited security (where available), priority boarding, and faster baggage delivery on arrival."
+              },
+              {
+                "question": "Do I need to apply for SkyPriority or is it automatic?",
+                "answer": "It’s automatic if you meet the fare or status requirements. Your boarding pass usually indicates SkyPriority eligibility."
+              }
+            ]
+          },
+          {
+            "title": "Airport maps",
+            "faqs": [
+              {
+                "question": "Where can I access detailed airport maps for Vietnam Airlines’ destinations?",
+                "answer": "Check the Vietnam Airlines site, airport websites, or travel apps. Physical maps may be posted on information boards as well."
+              },
+              {
+                "question": "Can I download airport maps before I travel?",
+                "answer": "Yes, many airports offer PDF maps online, and some apps provide offline access."
+              },
+              {
+                "question": "Do airport maps show restrooms and other facilities?",
+                "answer": "Most airport maps highlight restrooms, gates, security checkpoints, lounges, and other key facilities."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Travel guide",
+        "subCategories": [
+          {
+            "title": "For Vietnam domestic flights",
+            "faqs": [
+              {
+                "question": "Do I need a passport for domestic flights in Vietnam?",
+                "answer": "Vietnamese nationals can use a valid government-issued ID. Foreign nationals typically need a passport and valid visa if required."
+              },
+              {
+                "question": "How early should I arrive at the airport for a domestic flight?",
+                "answer": "Usually 1–2 hours beforehand. Check Vietnam Airlines’ recommendation and account for peak travel times."
+              },
+              {
+                "question": "Can I bring food on domestic flights?",
+                "answer": "Yes, sealed snacks or light meals are generally allowed. Check security rules for liquids or fresh food items."
+              }
+            ]
+          },
+          {
+            "title": "For flights to Vietnam",
+            "faqs": [
+              {
+                "question": "Do I need a visa to enter Vietnam?",
+                "answer": "It depends on your nationality. Some travelers have visa exemptions, while others need an e-visa or visa on arrival. Check official embassy guidelines."
+              },
+              {
+                "question": "How do I clear customs upon arrival in Vietnam?",
+                "answer": "First, go through immigration. Then claim your baggage and pass through customs. Declare any restricted or high-value items as required."
+              },
+              {
+                "question": "Are there any health requirements for entering Vietnam?",
+                "answer": "Certain vaccinations may be recommended depending on your travel history. Always check government health advisories."
+              }
+            ]
+          },
+          {
+            "title": "For flights from Vietnam to other countries",
+            "faqs": [
+              {
+                "question": "What documents do I need to depart Vietnam?",
+                "answer": "You need a valid passport, any required exit/re-entry visas, and relevant COVID-related documentation if still in effect."
+              },
+              {
+                "question": "How can I handle connecting flights and baggage when leaving Vietnam?",
+                "answer": "If on a single ticket, baggage is usually checked through to the final destination. Confirm if you must re-check during layovers."
+              },
+              {
+                "question": "Are there currency restrictions when leaving Vietnam?",
+                "answer": "Yes, there may be limits on how much local or foreign currency you can take out. Check current customs regulations."
+              }
+            ]
+          },
+          {
+            "title": "A guide for a smooth journey",
+            "faqs": [
+              {
+                "question": "How can I minimize waiting times at the airport?",
+                "answer": "Check in online, arrive early, and keep documents ready. Consider SkyPriority if you have access."
+              },
+              {
+                "question": "Can I request special assistance for my journey?",
+                "answer": "Yes, contact Vietnam Airlines 24–48 hours before your flight if you need wheelchair services or other assistance."
+              },
+              {
+                "question": "What’s the best way to handle a long layover?",
+                "answer": "Use lounges or rest areas, explore dining and shops, and keep an eye on departure boards for updates."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

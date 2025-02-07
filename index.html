@@ -206,26 +206,67 @@
             </div>
         </div>
 
-        <!-- SEARCH MODAL -->
-        <div class="modal fade" tabindex="-1" id="search-modal">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content" >
-                <!-- <div class="modal-header">
-                  <div class="d-flex align-items-center">
-                    <h5 class="modal-title">Search in the website</h5>
-                  </div>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div> -->
-                <div class="modal-body d-flex align-items-center">
-                    <i class='bx bx-search me-2' ></i>
-                  <input type="text" placeholder="Search in the website">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Search</button>
-                </div>
-              </div>
+          <!-- Search modal Modal -->
+        <div
+        class="modal fade"
+        id="searchModal"
+        tabindex="-1"
+        aria-labelledby="searchModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="searchModalLabel">Search in the website</h1>
+                <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                ></button>
             </div>
-          </div>
+            <div class="modal-body">
+                <!-- Search Input -->
+                <div class="mb-3 d-flex flex-column align-items-center">
+                    <label for="">What are you looking for?</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="searchInput"
+                    placeholder="Type here your search"
+                    onkeyup="searchFaqs()"
+                    style="margin-top: 1rem;"
+                />
+                </div>
+                <div id="resultsArea">
+                    <!-- Suggested results -->
+                    <div id="suggested-results">
+                      <div class="results mb-3">
+                        <h4>Suggested results</h4>
+                        <!-- Highlighted results go here -->
+                        <div id="highlightedResults"></div>
+                      </div>
+                      <button class="btn btn-light" id="more-results" onclick="showMoreResults()">See more results</button>
+                    </div>
+        
+                    <!-- Users often look for -->
+                    <div id="users-oriented-results" class="mt-4">
+                      <div class="results">
+                        <h4>Users often search for</h4>
+                        <!-- 3 Cards in a horizontal layout -->
+                        <div class="d-flex flex-row gap-3" id="usersSearchCards">
+                          <!-- Cards will be populated by JS -->
+                        </div>
+                      </div>
+                      <button class="btn btn-light mt-2" id="more-user-results">
+                        See more results
+                      </button>
+                    </div>
+                  </div>
+            </div>
+            </div>
+        </div>
+        </div>
 
         <!-- CHAT -->
         <div id="chat-container">
@@ -417,7 +458,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item" id="search-magnet">
-                                    <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#search-modal">
+                                    <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
                                         <i class='bx bx-search'></i>
                                     </button>
                                 </li>
@@ -2635,5 +2676,181 @@ async function loadUserData() {
 document.addEventListener('DOMContentLoaded', loadUserData);
 </script>
 
+<!-- FAQ script -->
+<script>
+    // We'll load and cache our FAQs data from the JSON file
+    let faqsDataCache = null;
+    // We'll store all matched results from the user’s search
+    let matchedResults = [];
+
+    // Fetch JSON data once and store in faqsDataCache
+    async function fetchFaqsData() {
+      if (!faqsDataCache) {
+        const response = await fetch("faqs.json"); // Replace with your JSON path
+        faqsDataCache = await response.json();
+      }
+      return faqsDataCache;
+    }
+
+    // Main search function
+    async function searchFaqs() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+
+      // Clear the highlighted results and matchedResults array each time
+      matchedResults = [];
+      document.getElementById("highlightedResults").innerHTML = "";
+
+      // If user cleared the input, just return (no results)
+      if (!query) return;
+
+      const faqsData = await fetchFaqsData();
+
+      // Loop through categories -> subCategories -> faqs
+      faqsData.faqsData.forEach((category) => {
+        category.subCategories.forEach((subCat) => {
+          subCat.faqs.forEach((faq) => {
+            const question = faq.question.toLowerCase();
+            if (question.includes(query)) {
+              // We found a match
+              matchedResults.push({
+                question: faq.question,
+                subCategory: subCat.title
+              });
+            }
+          });
+        });
+      });
+
+      // Display top 3 matches as “highlighted”
+      displayHighlightedResults(matchedResults);
+
+      // (Optional) You can also refresh "Users often look for" based on the query
+      // or leave it as some static or random suggestions. For example:
+      displayRelatedTopics();
+    }
+
+    // Display the first 3 matches in the “Suggested results” section
+    function displayHighlightedResults(results) {
+      const highlightedContainer = document.getElementById("highlightedResults");
+      highlightedContainer.innerHTML = "";
+
+      // Show first 3 results
+      const firstThree = results.slice(0, 3);
+      firstThree.forEach((item) => {
+        const div = document.createElement("div");
+        div.classList.add("mb-2");
+
+        const questionEl = document.createElement("p");
+        questionEl.innerText = item.question;
+        questionEl.style.marginBottom = 0;
+        questionEl.style.marginTop = "1rem";
+        
+        const linkEl = document.createElement("a");
+        linkEl.href = "#"; // Fake link or real page link
+        linkEl.innerText = item.subCategory;
+
+        div.appendChild(questionEl);
+        div.appendChild(linkEl);
+        highlightedContainer.appendChild(div);
+      });
+    }
+
+    // When user clicks “See more results,” show the rest
+    function showMoreResults() {
+      // We already displayed the first 3
+      const remaining = matchedResults.slice(3);
+      const highlightedContainer = document.getElementById("highlightedResults");
+
+      // Append the remaining results
+      remaining.forEach((item) => {
+        const div = document.createElement("div");
+        div.classList.add("mb-2");
+
+        const questionEl = document.createElement("p");
+        questionEl.innerText = item.question;
+
+        const linkEl = document.createElement("a");
+        linkEl.href = "#"; // Fake link or real page link
+        linkEl.innerText = item.subCategory;
+
+        div.appendChild(questionEl);
+        div.appendChild(linkEl);
+        highlightedContainer.appendChild(div);
+      });
+
+      // Optionally hide the “See more results” button after expanding
+      document.getElementById("more-results").style.display = "none";
+    }
+
+    // Display 3 related (or random) topics in horizontal cards
+    // For a real scenario, you might select them based on the user’s query or from a special list.
+    async function displayRelatedTopics() {
+      const cardsContainer = document.getElementById("usersSearchCards");
+      cardsContainer.innerHTML = ""; // Clear old content
+
+      const faqsData = await fetchFaqsData();
+      // Flatten all subCategories or pick a few at random
+      let subCats = [];
+      faqsData.faqsData.forEach((cat) => {
+        cat.subCategories.forEach((subCat) => {
+          subCats.push(subCat);
+        });
+      });
+
+      // Shuffle the subCats array (simple randomization approach)
+      subCats.sort(() => 0.5 - Math.random());
+
+      // Take the first 3 subCategories
+      const topThreeSubs = subCats.slice(0, 3);
+
+      topThreeSubs.forEach((subCat) => {
+        // Create a Bootstrap card
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+        cardDiv.style.width = "18rem"; // Adjust width as desired
+
+        // Card body
+        const cardBody = document.createElement("div");
+        cardBody.classList.add("card-body");
+
+        // Title
+        const cardTitle = document.createElement("h5");
+        cardTitle.classList.add("card-title");
+        cardTitle.innerText = subCat.title;
+
+        // Text
+        const cardText = document.createElement("p");
+        cardText.classList.add("card-text");
+        cardText.innerText = "A brief description or excerpt about this topic...";
+
+        // CTA button
+        const ctaButton = document.createElement("a");
+        ctaButton.classList.add("btn", "btn-primary");
+        ctaButton.href = "#"; // Or link to relevant page
+        ctaButton.innerText = "Learn more";
+
+        // Append elements to card
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardText);
+        cardBody.appendChild(ctaButton);
+
+        cardDiv.appendChild(cardBody);
+
+        // Finally, add the card to the container
+        cardsContainer.appendChild(cardDiv);
+      });
+    }
+
+    // Optionally, handle the “See more results” button in the users-oriented section
+    document.getElementById("more-user-results").addEventListener("click", () => {
+      // You can decide what to do here—e.g., expand with more related topics or redirect somewhere else.
+      alert("Show more related topics or redirect to a dedicated page...");
+    });
+
+    // On first modal open, you could also pre-populate the related topics if you want:
+    document.addEventListener("DOMContentLoaded", () => {
+      displayRelatedTopics();
+    });
+  </script>
 </body>
 </html>
