@@ -51,8 +51,210 @@
 
     <!-- Cookies -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="be44aa24-c268-4f82-bb69-6fb8544e5a98" data-blockingmode="auto" type="text/javascript"></script>
+
+        <!-- CreateLoyalty-styles -->
+        <style>
+            /* Simple styling to highlight the active step */
+            .step-indicator {
+              display: flex;
+              justify-content: space-around;
+              margin-bottom: 1rem;
+            }
+            .step-indicator .step {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 33%;
+              position: relative;
+            }
+            .step-indicator .step::before {
+              content: "";
+              width: 100%;
+              height: 2px;
+              background-color: #dee2e6;
+              position: absolute;
+              top: 50%;
+              left: -50%;
+              z-index: -1;
+            }
+            .step-indicator .step:first-child::before {
+              content: none;
+            }
+            .step-circle {
+              background-color: #adb5bd;
+              color: white;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 0.5rem;
+            }
+            .step-active .step-circle {
+              background-color: #0d6efd;
+            }
+            .step-active span.step-label {
+              font-weight: 600;
+              color: #0d6efd;
+            }
+        
+            /* Hide steps by default */
+            .form-step {
+              display: none;
+            }
+            .form-step.active {
+              display: block;
+              width: 70%;
+              margin: auto;
+              margin-top: 2rem;
+            }
+        
+            /* Summary section hidden by default */
+            #summarySection {
+              display: none;
+            }
+          </style>
 </head>
     <body id="body">
+
+        <!-- CREATE LOYALTY MODAL -->
+        <div
+  class="modal fade"
+  id="createLoyaltyModal"
+  tabindex="-1"
+  aria-labelledby="createLoyaltyModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createLoyaltyModalLabel">
+          Join Lotus Miles
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- STEP INDICATOR -->
+        <div class="step-indicator">
+          <div class="step step-active" data-step="1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Name / Email / Password</span>
+          </div>
+          <div class="step" data-step="2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Picture &amp; Contact</span>
+          </div>
+          <div class="step" data-step="3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Accept Terms</span>
+          </div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="form-step active" id="step1">
+          <div class="mb-3">
+            <label for="inputName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Enter a password"
+            />
+          </div>
+          <button class="btn btn-primary" onclick="goToStep(2)">Next</button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-step" id="step2">
+          <div class="mb-3">
+            <label for="inputPicture" class="form-label">Upload Picture</label>
+            <input
+              type="file"
+              class="form-control"
+              id="inputPicture"
+              accept="image/*"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="inputContact" class="form-label">Contact Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputContact"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="d-flex">
+            <button class="btn btn-secondary" onclick="goToStep(1)">Back</button>
+          <button class="btn btn-primary" onclick="goToStep(3)">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-step" id="step3">
+          <div class="form-check mb-4">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="checkTerms"
+            />
+            <label class="form-check-label" for="checkTerms">
+              I agree to the <a href="#">terms and conditions</a>.
+            </label>
+          </div>
+          <div class="d-flex">
+            <button class="btn btn-secondary" onclick="goToStep(2)">Back</button>
+          <button class="btn btn-success" onclick="finishRegistration()">
+          </div>
+            Finish
+          </button>
+        </div>
+
+        <!-- SUMMARY SECTION -->
+        <div id="summarySection" class="mt-4">
+          <h3>Registration Successful!</h3>
+          <p>Below is your profile recap:</p>
+          <ul>
+            <li><strong>Name:</strong> <span id="summaryName"></span></li>
+            <li><strong>Email:</strong> <span id="summaryEmail"></span></li>
+            <li><strong>Contact:</strong> <span id="summaryContact"></span></li>
+            <li><strong>Picture File Name:</strong> <span id="summaryPicture"></span></li>
+          </ul>
+          <button class="btn btn-primary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+        </div>
+
 
         <!-- ============ MODALS -->
         <!-- PAX-CLASS MODAL -->
@@ -1212,7 +1414,8 @@
                     <div class="container-fluid py-5">
                       <h1 class="display-5 fw-bold">Get the best!</h1>
                       <p class="col-md-8 fs-4">Exclusive offers, special rewards and  <br> amazing privileges with our loyalty program.</p>
-                      <button class="btn btn-primary btn-lg" type="button">Join Lotus Miles!</button>
+                      <button class="btn btn-primary btn-lg" type="button" id="createLoyalty" data-bs-toggle="modal"
+                      data-bs-target="#createLoyaltyModal">Join Lotus Miles!</button>
                     </div>
                   </div>
             </div>
@@ -2744,7 +2947,7 @@ document.addEventListener('DOMContentLoaded', loadUserData);
         questionEl.innerText = item.question;
         questionEl.style.marginBottom = 0;
         questionEl.style.marginTop = "1rem";
-        
+
         const linkEl = document.createElement("a");
         linkEl.href = "#"; // Fake link or real page link
         linkEl.innerText = item.subCategory;
@@ -2851,6 +3054,68 @@ document.addEventListener('DOMContentLoaded', loadUserData);
     document.addEventListener("DOMContentLoaded", () => {
       displayRelatedTopics();
     });
+  </script>
+
+  <!-- CREATE LOYALTY -->
+  <script>
+    function goToStep(stepNumber) {
+      // Hide all form steps
+      document.querySelectorAll(".form-step").forEach((el) => {
+        el.classList.remove("active");
+      });
+      // Deactivate all step indicators
+      document.querySelectorAll(".step-indicator .step").forEach((step) => {
+        step.classList.remove("step-active");
+      });
+  
+      // Show the selected step form
+      const stepId = "step" + stepNumber;
+      document.getElementById(stepId).classList.add("active");
+  
+      // Activate the selected step indicator
+      const indicator = document.querySelector(
+        `.step-indicator .step[data-step='${stepNumber}']`
+      );
+      if (indicator) {
+        indicator.classList.add("step-active");
+      }
+    }
+  
+    function finishRegistration() {
+      // Basic validation for the terms checkbox
+      const agreed = document.getElementById("checkTerms").checked;
+      if (!agreed) {
+        alert("You must agree to the terms before finishing.");
+        return;
+      }
+  
+      // Collect data from form inputs
+      const nameVal = document.getElementById("inputName").value.trim();
+      const emailVal = document.getElementById("inputEmail").value.trim();
+      const contactVal = document.getElementById("inputContact").value.trim();
+      const pictureInput = document.getElementById("inputPicture");
+  
+      // Show summary
+      document.getElementById("summaryName").textContent = nameVal;
+      document.getElementById("summaryEmail").textContent = emailVal;
+      document.getElementById("summaryContact").textContent = contactVal;
+      document.getElementById("summaryPicture").textContent = pictureInput.files.length
+        ? pictureInput.files[0].name
+        : "No file selected";
+  
+      // Hide the step forms
+      document.getElementById("step1").classList.remove("active");
+      document.getElementById("step2").classList.remove("active");
+      document.getElementById("step3").classList.remove("active");
+  
+      // Hide step indicators
+      document.querySelectorAll(".step-indicator .step").forEach((step) => {
+        step.classList.remove("step-active");
+      });
+  
+      // Show the summary section
+      document.getElementById("summarySection").style.display = "block";
+    }
   </script>
 </body>
 </html>
