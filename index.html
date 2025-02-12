@@ -2405,265 +2405,1079 @@
 <script>
    
 // Search configuration
-var from = "SIN";
+
+var from = "NYC";
+
 var to = "LHR";
-var dep = "2025-03-20";
-var returnDate = "2025-04-10";
+
+var dep = "2023-12-25";
+
+var returnDate = "2023-12-29";
+
+
 
 var bootstrapConfig;
 
+
+
 //BCM key
+
 var bcmKey; // ="putyourBCMkeyHereAndUncomment";
 
+
+
 // Add static configuration
-var staticConfig  = JSON.stringify([{ 'name': 'PageTitlePresConfig',
-'config': {
-  'backgroundImgMobilePath': '',
-  'backgroundImgTabletPath': '',
-  'backgroundImgDesktopPath': 'img/'+to+'.png',
-  'shouldApplyCustomStyling': true,
-  'shouldDisplayBackgroundImage': true
+
+var staticConfig = JSON.stringify([{
+
+    'name': 'PageTitlePresConfig',
+
+    'config': {
+
+        'backgroundImgMobilePath': '',
+
+        'backgroundImgTabletPath': '',
+
+        'backgroundImgDesktopPath': 'img/' + to + '.png',
+
+        'shouldApplyCustomStyling': true,
+
+        'shouldDisplayBackgroundImage': true
+
+    },
+
+    'library': '@refx/shared-components'
+
+}, {
+
+    'name': 'RefxComponentsCommonRuntimeConfig',
+
+    'config': {
+
+        'globalDisplayDiscountOptions': true,
+
+        'globalDisplayAncillariesDiscounts': true,
+
+        'globalEnableHighlightOrdering': true,
+
+        'globalEnablePrimaryPassengerRememberMeOption': true,
+
+        'globalDisplayDiscounts': true,
+
+        "globalEnableGETQueryParamsDeeplinkForPage": [
+
+            { "pageId": "SHOPPINGCART", "type": "cart" },
+
+            { "pageId": "SEATMAP" },
+
+            { "pageId": "SERVICES" },
+
+            { "pageId": "CONFIRMATION" },
+
+            { "pageId": "MANAGEBOOKING" },
+
+            { "pageId": "self-reaccommodation/availability" },
+
+            { "pageId": "refund/review" },
+
+            { "pageId": "IDENTIFICATION" },
+
+            { "pageId": "JOURNEYSELECTION" },
+
+            { "pageId": "OVERVIEW" }
+
+        ]
+
+    },
+
+    'library': '@refx/shared-common'
+
 },
-'library': '@refx/shared-components'
-},{
-'name': 'RefxComponentsCommonRuntimeConfig',
-'config': {
-  'globalDisplayDiscountOptions': true,
-  'globalDisplayAncillariesDiscounts': true,
-  'globalEnableHighlightOrdering': true,
-  'globalEnablePrimaryPassengerRememberMeOption': true,
-  'globalDisplayDiscounts': true,
-  "globalEnableGETQueryParamsDeeplinkForPage": [
-    { "pageId": "SHOPPINGCART", "type": "cart" },
-    { "pageId": "SEATMAP" },
-    { "pageId": "SERVICES" },
-    { "pageId": "CONFIRMATION" },
-    { "pageId": "MANAGEBOOKING" },
-    { "pageId": "self-reaccommodation/availability" } ,
-    { "pageId": "refund/review" },
-    { "pageId": "IDENTIFICATION" },
-    { "pageId": "JOURNEYSELECTION" },
-    { "pageId": "OVERVIEW" }
-  ]
-},
-'library': '@refx/shared-common'
-},{
-'name': 'AppConfig',
-'config': {
-  'enableNewFeature': true,
-},
-'library': '@vn/booking'
+
+//{name: 'BookingServiceCatalogContConfig', library: '@refx/booking-components', config: {catalogCall: custoMap.cartServices ? 'cart' : 'order'}},
+
+{
+
+    'name': 'AppConfig',
+
+    'config': {
+
+        'enableNewFeature': true,
+
+    },
+
+    'library': '@va/booking'
+
 }]);
 
+
+
 // Add bootstrap config (CO2 Panel activation example)
+
 // bootstrapConfig = JSON.stringify({
+
 //   'activateCo2Panel' : true
+
 // });
 
+
+
 var environment = '6x'; //0eskl or 6x
+
 var cffOverride;
 
 if (environment === '6x') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': 'hHTGWHFDeUFVdOztQWTC7zoe63E0k8zu',
-  'gatewayClientSecret': 'Zw2qeL9q2LXd6Ez0'
-});
-// Override with 6X fare families
-cffOverride = ["DEMOALL", "NDCTALL"];
-//bcmKey = undefined;
+
+    // Bootstrap config override
+
+    bootstrapConfig = JSON.stringify({
+
+        'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
+
+        'gatewayClientId': 'hHTGWHFDeUFVdOztQWTC7zoe63E0k8zu',
+
+        'gatewayClientSecret': 'Zw2qeL9q2LXd6Ez0'
+
+    });
+
+    // Override with 6X fare families
+
+    cffOverride = ["DEMOALL", "NDCTALL"];
+
+    //bcmKey = undefined;
+
 } else if (environment === '0eskl') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': '3GAAzoyrc81iw3CdAladDGKTXAGeZihg',
-  'gatewayClientSecret': 'YRTSzscJKH6E0ONM'
-});
-//bcmKey = undefined;
+
+    // Bootstrap config override
+
+    bootstrapConfig = JSON.stringify({
+
+        'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
+
+        'gatewayClientId': '3GAAzoyrc81iw3CdAladDGKTXAGeZihg',
+
+        'gatewayClientSecret': 'YRTSzscJKH6E0ONM'
+
+    });
+
+    //bcmKey = undefined;
+
 } else if (environment === '0e') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-  'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
-  'gatewayClientId': 'CQZddrc7RFTBmG6Hbl7pQTyiPtHUuOAq',
-  'gatewayClientSecret': 'NaeP7dKAgV2emuvi'
-});
-//bcmKey = undefined;
+
+    // Bootstrap config override
+
+    bootstrapConfig = JSON.stringify({
+
+        'gatewayBaseUrl': 'https://test.airlines.api.amadeus.com',
+
+        'gatewayClientId': 'CQZddrc7RFTBmG6Hbl7pQTyiPtHUuOAq',
+
+        'gatewayClientSecret': 'NaeP7dKAgV2emuvi'
+
+    });
+
+    //bcmKey = undefined;
+
 } else if (environment === '0eUAT') {
-// Bootstrap config override
-bootstrapConfig = JSON.stringify({
-"gatewayBaseUrl":"https://test.airlines.api.amadeus.com",
-"gatewayClientId":"MAc35CupTZnqj02YoSWuO202cb5SHpLG",
-"gatewayClientSecret":"La8Wq90nddnbP5lG"
-});
-//bcmKey = undefined;
+
+    // Bootstrap config override
+
+    bootstrapConfig = JSON.stringify({
+
+        "gatewayBaseUrl": https://test.airlines.api.amadeus.com,
+
+        "gatewayClientId": "MAc35CupTZnqj02YoSWuO202cb5SHpLG",
+
+        "gatewayClientSecret": "La8Wq90nddnbP5lG"
+
+    });
+
+    //bcmKey = undefined;
+
 }
 
 
+
+
+
+
+
+var loginMock = [
+
+        {
+
+            "id": window.userId,
+
+            "isPrimaryTraveler": true,
+
+            "nickName": "",
+
+            "avatarLogoUrl": https://kosmea.com.au/wp-content/uploads/2021/03/mature-asian-lady.jpeg,
+
+            "passengerTypeCode": "ADT",
+
+            "nationalityCountryCodes": [
+
+                "FR"
+
+            ],
+
+            "names": [
+
+                {
+
+                    "firstName": "Jane",//window.userName,
+
+                    "lastName": "Smith",
+
+                    "title": "MR"
+
+                }
+
+            ],
+
+            // "frequentFlyerCard": {
+
+            //     "companyCode": "ZZ",
+
+            //     "cardNumber": "8855"
+
+            // },
+
+            // "milesAssetBalance": [
+
+            //     {
+
+            //         "assetType": "Miles",
+
+            //         "assetValue": "10030"
+
+            //     }
+
+            // ],
+
+            "gender": "male",
+
+            "dateOfBirth": "01/06/1987",
+
+            "contacts": [
+
+                {
+
+                    "contactType": "Phone",
+
+                    "category": "Other",
+
+                    "countryPhoneExtension": "+43",
+
+                    "number": "2164654644"
+
+                },
+
+                {
+
+                    "contactType": "Email",
+
+                    "address": a.t@gmail.com
+
+                }
+
+            ],/*
+
+            "regulatoryDetails": [
+
+                {
+
+                    "regulatoryApisType": "ApisDetailRegulatoryDocument",
+
+                    "regulatoryDocument": {
+
+                        "documentType": "passport",
+
+                        "nationalityCode": "FR",
+
+                        "number": "M08324244",
+
+                        "issuanceCountryCode": "FR",
+
+                        "expiryDate": "2031-05-05",
+
+                        "issuanceLocation": "FR"
+
+                    }
+
+                }
+
+            ],
+
+            "entitlementDocuments": [
+
+                {
+
+                    "documentType": "SpanishResidentCard",
+
+                    "travelerType": "spanishCitizen",
+
+                    "identityCardNumber": "61974134J",
+
+                    "postalCode": "070012",
+
+                    "name": {
+
+                        "firstName": "Marie",
+
+                        "lastName": "Smith",
+
+                        "secondLastName": ""
+
+                    }
+
+                }
+
+            ]*/
+
+        }
+
+    ]
 
 // This needs to be added AFTER the request definition
 
+
+
+
+
+function buildRequest() {
+
+
+
+    var from = document.getElementById('departureInput').value.split("- ")[1];
+
+    var to = document.getElementById('arrivalInput').value.split("- ")[1];
+
+
+
+    var promoCode = "";
+
+    var login = [
+
+        {
+
+            "id": window.userId,
+
+            "isPrimaryTraveler": true,
+
+            "nickName": "",
+
+            "avatarLogoUrl": https://i.pinimg.com/originals/e7/da/8d/e7da8d8b6a269d073efa11108041928d.jpg,
+
+            "passengerTypeCode": "ADT",
+
+            "nationalityCountryCodes": [
+
+                "FR"
+
+            ],
+
+            "names": [
+
+                {
+
+                    "firstName": window.userName,
+
+                    "lastName": "Smith",
+
+                    "title": "MS"
+
+                }
+
+            ],
+
+            "frequentFlyerCard": {
+
+                "companyCode": "ZZ",
+
+                "cardNumber": "8855"
+
+            },
+
+            "milesAssetBalance": [
+
+                {
+
+                    "assetType": "Miles",
+
+                    "assetValue": "10030"
+
+                }
+
+            ],
+
+            "gender": "female",
+
+            "dateOfBirth": "05/05/1950",
+
+            "contacts": [
+
+                {
+
+                    "contactType": "Phone",
+
+                    "category": "Other",
+
+                    "countryPhoneExtension": "+93",
+
+                    "number": "987654321"
+
+                },
+
+                {
+
+                    "contactType": "Email",
+
+                    "address": marie@smith.com
+
+                }
+
+            ],
+
+            "regulatoryDetails": [
+
+                {
+
+                    "regulatoryApisType": "ApisDetailRegulatoryDocument",
+
+                    "regulatoryDocument": {
+
+                        "documentType": "passport",
+
+                        "nationalityCode": "FR",
+
+                        "number": "M08324244",
+
+                        "issuanceCountryCode": "FR",
+
+                        "expiryDate": "2031-05-05",
+
+                        "issuanceLocation": "FR"
+
+                    }
+
+                }
+
+            ],
+
+            "entitlementDocuments": [
+
+                {
+
+                    "documentType": "SpanishResidentCard",
+
+                    "travelerType": "spanishCitizen",
+
+                    "identityCardNumber": "61974134J",
+
+                    "postalCode": "070012",
+
+                    "name": {
+
+                        "firstName": "Marie",
+
+                        "lastName": "Smith",
+
+                        "secondLastName": ""
+
+                    }
+
+                }
+
+            ]
+
+        }
+
+    ]
+
+
+
+    var request = {
+
+        "search": {
+
+            "travelers": [
+
+                {
+
+                    "passengerTypeCode": "ADT"
+
+                }
+
+            ],
+
+            "commercialFareFamilies": [
+
+                "ECONOMY",
+
+                "BUSINESS"
+
+            ],
+
+            "itineraries": [
+
+                {
+
+                    "originLocationCode": from,
+
+                    "destinationLocationCode": to,//selected_startDate
+
+                    "departureDateTime": selected_startDate.getFullYear() + "-" + (selected_startDate.getMonth() + 1) + "-" + selected_startDate.getDate()
+
+                }
+
+            ]
+
+        },
+
+        "portalFacts": [{ "key": "corporateCodes", "value": "000001" }],
+
+        "pointOfSale": "FR"
+
+    }
+
+
+
+    if (!!cffOverride) {
+
+        request.search.commercialFareFamilies = cffOverride;
+
+    }
+
+
+
+    if (!!bcmKey) {
+
+        request.bcmConfigKey = bcmKey;
+
+    }
+
+    if (!!staticConfig) {
+
+        request.staticConfig = btoa(staticConfig);
+
+    }
+
+    if (!!bootstrapConfig) {
+
+        request.bootstrapConfig = btoa(bootstrapConfig);
+
+    }
+
+    if (!!promoCode) {
+
+        request.search.promotion = { "code": promoCode }
+
+    }
+
+
+
+    if (!!returnDate) {
+
+        request.search.itineraries.push({
+
+            "originLocationCode": to,
+
+            "destinationLocationCode": from,
+
+            "departureDateTime": selected_endDate.getFullYear() + "-" + (selected_endDate.getMonth() + 1) + "-" + selected_endDate.getDate()
+
+        })
+
+    }
+
+
+
+    if (!!login) {
+
+        request.lightLogin = login
+
+    }
+
+    return request;
+
+    }
+
+    var urlServer = http://localhost:3000;;
+
+    var urlRefX = https://uat.digital.airline.amadeus.com/0e/0e-booking-master;
+
+    var req = localStorage.getItem("request");
+
+    if(req){
+
+        req = JSON.parse(req);
+
+        urlRefX = req.UIUrl;
+
+    }
+
+    function launchRefX() {
+
+    var request = req ? req : getRequest();
+
+    var from = document.getElementById('departureInput').value.split("- ")[1];
+
+    var to = document.getElementById('arrivalInput').value.split("- ")[1];
+
+    from = from ? from : "NCE";
+
+    to = to ? to : "LHR";
+
+    var month = (selected_startDate.getMonth() + 1)
+
+    var day = selected_startDate.getDate()
+
+    request.search.itineraries[0] = {
+
+            "originLocationCode": from,
+
+            "destinationLocationCode": to,
+
+            "departureDateTime": selected_startDate.getFullYear() + "-" + (month < 10 ? "0"+month : month) + "-" + (day < 10 ? "0"+day : day)
+
+        }
+
+    if (selected_endDate) {
+
+        month = (selected_endDate.getMonth() + 1)
+
+        day = selected_endDate.getDate()
+
+        request.search.itineraries[1] = {
+
+            "originLocationCode": to,
+
+            "destinationLocationCode": from,
+
+            "departureDateTime": selected_endDate.getFullYear() + "-" + (month < 10 ? "0"+month : month) + "-" + (day < 10 ? "0"+day : day)
+
+        }
+
+    } else {
+
+        if(request.search.itineraries.length > 1){
+
+            request.search.itineraries.pop()
+
+        }
+
+    }
+
+
+
+
+
+    localStorage.setItem("request", JSON.stringify(request));
+
+   
+
+    openWindowWithPost(urlRefX, request)
+
+    }
+
+
+
+var urlServer = http://localhost:3000;;
+
+var urlRefX = https://uat.digital.airline.amadeus.com/0e/0e-booking-master;
+
+
+
 function getRequest(){
 
-var from = document.getElementById('departureInput').value.split("- ")[1];
-var to = document.getElementById('arrivalInput').value.split("- ")[1];
+   
 
-var promoCode = "";
-var login = [
-{
-  "id":window.userId,
-  "isPrimaryTraveler": true,
-  "nickName": "",
-  "avatarLogoUrl": "https://i.pinimg.com/originals/e7/da/8d/e7da8d8b6a269d073efa11108041928d.jpg",
-  "passengerTypeCode": "ADT",
-  "nationalityCountryCodes": [
-    "FR"
-  ],
-  "names": [
-    {
-      "firstName": window.userName,
-      "lastName": "Smith",
-      "title": "MS"
+    var from = document.getElementById('departureInput').value.split("- ")[1];
+
+    var to = document.getElementById('arrivalInput').value.split("- ")[1];
+
+
+
+    var promoCode = "";
+
+    var login = [
+
+        {
+
+            "id": window.userId,
+
+            "isPrimaryTraveler": true,
+
+            "nickName": "",
+
+            "avatarLogoUrl": https://i.pinimg.com/originals/e7/da/8d/e7da8d8b6a269d073efa11108041928d.jpg,
+
+            "passengerTypeCode": "ADT",
+
+            "nationalityCountryCodes": [
+
+                "FR"
+
+            ],
+
+            "names": [
+
+                {
+
+                    "firstName": window.userName,
+
+                    "lastName": "Smith",
+
+                    "title": "MS"
+
+                }
+
+            ],
+
+            "frequentFlyerCard": {
+
+                "companyCode": "ZZ",
+
+                "cardNumber": "8855"
+
+            },
+
+            "milesAssetBalance": [
+
+                {
+
+                    "assetType": "Miles",
+
+                    "assetValue": "10030"
+
+                }
+
+            ],
+
+            "gender": "female",
+
+            "dateOfBirth": "05/05/1950",
+
+            "contacts": [
+
+                {
+
+                    "contactType": "Phone",
+
+                    "category": "Other",
+
+                    "countryPhoneExtension": "+93",
+
+                    "number": "987654321"
+
+                },
+
+                {
+
+                    "contactType": "Email",
+
+                    "address": marie@smith.com
+
+                }
+
+            ],
+
+            "regulatoryDetails": [
+
+                {
+
+                    "regulatoryApisType": "ApisDetailRegulatoryDocument",
+
+                    "regulatoryDocument": {
+
+                        "documentType": "passport",
+
+                        "nationalityCode": "FR",
+
+                        "number": "M08324244",
+
+                        "issuanceCountryCode": "FR",
+
+                        "expiryDate": "2031-05-05",
+
+                        "issuanceLocation": "FR"
+
+                    }
+
+                }
+
+            ],
+
+            "entitlementDocuments": [
+
+                {
+
+                    "documentType": "SpanishResidentCard",
+
+                    "travelerType": "spanishCitizen",
+
+                    "identityCardNumber": "61974134J",
+
+                    "postalCode": "070012",
+
+                    "name": {
+
+                        "firstName": "Marie",
+
+                        "lastName": "Smith",
+
+                        "secondLastName": ""
+
+                    }
+
+                }
+
+            ]
+
+        }
+
+    ]
+
+
+
+    var request = {
+
+        "search": {
+
+            "travelers": [
+
+                {
+
+                    "passengerTypeCode": "ADT"
+
+                }
+
+            ],
+
+            "commercialFareFamilies": [
+
+                "ECONOMY",
+
+                "BUSINESS"
+
+            ],
+
+            "itineraries": [
+
+                {
+
+                    "originLocationCode": from,
+
+                    "destinationLocationCode": to,//selected_startDate
+
+                    "departureDateTime": selected_startDate.getFullYear() + "-" + (selected_startDate.getMonth() + 1) + "-" + selected_startDate.getDate()
+
+                }
+
+            ]
+
+        },
+
+        "portalFacts": [{ "key": "corporateCodes", "value": "000001" }],
+
+        "pointOfSale": "FR"
+
     }
-  ],
-  "frequentFlyerCard": {
-    "companyCode": "ZZ",
-    "cardNumber": "8855"
-  },
-  "milesAssetBalance": [
-    {
-      "assetType": "Miles",
-      "assetValue": "10030"
+
+
+
+    if (!!cffOverride) {
+
+        request.search.commercialFareFamilies = cffOverride;
+
     }
-  ],
-  "gender": "female",
-  "dateOfBirth": "05/05/1950",
-  "contacts": [
-    {
-      "contactType": "Phone",
-      "category": "Other",
-      "countryPhoneExtension": "+93",
-      "number": "987654321"
-    },
-    {
-      "contactType": "Email",
-      "address": "marie@smith.com"
+
+
+
+    if (!!bcmKey) {
+
+        request.bcmConfigKey = bcmKey;
+
     }
-  ],
-  "regulatoryDetails": [
-    {
-      "regulatoryApisType": "ApisDetailRegulatoryDocument",
-      "regulatoryDocument": {
-        "documentType": "passport",
-        "nationalityCode": "FR",
-        "number": "M08324244",
-        "issuanceCountryCode": "FR",
-        "expiryDate": "2031-05-05",
-        "issuanceLocation": "FR"
-      }
+
+    if (!!staticConfig) {
+
+        request.staticConfig = btoa(staticConfig);
+
     }
-  ],
-  "entitlementDocuments": [
-    {
-      "documentType": "SpanishResidentCard",
-      "travelerType": "spanishCitizen",
-      "identityCardNumber": "61974134J",
-      "postalCode": "070012",
-      "name": {
-        "firstName": "Marie",
-        "lastName": "Smith",
-        "secondLastName": ""
-      }
+
+    if (!!bootstrapConfig) {
+
+        request.bootstrapConfig = btoa(bootstrapConfig);
+
     }
-  ]
-}
-]
 
-var request = {
-"search": {
-  "travelers": [
-    {
-      "passengerTypeCode": "ADT"
+    if (!!promoCode) {
+
+        request.search.promotion = { "code": promoCode }
+
     }
-  ],
-  "commercialFareFamilies": [
-    "ECONOMY",
-    "BUSINESS"
-  ],
-  "itineraries": [
-    {
-      "originLocationCode": from,
-      "destinationLocationCode": to,//selected_startDate
-      "departureDateTime": selected_startDate.getFullYear()+"-"+(selected_startDate.getMonth()+1)+"-"+selected_startDate.getDate()
+
+
+
+    if (!!returnDate) {
+
+        request.search.itineraries.push({
+
+            "originLocationCode": to,
+
+            "destinationLocationCode": from,
+
+            "departureDateTime": selected_endDate.getFullYear() + "-" + (selected_endDate.getMonth() + 1) + "-" + selected_endDate.getDate()
+
+        })
+
     }
-  ]
-},
-"portalFacts": [{"key":"corporateCodes", "value":"000001"}],
-"pointOfSale": "FR"
-}
 
-if (!!cffOverride) {
-request.search.commercialFareFamilies = cffOverride;
-}
 
-if(!!bcmKey) {
-request.bcmConfigKey = bcmKey;
-}
-if(!!staticConfig) {
-request.staticConfig = btoa(staticConfig);
-}
-if (!!bootstrapConfig) {
-request.bootstrapConfig = btoa(bootstrapConfig);
-}
-if(!!promoCode){
-request.search.promotion = {"code":promoCode}
-}
 
-if(!!returnDate){
-request.search.itineraries.push({
-  "originLocationCode": to,
-  "destinationLocationCode": from,
-  "departureDateTime": selected_endDate.getFullYear()+"-"+(selected_endDate.getMonth()+1)+"-"+selected_endDate.getDate()
-})
-}
+    if (!!login) {
 
-if(!!login){
-request.lightLogin = login
-}
-return request;
-}
-var urlServer = "http://localhost:3000";
-var urlRefX = "https://uat.digital.airline.amadeus.com/0e/0e-booking-va";
-function launchRefX(){
-    openWindowWithPost(urlRefX, getRequest())
+        request.lightLogin = login
+
+    }
+
+    return request;
 
 }
-function clik(cartId){
-openWindowWithPost("https://uat.digital.airline.amadeus.com/0e/0e-booking-va/shopping-cart?cartId="+cartId+"&type=cart", getRequest());
-//openWindowWithPost(urlRefX+"?lang=en-GB", request);
+
+
+
+// activate prefetch when user starts filling in the search form
+
+
+
+document.getElementById('departureInput').addEventListener("click", addPrefetchScript);
+
+
+
+function addPrefetchScript() {
+
+    const prefetchScriptTag = document.createElement('script');
+
+    prefetchScriptTag.src = `${urlRefX}/api/prefetch?lang=en-GB`;
+
+    document.head.appendChild(prefetchScriptTag);
+
 }
 
-function openWindowWithPost(url, data) {
-var form = document.createElement("form");
-form.target = "_blank";
-form.method = "POST";
-form.action = url;
-form.style.display = "none";
+/*
 
-for (var key in data) {
-  var input = document.createElement("input");
-  input.type = "hidden";
-  input.name = key;
-  if (typeof data[key] === "string" || typeof data[key] === "boolean" || typeof data[key] === "number") {
-    input.value = data[key];
-  } else {
-    input.value = JSON.stringify(data[key]);
-  }
-  form.appendChild(input);
+function launchRefX() {
+
+    var request = req ? req : getRequest();
+
+    var from = document.getElementById('departureInput').value.split("- ")[1];
+
+    var to = document.getElementById('arrivalInput').value.split("- ")[1];
+
+    var month = (selected_startDate.getMonth() + 1)
+
+    var day = selected_startDate.getDate()
+
+    request.search.itineraries[0] = {
+
+            "originLocationCode": from,
+
+            "destinationLocationCode": to,
+
+            "departureDateTime": selected_startDate.getFullYear() + "-" + (month < 10 ? "0"+month : month) + "-" + (day < 10 ? "0"+day : day)
+
+        }
+
+    if (selected_endDate) {
+
+        month = (selected_endDate.getMonth() + 1)
+
+        day = selected_endDate.getDate()
+
+        request.search.itineraries[1] = {
+
+            "originLocationCode": to,
+
+            "destinationLocationCode": from,
+
+            "departureDateTime": selected_endDate.getFullYear() + "-" + (month < 10 ? "0"+month : month) + "-" + (day < 10 ? "0"+day : day)
+
+        }
+
+    } else {
+
+        request.search.itineraries.pop()
+
+    }
+
+
+
+
+
+    localStorage.setItem("request", JSON.stringify(request))
+
+
+
+    openWindowWithPost(urlRefX, request)
+
+}*/
+
+function clik(cartId) {
+
+    openWindowWithPost(https://uat.digital.airline.amadeus.com/0e/nevio-booking-10-0/shopping-cart?cartId= + cartId + "&type=cart", getRequest());
+
+    //openWindowWithPost(urlRefX+"?lang=en-GB", request);
+
 }
-document.body.appendChild(form);
-form.submit();
-document.body.removeChild(form);
+
+
+
+function openWindowWithPost(url, data) {debugger;
+
+    var form = document.createElement("form");
+
+    form.target = "_blank";
+
+    form.method = "POST";
+
+    form.action = url;
+
+    form.style.display = "none";
+
+
+
+    for (var key in data) {
+
+        var input = document.createElement("input");
+
+        input.type = "hidden";
+
+        input.name = key;
+
+        if (typeof data[key] === "string" || typeof data[key] === "boolean" || typeof data[key] === "number") {
+
+            input.value = data[key];
+
+        } else {
+
+            input.value = JSON.stringify(data[key]);
+
+        }
+
+        form.appendChild(input);
+
+    }
+
+    document.body.appendChild(form);
+
+    form.submit();
+
+    document.body.removeChild(form);
+
 }
 
 </script>
