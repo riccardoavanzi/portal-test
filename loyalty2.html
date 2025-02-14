@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LotusMiles - Vietnam Airlines</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font: Rubik -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    nav.navbar {
+      border-bottom: 1px solid #eee; /* optional thin border */
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1515073838964-4d4d56a58b21?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D   ') center/cover no-repeat;
+      height: 300px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    /* Tabs Navigation */
+    .tabs-container {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 3rem;
+      width: fit-content;
+    }
+
+    /* Membership Card */
+    .membership-card {
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .membership-card img {
+      width: 100%;
+      max-width: 350px;
+      margin-top: 10px;
+      content: url('https://vietnamairlines.statusmatch.com/images/card_lotusmiles_black.jpg');
+                    width: 300px;
+                    height: 180px;
+                    object-fit: cover;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #0066cc;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #004080;
+    }
+
+    /* LotusMiles Banner */
+    .lotusmiles-banner {
+      background-color: #00a6d6;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+
+    /* Section Headings */
+    .section-title {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    /* Cards */
+    .card {
+      background-color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #f1f1f1;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    footer a {
+      text-decoration: none;
+      color: #333;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .history-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-top .history-title {
+    margin-bottom: 2rem;
+    font-size: 24px; /* Adjust as needed */
+}
+
+.history-top .history-content .history-content-top .history-form .input-dates {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-top .history-content .history-content-top .history-form .input-dates .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.history-top .history-content .history-content-top .history-form .input-dates .input-box input {
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    border: 1px solid #ccc; /* Replace $light_gray with a standard light gray color */
+}
+
+.history-top .history-content .history-content-bottom {
+    margin-top: 2rem;
+}
+
+.history-top .history-content .history-content-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-top .history-content .history-content-bottom th,
+.history-top .history-content .history-content-bottom td {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+/* Uncomment these if needed */
+/*
+.history-top .history-content .history-content-bottom th {
+    color: #143142;
+}
+
+.history-top .history-content .history-content-bottom tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.history-top .history-content .history-content-bottom tr:hover {
+    background-color: #ddd;
+}
+*/
+
+.history-top .history-content .history-content-bottom .detail-link {
+    color: #0066a2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.history-top .history-content .history-content-bottom .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.history-top .history-content .history-content-bottom .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #0066a2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.history-top .history-content .history-content-bottom .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.history-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.settings-container .settings-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-container .settings-content .settings-top {
+    margin-bottom: 2rem;
+    font-size: 24px; /* Adjust as needed */
+}
+
+.settings-container .settings-content .settings-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-container .settings-content .settings-main .alert {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.settings-container .settings-content .settings-main .change-password-inputs {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.settings-container .settings-content .settings-main .change-password-inputs input {
+    border-radius: 2px;
+    border: 1px solid #ccc; /* Replace $light_gray with an appropriate color */
+}
+
+.settings-container .settings-content .settings-main .change-password-inputs .change-pwd-item {
+    margin: 0.5rem;
+}
+
+.calculator-container .calculator-content .calculator-content-top .calculator-title {
+    display: flex;
+    justify-content: center;
+    font-size: 24px; /* Adjust as needed */
+}
+
+.calculator-container .calculator-content .calculator-content-main .container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.calculator-container .calculator-content .calculator-content-main #miles-calculator-form {
+    width: 400px;
+}
+
+.calculator-container .calculator-content .calculator-content-main .form-group {
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-container .calculator-content .calculator-content-main label {
+    display: inline;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.calculator-container .calculator-content .calculator-content-main select,
+.calculator-container .calculator-content .calculator-content-main input,
+.calculator-container .calculator-content .calculator-content-main button {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid #ccc; /* Replace $light_gray with an appropriate color */
+}
+
+.calculator-container .calculator-content .calculator-content-main button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.calculator-container .calculator-content .calculator-content-main button:hover {
+    background-color: #0056b3;
+}
+
+.calculator-container .calculator-content .calculator-content-main .result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 2rem;
+}
+
+.calculator-container .calculator-content .calculator-content-main .result h4 {
+    margin-top: 0;
+}
+
+.calculator-container .calculator-content .calculator-content-main .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.calculator-container .calculator-content .calculator-content-main .table th,
+.calculator-container .calculator-content .calculator-content-main .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.calculator-container .calculator-content .calculator-content-main .table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Left: Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img 
+          src="https://www.vietnamairlines.com/~/media/Images/VNANew/Home/Logo/logo_vna.png" 
+          alt="Vietnam Airlines Logo"
+        />
+      </a>
+  
+      <!-- Center: Menu items -->
+      <button 
+        class="navbar-toggler border-0" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarContent" 
+        aria-controls="navbarContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Explore</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Book &amp; Manage</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Prepare</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Lotus Miles</a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Right: Search Icon + Login Button -->
+      <div class="d-flex align-items-center">
+        <!-- Search triggers modal -->
+        <button class="btn btn-link text-dark me-2" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <i class="ri-search-line" style="font-size: 1.25rem;"></i>
+        </button>
+        <!-- Login -->
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </div>
+    </div>
+  </nav>
+<!-- Hero Section -->
+<div class="container mt-4">
+  <div class="hero-section">
+    <h1>Welcome back, Jane!</h1>
+  </div>
+</div>
+
+<!-- Tabs Navigation -->
+<div class="container tabs-container">
+    <ul class="nav nav-pills justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="summary-tab" data-bs-toggle="tab" href="#summary" role="tab" aria-controls="summary" aria-selected="true">Summary</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="history-tab" data-bs-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false">History</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="password-tab" data-bs-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="calculator-tab" data-bs-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="false">Calculator</a>
+      </li>
+    </ul>
+  </div>
+
+<!-- User Profile & Membership Details -->
+<!-- <div class="container mt-4">
+  <div class="row" style="width: 70%; margin: auto; display: flex; align-items: center;">
+    <div class="col-md-4">
+      <div class="d-flex align-items-center">
+        <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=2517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="50px" height="50px" style="object-fit: cover;" class="rounded-circle me-3" alt="User Avatar">
+        <div>
+          <h5 class="mb-0">Jane Doe</h5>
+          <span class="badge bg-primary">15245625</span>
+          <p class="mb-0 text-muted">Miles balance: <strong>283,990</strong></p>
+          <p class="mb-0 text-muted">Tier status: <strong>Platinum</strong></p>
+        </div>
+      </div>
+
+      <div class="membership-card mt-3">
+        <p>LotusMiles Platinum</p>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="p-4 bg-white rounded shadow-sm">
+        <h5 class="mb-3">Membership Details</h5>
+        <p><strong>Expiry date:</strong> 2025/06/30</p>
+        <p><strong>To next tier:</strong> 18,000 miles</p>
+        <button class="btn btn-primary me-2">Redeem miles</button>
+        <button class="btn btn-primary">Purchase miles</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Tab Content -->
+<div class="container mt-3">
+    <div class="tab-content" id="myTabContent">
+      <!-- Summary Tab -->
+      <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+        <!-- User Profile & Membership Details -->
+        <div class="container mt-4">
+          <div class="row" style="width: 70%; margin: auto; display: flex; align-items: center;">
+            <div class="col-md-4">
+              <!-- User Profile -->
+              <div class="d-flex align-items-center">
+                <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=2517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                  width="50px" height="50px" style="object-fit: cover;" class="rounded-circle me-3" alt="User Avatar">
+                <div>
+                  <h5 class="mb-0">Jane Doe</h5>
+                  <span class="badge bg-primary">15245625</span>
+                  <p class="mb-0 text-muted">Miles balance: <strong>283,990</strong></p>
+                  <p class="mb-0 text-muted">Tier status: <strong>Platinum</strong></p>
+                </div>
+              </div>
+  
+              <!-- Membership Card -->
+              <div class="membership-card mt-3">
+                <p>LotusMiles Platinum</p>
+              </div>
+            </div>
+  
+            <div class="col-md-8">
+              <!-- Membership Details -->
+              <div class="p-4 bg-white rounded shadow-sm">
+                <h5 class="mb-3">Membership Details</h5>
+                <p><strong>Expiry date:</strong> 2025/06/30</p>
+                <p><strong>To next tier:</strong> 18,000 miles</p>
+                <button class="btn btn-primary me-2">Redeem miles</button>
+                <button class="btn btn-primary">Purchase miles</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- History Tab -->
+      <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+        <div class="row" style="width: 70%; margin: auto; display: flex; align-items: center;">
+            <div class="history-pill-container" id="history-pill-container">
+                <div class="history-top">
+                    <div class="history-title">Your recent activities</div>
+                    <div class="history-content">
+                        <div class="history-content-top">
+                            <div class="history-form">
+                                <div class="input-dates">
+                                    <div class="input-box">
+                                        <label for="">From</label>
+                                        <input type="date" id="start-date">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">To</label>
+                                        <input type="date" id="end-date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history-content-bottom">
+                            <!-- <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Reference</th>
+                                        <th>Reference</th>
+                                        <th>Bonus Miles</th>
+                                        <th>Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025/01/11</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>793</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025/01/10</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>793</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025/01/01</td>
+                                        <td>Points Expiration</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>-120</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/11/21</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>793</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/11/19</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>793</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/11/01</td>
+                                        <td>Points Expiration</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>-448</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/10/01</td>
+                                        <td>Points Expiration</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>-1000</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/09/21</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>716</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024/09/19</td>
+                                        <td>Airline Issuance</td>
+                                        <td>Vietnam Airlines</td>
+                                        <td>276</td>
+                                        <td><span class="detail-link">Detail</span></td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                            <table id="bonusMilesTable">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Reference</th>
+                                        <th>Reference</th>
+                                        <th>Bonus Miles</th>
+                                        <th>Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                    <!-- Rows will be dynamically added -->
+                                </tbody>
+                            </table>
+                            <div class="pagination">
+                                <button id="prevButton" onclick="prevPage()"><i class='bx bx-chevron-left'></i></button>
+                                <button id="nextButton" onclick="nextPage()"><i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-bottom">
+                    <button class="btn btn-primary">See all activities</button>
+                </div>
+            </div>
+        </div>
+      </div>
+  
+      <!-- Password Tab -->
+      <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+        <div class="row" style="width: 70%; margin: auto; display: flex; align-items: center;">
+            <div class="settings-container">
+                <div class="settings-content">
+                    <div class="settings-top">
+                        Change password
+                    </div>
+                    <div class="settings-main">
+                        <div class="alert alert-info" role="alert" id="password-requirements">
+                            The password must contain at least 8 characters, with unlimnited maximum length. <br> Password must contain at least 1 number digit, 1 uppercase letter, 1 lowercase letter and 1 special character.
+                        </div>
+                        <div class="alert alert-success" role="alert" id="password-changed">
+                            Password successfully changed
+                          </div>
+                        <div class="change-password-inputs">
+                            <div class="change-pwd-item">
+                                <label for="current-pwd">Type the current password</label>
+                                <div class="input-container-pwd">
+                                    <input type="password" id="current-pwd">
+                                    <button type="button" id="set-current"><i class='bx bx-low-vision'></i></button>
+                                </div>
+                            </div>
+                            <div class="change-pwd-item">
+                                <label for="new-pwd">Type the new password</label>
+                                <div class="input-container-pwd">
+                                    <input type="password" id="new-pwd">
+                                    <button type="button" id="set-new"><i class='bx bx-low-vision'></i></button>
+                                </div>
+                            </div>
+                            <div class="change-pwd-item">
+                                <label for="new-pwd2">Confirm the new password</label>
+                                <div class="input-container-pwd">
+                                    <input type="password" id="new-pwd2">
+                                    <button type="button" id="confirm-current"><i class='bx bx-low-vision'></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="change-password">change password</button>
+                    </div>
+                    <div class="settings-footer"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+  
+      <!-- Calculator Tab -->
+      <div class="tab-pane fade" id="calculator" role="tabpanel" aria-labelledby="calculator-tab">
+        <div class="row" style="width: 70%; margin: auto; display: flex; align-items: center;">
+            <div class="calculator-container">
+                <div class="calculator-content">
+                    <div class="calculator-content-top">
+                        <div class="calculator-title"><h4>Mileage calculator</h4></div>
+                    </div>
+                    <div class="calculator-content-main">
+                        <div class="container">
+                            <form id="miles-calculator-form">
+                                <div class="form-group">
+                                    <label for="carrier">Carrier *</label>
+                                    <select id="carrier" required>
+                                        <option value="Vietnam Airlines - VN">Vietnam Airlines - VN</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-class">Booking Class *</label>
+                                    <select id="booking-class" required>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Premium Economy">Premium Economy</option>
+                                        <option value="Business">Business</option>
+                                        <option value="First Class">First Class</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="departure">From *</label>
+                                    <select id="departure" required>
+                                        <!-- Airports populated by JS -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="arrival">To *</label>
+                                    <select id="arrival" required>
+                                        <!-- Airports populated by JS -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="departure-date">Departure Date *</label>
+                                    <input type="date" id="departure-date" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">CALCULATE</button>
+                            </form>
+                            <div id="result" class="result" style="display: none;">
+                                <h4>Mileage result</h4>
+                                <p>Itinerary</p>
+                                <p id="itinerary"></p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>BONUS MILES</th>
+                                            <th>QUALIFYING MILES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id="bonus-miles"></td>
+                                            <td id="qualifying-miles"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="calculator-content-bottom"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Benefits Section -->
+<div class="container mt-5">
+  <h2 class="section-title">Exclusive Benefits</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?vip,lounge" class="card-img-top" alt="Lounge Access">
+        <div class="card-body">
+          <h5 class="card-title">VIP Lounge Access</h5>
+          <p class="card-text">Relax in our exclusive lounges with complimentary food and drinks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?airplane,seat" class="card-img-top" alt="Priority Boarding">
+        <div class="card-body">
+          <h5 class="card-title">Priority Boarding</h5>
+          <p class="card-text">Enjoy fast-track check-in and priority boarding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LotusMiles Banner -->
+<div class="container-fluid lotusmiles-banner">
+  <h2>Join LotusMiles Today</h2>
+  <p>Earn miles and unlock exclusive benefits with Vietnam Airlines.</p>
+  <a href="#" class="btn btn-light">Join Now</a>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; 2025 Vietnam Airlines - All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- History table filter and pagination -->
+<script>
+    // Sample data for the table
+const data = [
+    { date: '2025/01/11', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2025/01/10', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2025/01/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -120, comment: 'Detail' },
+    { date: '2024/11/21', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2024/11/19', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 793, comment: 'Detail' },
+    { date: '2024/11/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -448, comment: 'Detail' },
+    { date: '2024/10/01', reference1: 'Points Expiration', reference2: 'Vietnam Airlines', miles: -1000, comment: 'Detail' },
+    { date: '2024/09/21', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 716, comment: 'Detail' },
+    { date: '2024/09/19', reference1: 'Airline Issuance', reference2: 'Vietnam Airlines', miles: 276, comment: 'Detail' },
+];
+
+const rowsPerPage = 3;
+let currentPage = 1;
+let filteredData = [...data]; // Initialize with all data
+
+function renderTable() {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = ''; // Clear previous rows
+
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    const rows = filteredData.slice(startIndex, endIndex);
+
+    rows.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${row.date}</td>
+            <td>${row.reference1}</td>
+            <td>${row.reference2}</td>
+            <td>${row.miles}</td>
+            <td><span class="detail-link">${row.comment}</span></td>
+        `;
+        tableBody.appendChild(tr);
+    });
+
+    // Disable/Enable buttons based on the current page
+    document.getElementById('prevButton').disabled = currentPage === 1;
+    document.getElementById('nextButton').disabled = (currentPage * rowsPerPage) >= filteredData.length;
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    if ((currentPage * rowsPerPage) < filteredData.length) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function filterData() {
+    const fromDate = document.getElementById('start-date').value;
+    const toDate = document.getElementById('end-date').value;
+
+    if (fromDate || toDate) {
+        filteredData = data.filter(row => {
+            const rowDate = new Date(row.date);
+            const fromDateObj = fromDate ? new Date(fromDate) : null;
+            const toDateObj = toDate ? new Date(toDate) : null;
+
+            return (!fromDateObj || rowDate >= fromDateObj) && (!toDateObj || rowDate <= toDateObj);
+        });
+    } else {
+        filteredData = [...data]; // Reset to all data
+    }
+
+    currentPage = 1; // Reset to the first page after filtering
+    renderTable();
+}
+
+// Add event listeners to the date inputs
+document.getElementById('start-date').addEventListener('change', filterData);
+document.getElementById('end-date').addEventListener('change', filterData);
+
+// Initial render
+renderTable();
+</script>
+
+<!-- Change password -->
+<script>
+    // Function to toggle password visibility
+    function togglePasswordVisibility(inputId, buttonId) {
+        const input = document.getElementById(inputId);
+        const button = document.getElementById(buttonId);
+
+        button.addEventListener('click', () => {
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+
+            const icon = button.querySelector('i');
+            icon.className = isPassword ? 'bx bx-show' : 'bx bx-low-vision';
+        });
+    }
+
+    // Attach toggle functionality to each input-button pair
+    togglePasswordVisibility('current-pwd', 'set-current');
+    togglePasswordVisibility('new-pwd', 'set-new');
+    togglePasswordVisibility('new-pwd2', 'confirm-current');
+
+    // Show/Hide alerts when the "Change Password" button is clicked
+    const changePasswordButton = document.getElementById('change-password');
+    const passwordRequirementsAlert = document.getElementById('password-requirements');
+    const passwordChangedAlert = document.getElementById('password-changed');
+
+    // Initially show the requirements alert and hide the success alert
+    passwordRequirementsAlert.style.display = 'block';
+    passwordChangedAlert.style.display = 'none';
+
+    changePasswordButton.addEventListener('click', () => {
+        // Hide the requirements alert
+        passwordRequirementsAlert.style.display = 'none';
+
+        // Show the success alert
+        passwordChangedAlert.style.display = 'block';
+    });
+</script>
+
+<!-- Miles Calculator -->
+<script>
+    // Airports
+    const airports = [
+        "HA NOI - HAN", "HO CHI MINH CITY - SGN", "DA NANG - DAD", "NHA TRANG - CXR",
+        "PHU QUOC - PQC", "HUE - HUI", "CAN THO - VCA", "PLEIKU - PXU",
+        "VINH - VII", "QUY NHON - UIH", "DONG HOI - VDH", "HA LONG - HLG",
+        "CAM RANH - CXR", "RACH GIA - VKG", "CON DAO - VCS"
+    ];
+
+    // Populate airport options
+    const departureSelect = document.getElementById("departure");
+    const arrivalSelect = document.getElementById("arrival");
+
+    airports.forEach(airport => {
+        const option1 = document.createElement("option");
+        option1.value = airport;
+        option1.textContent = airport;
+
+        const option2 = option1.cloneNode(true); // Clone for arrival select
+
+        departureSelect.appendChild(option1);
+        arrivalSelect.appendChild(option2);
+    });
+
+    // Handle form submission
+    document.getElementById("miles-calculator-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const departure = departureSelect.value;
+        const arrival = arrivalSelect.value;
+
+        // Prevent same departure and arrival
+        if (departure === arrival) {
+            alert("Departure and arrival cannot be the same.");
+            return;
+        }
+
+        const bonusMiles = Math.floor(Math.random() * 2000) + 500; // Random between 500-2500
+        const qualifyingMiles = Math.floor(Math.random() * 2000) + 500;
+
+        // Update result
+        document.getElementById("itinerary").textContent = `${departure} ➝ ${arrival}`;
+        document.getElementById("bonus-miles").textContent = bonusMiles;
+        document.getElementById("qualifying-miles").textContent = qualifyingMiles;
+
+        document.getElementById("result").style.display = "block";
+    });
+</script>
+
+</body>
+</html>

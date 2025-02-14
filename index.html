@@ -849,22 +849,31 @@
                         <!-- CHECK-IN -->
                         <div class="tab-pane fade" id="pills-ssci" role="tabpanel" aria-labelledby="pills-contact-tab">
                             <div class="ssci_container" id="ssci">
+                                <!-- <div class="d-flex flex-column">
+                                    <p class="checkin-info">Web Check-in is available 24 to 1 hour before flight departure</p>
+                                    <p class="instructions">Please ensure you input the family name as it appears in your ticket</p>
+                                </div> -->
                                 <ul class="criteria">
                                     <li>
-                                        <input type="text" placeholder="Last name">
+                                        <input type="text" id="lastName" placeholder="Family Name">
                                     </li>
                                     <div class="dropdown">
-                                        <button class="btn dropdown-toggle" id="options" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Booking reference
+                                        <button class="btn dropdown-toggle" id="options" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Enter your Reservation Code
                                         </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Ticket number</a></li>
-                                        <li><a class="dropdown-item" href="#">Frequent Flyer number</a></li>
+                                        <ul class="dropdown-menu" aria-labelledby="options">
+                                            <li><a class="dropdown-item" data-value="reservation" href="#">Reservation Code</a></li>
+                                            <li><a class="dropdown-item" data-value="ticket" href="#">eTicket number</a></li>
+                                            <li><a class="dropdown-item" data-value="flyer" href="#">Frequent Flyer number</a></li>
                                         </ul>
                                     </div>
+                                    <li>
+                                        <input type="text" id="bookingInput" placeholder="Reservation Code">
+                                    </li>
                                 </ul>
-                                <button type="submit" class="submit">
-                                    <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+                            
+                                <button type="submit" class="btn btn-primary">
+                                    CHECK IN
                                 </button>
                             </div>
                         </div>
